@@ -1,0 +1,130 @@
+	.container{
+		width: 1200px;
+		margin: 0 auto;
+		background-color:white;
+	}
+	
+	h1{
+		font-size:80px;
+		padding:0px 0px;
+	}
+	
+	h3{
+		font-family: Impact, Charcoal, sans-serif;
+		font-size: 36px;
+		padding:0px 25px;
+	}
+	
+	.navClass ul{
+		background-color:#222;
+		font-size:20px;
+		font-family:sans-serif;
+	}
+	
+	.navClass ul li{
+		list-style-type:none;
+		display:inline-block;
+		padding:5px 50px;
+		position:relative;
+	}
+	
+	.navClass ul li a{
+		color:white;
+		text-decoration: none;
+	}
+	
+	.navClass ul li:hover{
+		background-color:gray;
+	}
+	
+	.navClass ul.sub-menu{
+		position:absolute;
+		background-color:#333;
+		list-style-type:none;
+		width:125px;
+		padding:0px 25px;
+		margin-left:-25px;
+		margin-top:6px;
+		opacity:0;
+	}
+	
+	.navClass ul.sub-menu li{
+		padding:0px 10px;
+	}
+	
+	.navClass li:hover .sub-menu{
+		opacity:1;
+	}
+	
+	body{
+		background-size:cover;
+	}
+	
+	#signup-img{
+		display: block;
+		margin: 0 auto;
+	}
+	
+	.signup-info{
+		margin-top:50px;
+		margin-left:450px;
+		font-family: Impact, Charcoal, sans-serif;
+		font-size: 24px;
+		padding:0px 25px;
+	}
+	
+	footer {
+	width: 1200px;
+	margin: 0 auto;
+    color: white;
+    background-color: black;
+    text-align: center;
+	height:50px;
+	}
+	
+	/* Slideshow container */
+		.slideshow-container {
+		max-width: 1200px;
+		position: relative;
+		margin: auto;
+		}
+
+		.mySlides {
+			display: none;
+		}
+		
+		.mySlides img{
+			height:400px;
+			width:100%;
+		}
+
+
+		/* Caption text */
+		.slide-text {
+		font-size: 100px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+		font-weight:bold;
+		font-family: Arial, Helvetica, sans-serif;
+		}
+
+		/* Fading animation */
+		.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+		}
+
+		@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+		}

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Sign Up</title>
+	<link rel="StyleSheet" href="css/signup.css">
+</head>
+<body background="pic/queenstown_2.jpg">
+	<header align="center">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="pic/queenstown_3.jpg" style="width:100%">
+				<div class="slide-text">Sign Up</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pic/queenstown_4.jpg" style="width:100%">
+				<div class="slide-text">Sign Up</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pic/queenstown_5.jpg" style="width:100%">
+				<div class="slide-text">Sign Up</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+	
+		<nav class="navClass">
+			<ul><b>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="visit.html">Visit</a></li>
+				<li><a href="food.html">Food</a></li>
+				<li><a href="accommodation.html">Accommodation</a>
+					<ul class="sub-menu">
+						<li><a href="hotel.html">Hotel</a></li>
+						<li><a href="motel.html">Motel</a></li>
+						<li><a href="BnB.html">Bed & Breakfast</a></li>
+						<li><a href="backpacker.html">Backpacker</a></li>
+					</ul>
+					<span class="arrow">&#9660;</span>
+				</li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="signup.html">Signup</a></li>
+			</b></ul>
+		</nav>
+		
+		<img id="signup-img" src="pic/signup.png" alt="signup-img">
+		
+		<div class="signup-info">
+			First Name:</br>
+			<input type="text" id="firstname">
+			</br>
+			</br>
+			Last name:</br>
+			<input type="text" id="lastname">
+			</br>
+			</br>
+			Email:</br>
+			<input type="email" id="email">
+			</br></br>
+			<input type="checkbox" id="agree" value="agree">I Agree with the term of service
+			</br></br>
+			<input type="button" onclick="submit()" value="Submit">
+			</br></br>	
+		</div>
+		
+		<footer>Copyright &copy; Wayne Hong</footer>
+	</div>
+	
+	<script src="js/signup.js"></script>
+</body>
+</html>

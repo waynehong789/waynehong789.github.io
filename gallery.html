@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+	<link rel="StyleSheet" href="css/gallery.css">
+</head>
+<body background="pic/queenstown_2.jpg">
+	<header align="center">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="pic/queenstown_3.jpg" style="width:100%">
+				<div class="slide-text">Magic Moments in Queenstown</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pic/queenstown_4.jpg" style="width:100%">
+				<div class="slide-text">Magic Moments in Queenstown</div>
+			</div>
+
+			<div class="mySlides fade">
+				<img src="pic/queenstown_5.jpg" style="width:100%">
+				<div class="slide-text">Magic Moments in Queenstown</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container"> 		
+		<nav class="navClass">
+			<ul><b>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="visit.html">Visit</a></li>
+				<li><a href="food.html">Food</a></li>
+				<li><a href="accommodation.html">Accommodation</a>
+					<ul class="sub-menu">
+						<li><a href="hotel.html">Hotel</a></li>
+						<li><a href="motel.html">Motel</a></li>
+						<li><a href="BnB.html">Bed & Breakfast</a></li>
+						<li><a href="backpacker.html">Backpacker</a></li>
+					</ul>
+					<span class="arrow">&#9660;</span>
+				</li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="signup.html">Signup</a></li>
+			</b></ul>
+		</nav>
+		
+		<div class="Intro">
+		<h3>Queenstown, New Zealand, <br/>is the Southern Hemisphere’s premier four season lake and alpine resort. </h3>
+		<p class="text">Feel inspired by Queenstown’s stunning scenery, huge range of activities and renowned warm welcome. Surrounded by majestic mountains and set on the shores of crystal clear Lake Wakatipu, the natural beauty and the unique energy of the region create the perfect backdrop for a holiday full of adventure, discovery and rejuvenation. You’ll find everything you need to plan your next trip to Queenstown, from accommodation options to the endless array of activities and attractions, as well as a full calendar of events for the year.</p>	
+		</div>
+	
+		<div class="events">
+			<img onclick = "displayFullImage(this);"  name="img1" src="pic/1.jpg" alt="1">
+			<img onclick = "displayFullImage(this);"  name="img2" src="pic/2.jpg" alt="2">
+			<img onclick = "displayFullImage(this);"  name="img3" src="pic/3.jpg" alt="3">
+			<img onclick = "displayFullImage(this);"  name="img4" src="pic/4.jpg" alt="4">
+			<img onclick = "displayFullImage(this);"  name="img5" src="pic/5.jpg" alt="5">
+			<img onclick = "displayFullImage(this);"  name="img6" src="pic/6.jpg" alt="6">
+			<img onclick = "displayFullImage(this);"  name="img7" src="pic/7.jpg" alt="7">
+			<img onclick = "displayFullImage(this);"  name="img8" src="pic/8.jpg" alt="8">
+			<img onclick = "displayFullImage(this);"  name="img9" src="pic/9.jpg" alt="9">
+		</div>
+		
+		<div id = "lightbox" onclick = "removeFullImage(this);" align="center">			
+				<span id ="left_button" onclick ="gobackward(event);"></span><img  name="fullImage" src="" alt="full image" id = "fullImage" width = "400" height = "200" onclick = "event.stopPropagation();"  /><span id ="right_button" onclick ="goforward(event);"></span>		
+		</div>
+	
+		<footer>Copyright &copy; Wayne Hong</footer>
+	</div>
+	
+	<script src="js/gallery.js"></script>
+</body>
+</html>
