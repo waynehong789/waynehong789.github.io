@@ -180,7 +180,7 @@
 		#left_button
 		{
 		display: none;
-		background-image: url('pic/left_arrow.png');
+		background-image: url('../pic/left_arrow.png');
 		width:64px;
 		height:64px;
 		position: relative;
@@ -190,7 +190,7 @@
 		#right_button
 		{
 		display: none;
-		background-image: url('pic/right_arrow.png');
+		background-image: url('../pic/right_arrow.png');
 		width:64px;
 		height:64px;
 		position: relative;
