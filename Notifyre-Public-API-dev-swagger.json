@@ -18,6 +18,10 @@
       "get": {
         "summary": "List received faxes",
         "description": "Retrieve received faxes.",
+        "x-codeSamples": {
+          "lang": "JavaScript",
+          "source": "console.log('Hello World');"
+        },
         "produces": [
           "application/json"
         ],
