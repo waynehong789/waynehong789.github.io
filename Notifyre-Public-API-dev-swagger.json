@@ -2,26 +2,22 @@
   "swagger": "2.0",
   "info": {
     "version": "2020-12-29T04:17:05Z",
-    "title": "Notifyre Public API"
+    "title": "Notifyre Public API",
+    "x-logo":{
+    "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
+    "altText": "Notifyre logo"
+  },
   },
   "host": "kj37fsnrm8.execute-api.ap-southeast-2.amazonaws.com",
   "basePath": "/dev",
   "schemes": [
     "https"
   ],
-  "logo":{
-    "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
-    "altText": "Notifyre logo"
-  },
   "paths": {
     "/fax/received": {
       "get": {
         "summary": "List received faxes",
         "description": "Retrieve received faxes.",
-        "codeSamples": {
-          "lang": "JavaScript",
-          "source": "console.log('Hello World');"
-        },
         "produces": [
           "application/json"
         ],
