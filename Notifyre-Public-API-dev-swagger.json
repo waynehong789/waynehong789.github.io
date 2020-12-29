@@ -9,6 +9,10 @@
   "schemes": [
     "https"
   ],
+  "x-logo":{
+    "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
+    "altText": "Notifyre logo"
+  },
   "paths": {
     "/fax/received": {
       "get": {
