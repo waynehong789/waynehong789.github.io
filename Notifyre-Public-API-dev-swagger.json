@@ -12,8 +12,8 @@
   "paths": {
     "/fax/received": {
       "get": {
-        "summary": "The /fax/received resource represents the operations for received fax.",
-        "description": "Supporting GET received fax",
+        "summary": "List received faxes",
+        "description": "Retrieve received faxes.",
         "produces": [
           "application/json"
         ],
@@ -61,6 +61,8 @@
     },
     "/fax/received/{id}": {
       "get": {
+        "summary": "Get received fax meta data",
+        "description": "Query specific received fax meta data by id",
         "produces": [
           "application/json"
         ],
@@ -116,6 +118,8 @@
     },
     "/fax/received/{id}/download": {
       "get": {
+        "summary": "Download received fax by id",
+        "description": "Download specific received fax (TIFF) by id",
         "produces": [
           "application/json"
         ],
@@ -171,6 +175,8 @@
     },
     "/fax/send": {
       "get": {
+        "summary": "List sent faxes",
+        "description": "Retrieve sent faxes.",
         "produces": [
           "application/json"
         ],
@@ -189,6 +195,8 @@
         ]
       },
       "post": {
+        "summary": "Send fax",
+        "description": "Submit fax to be sent",
         "produces": [
           "application/json"
         ],
@@ -236,6 +244,8 @@
     },
     "/fax/send/{id}": {
       "get": {
+        "summary": "Get sent fax meta data",
+        "description": "Query specific sent fax meta data by id",
         "produces": [
           "application/json"
         ],
@@ -291,6 +301,8 @@
     },
     "/fax/send/{id}/download": {
       "get": {
+        "summary": "Download the sent fax",
+        "description": "Download specific sent fax (PDF) by id",
         "produces": [
           "application/json"
         ],
@@ -346,6 +358,8 @@
     },
     "/fax/send/{id}/resend": {
       "post": {
+        "summary": "Resend fax",
+        "description": "Resend fax by id",
         "produces": [
           "application/json"
         ],
@@ -401,6 +415,8 @@
     },
     "/sms/send": {
       "get": {
+        "summary": "List sent SMS",
+        "description": "Retrieve sent SMS",
         "produces": [
           "application/json"
         ],
@@ -419,6 +435,8 @@
         ]
       },
       "post": {
+        "summary": "Send SMS",
+        "description": "Submit SMS to be sent",
         "produces": [
           "application/json"
         ],
@@ -466,6 +484,8 @@
     },
     "/sms/send/cost": {
       "post": {
+        "summary": "Calcaulate send SMS cost",
+        "description": "Calcaulate cost of the SMS to be sent",
         "produces": [
           "application/json"
         ],
@@ -513,6 +533,8 @@
     },
     "/sms/send/{id}": {
       "get": {
+        "summary": "Get sent SMS by id",
+        "description": "Get sent SMS meta data",
         "produces": [
           "application/json"
         ],
