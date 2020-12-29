@@ -33,11 +33,11 @@
         ],
         "x-codeSamples": [
           {
-          "lang": "JavaScript",
-          "source": "console.log('Hello World');"
+          "lang": "C#",
+          "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
           },
           {
-          "lang": "C#",
+          "lang": "JavaScript",
           "source": "console.log('Hello World');"
           }
         ],
