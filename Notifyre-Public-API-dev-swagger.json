@@ -6,6 +6,16 @@
   },
   "host": "kj37fsnrm8.execute-api.ap-southeast-2.amazonaws.com",
   "basePath": "/dev",
+  "tags": [
+        {
+            "name": "fax",
+            "description": "Everything about fax"
+        },
+        {
+            "name": "sms",
+            "description": "Access to SMS"
+        }
+    ],
   "schemes": [
     "https"
   ],
@@ -57,6 +67,8 @@
     },
     "/fax/gofax": {
       "post": {
+        "summary": "submit fax",
+        "description": "Submit a fax to GoFax API",
         "produces": [
           "application/json"
         ],
