@@ -3,35 +3,40 @@
   "info": {
     "version": "2020-12-29T04:17:05Z",
     "title": "Notifyre Public API",
-    "x-logo":{
-    "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
-    "altText": "Notifyre logo"
-  },
+    "x-logo": {
+      "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
+      "altText": "Notifyre logo"
+    }
   },
   "host": "kj37fsnrm8.execute-api.ap-southeast-2.amazonaws.com",
   "basePath": "/dev",
   "tags": [
-        {
-            "name": "Fax Send",
-            "description": "Notifyre Fax Send"
-        },
-        {
-            "name": "Fax Received",
-            "description": "Notifyre Fax Received"
-        },
-        {
-            "name": "SMS",
-            "description": "Notifyre SMS"
-        }
-    ],
-  "x-tagGroups": [
     {
-      "name": "Fax",
-      "tags": ["Fax Send", "Fax Received"]
+      "name": "Fax Send",
+      "description": "Notifyre Fax Send"
+    },
+    {
+      "name": "Fax Received",
+      "description": "Notifyre Fax Received"
     },
     {
       "name": "SMS",
-      "tags": ["SMS"]
+      "description": "Notifyre SMS"
+    }
+  ],
+  "x-tagGroups": [
+    {
+      "name": "Fax",
+      "tags": [
+        "Fax Send",
+        "Fax Received"
+      ]
+    },
+    {
+      "name": "SMS",
+      "tags": [
+        "SMS"
+      ]
     }
   ],
   "schemes": [
@@ -41,8 +46,8 @@
     "/fax/received": {
       "get": {
         "tags": [
-                    "Fax Received"
-                ],
+          "Fax Received"
+        ],
         "summary": "List received faxes",
         "description": "Retrieve received faxes.",
         "produces": [
@@ -50,12 +55,12 @@
         ],
         "x-codeSamples": [
           {
-          "lang": "C#",
-          "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+            "lang": "C#",
+            "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
           },
           {
-          "lang": "JavaScript",
-          "source": "console.log('Hello World');"
+            "lang": "JavaScript",
+            "source": "console.log('Hello World');"
           }
         ],
         "responses": {
@@ -76,8 +81,8 @@
     "/fax/received/{id}": {
       "get": {
         "tags": [
-                    "Fax Received"
-                ],
+          "Fax Received"
+        ],
         "summary": "Get received fax meta data",
         "description": "Query specific received fax meta data by id",
         "produces": [
@@ -109,8 +114,8 @@
     "/fax/received/{id}/download": {
       "get": {
         "tags": [
-                    "Fax Received"
-                ],
+          "Fax Received"
+        ],
         "summary": "Download received fax by id",
         "description": "Download specific received fax (TIFF) by id",
         "produces": [
@@ -142,8 +147,8 @@
     "/fax/send": {
       "get": {
         "tags": [
-                    "Fax Send"
-                ],
+          "Fax Send"
+        ],
         "summary": "List sent faxes",
         "description": "Retrieve sent faxes.",
         "produces": [
@@ -165,8 +170,8 @@
       },
       "post": {
         "tags": [
-                    "Fax Send"
-                ],
+          "Fax Send"
+        ],
         "summary": "Send fax",
         "description": "Submit fax to be sent",
         "produces": [
@@ -190,8 +195,8 @@
     "/fax/send/{id}": {
       "get": {
         "tags": [
-                    "Fax Send"
-                ],
+          "Fax Send"
+        ],
         "summary": "Get sent fax meta data",
         "description": "Query specific sent fax meta data by id",
         "produces": [
@@ -223,8 +228,8 @@
     "/fax/send/{id}/download": {
       "get": {
         "tags": [
-                    "Fax Send"
-                ],
+          "Fax Send"
+        ],
         "summary": "Download the sent fax",
         "description": "Download specific sent fax (PDF) by id",
         "produces": [
@@ -256,8 +261,8 @@
     "/fax/send/{id}/resend": {
       "post": {
         "tags": [
-                    "Fax Send"
-                ],
+          "Fax Send"
+        ],
         "summary": "Resend fax",
         "description": "Resend fax by id",
         "produces": [
@@ -289,8 +294,8 @@
     "/sms/send": {
       "get": {
         "tags": [
-                    "SMS"
-                ],
+          "SMS"
+        ],
         "summary": "List sent SMS",
         "description": "Retrieve sent SMS",
         "produces": [
@@ -312,8 +317,8 @@
       },
       "post": {
         "tags": [
-                    "SMS"
-                ],
+          "SMS"
+        ],
         "summary": "Send SMS",
         "description": "Submit SMS to be sent",
         "produces": [
@@ -337,8 +342,8 @@
     "/sms/send/cost": {
       "post": {
         "tags": [
-                    "SMS"
-                ],
+          "SMS"
+        ],
         "summary": "Calcaulate send SMS cost",
         "description": "Calcaulate cost of the SMS to be sent",
         "produces": [
@@ -362,8 +367,8 @@
     "/sms/send/{id}": {
       "get": {
         "tags": [
-                    "SMS"
-                ],
+          "SMS"
+        ],
         "summary": "Get sent SMS by id",
         "description": "Get sent SMS meta data",
         "produces": [
