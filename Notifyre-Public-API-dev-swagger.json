@@ -9,7 +9,7 @@
   "schemes": [
     "https"
   ],
-  "x-logo":{
+  "logo":{
     "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
     "altText": "Notifyre logo"
   },
@@ -18,7 +18,7 @@
       "get": {
         "summary": "List received faxes",
         "description": "Retrieve received faxes.",
-        "x-codeSamples": {
+        "codeSamples": {
           "lang": "JavaScript",
           "source": "console.log('Hello World');"
         },
