@@ -31,10 +31,16 @@
         "produces": [
           "application/json"
         ],
-        "x-codeSamples": [{
+        "x-codeSamples": [
+          {
           "lang": "JavaScript",
           "source": "console.log('Hello World');"
-        }],
+          },
+          {
+          "lang": "C#",
+          "source": "console.log('Hello World');"
+          }
+        ],
         "responses": {
           "200": {
             "description": "200 response",
