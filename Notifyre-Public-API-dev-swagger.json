@@ -382,8 +382,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.2",
-    "createdDate" : "2020-12-30T00:50:31Z",
+    "version" : "v1.4",
+    "createdDate" : "2020-12-30T02:36:26Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -413,7 +413,56 @@
         }, {
           "name" : "SMS",
           "tags" : [ "SMS" ]
-        } ]
+        } ],
+        "definitions" : {
+          "Empty" : {
+            "type" : "object",
+            "title" : "Empty Schema"
+          },
+          "SendFaxResponse" : {
+            "type" : "object",
+            "properties" : {
+              "Documents" : {
+                "type" : "array",
+                "items" : {
+                  "$ref" : "#/definitions/ResponseDocument"
+                }
+              },
+              "Success" : {
+                "type" : "boolean"
+              },
+              "Message" : {
+                "type" : "string"
+              },
+              "JobID" : {
+                "type" : "string"
+              },
+              "ToNumber" : {
+                "type" : "string"
+              },
+              "ValidationErrors" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "ResponseDocument" : {
+            "type" : "object",
+            "properties" : {
+              "Filename" : {
+                "type" : "string"
+              },
+              "Message" : {
+                "type" : "string"
+              },
+              "Submitted" : {
+                "type" : "boolean"
+              }
+            }
+          }
+        }
       }
     }, {
       "location" : {
@@ -557,7 +606,47 @@
         }, {
           "lang" : "JavaScript",
           "source" : "console.log('Hello World');"
-        } ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Success" : {
+                  "type" : "boolean"
+                },
+                "StatusCode" : {
+                  "type" : "integer",
+                  "format" : "int32"
+                },
+                "Message" : {
+                  "type" : "string"
+                },
+                "Payload" : {
+                  "type" : "object",
+                  "properties" : {
+                    "FaxID" : {
+                      "type" : "string"
+                    },
+                    "SubmittedFaxes" : {
+                      "type" : "array",
+                      "items" : {
+                        "$ref" : "#/definitions/SendFaxResponse"
+                      }
+                    }
+                  }
+                },
+                "Errors" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }, {
       "location" : {
@@ -630,6 +719,104 @@
           "lang" : "JavaScript",
           "source" : "console.log('Hello World');"
         } ]
+      }
+    }, {
+      "location" : {
+        "type" : "MODEL",
+        "name" : "ResponseDocument"
+      },
+      "properties" : {
+        "type" : "object",
+        "properties" : {
+          "Filename" : {
+            "type" : "string"
+          },
+          "Message" : {
+            "type" : "string"
+          },
+          "Submitted" : {
+            "type" : "boolean"
+          }
+        }
+      }
+    }, {
+      "location" : {
+        "type" : "MODEL",
+        "name" : "SendFaxResponse"
+      },
+      "properties" : {
+        "type" : "object",
+        "properties" : {
+          "Documents" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/ResponseDocument"
+            }
+          },
+          "Success" : {
+            "type" : "boolean"
+          },
+          "Message" : {
+            "type" : "string"
+          },
+          "JobID" : {
+            "type" : "string"
+          },
+          "ToNumber" : {
+            "type" : "string"
+          },
+          "ValidationErrors" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }, {
+      "location" : {
+        "type" : "RESPONSE_BODY",
+        "path" : "/fax/send",
+        "method" : "POST",
+        "statusCode" : "200"
+      },
+      "properties" : {
+        "description" : "successful operation",
+        "schema" : {
+          "type" : "object",
+          "properties" : {
+            "Success" : {
+              "type" : "boolean"
+            },
+            "StatusCode" : {
+              "type" : "integer",
+              "format" : "int32"
+            },
+            "Message" : {
+              "type" : "string"
+            },
+            "Payload" : {
+              "type" : "object",
+              "properties" : {
+                "FaxID" : {
+                  "type" : "string"
+                },
+                "SubmittedFaxes" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/definitions/SendFaxResponse"
+                  }
+                }
+              }
+            },
+            "Errors" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
       }
     } ]
   },
