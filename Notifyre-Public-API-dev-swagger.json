@@ -260,7 +260,7 @@
     },
     "/sms/send" : {
       "get" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "List sent SMS",
         "description" : "Retrieve sent SMS",
         "produces" : [ "application/json" ],
@@ -284,7 +284,7 @@
         } ]
       },
       "post" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Send SMS",
         "description" : "Submit SMS to be sent",
         "produces" : [ "application/json" ],
@@ -310,7 +310,7 @@
     },
     "/sms/send/cost" : {
       "post" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Calcaulate send SMS cost",
         "description" : "Calcaulate cost of the SMS to be sent",
         "produces" : [ "application/json" ],
@@ -336,7 +336,7 @@
     },
     "/sms/send/{id}" : {
       "get" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Get sent SMS by id",
         "description" : "Get sent SMS meta data",
         "produces" : [ "application/json" ],
@@ -382,8 +382,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.1",
-    "createdDate" : "2020-12-29T22:26:32Z",
+    "version" : "v1.2",
+    "createdDate" : "2020-12-30T00:50:31Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -566,7 +566,7 @@
         "method" : "POST"
       },
       "properties" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Calcaulate send SMS cost",
         "description" : "Calcaulate cost of the SMS to be sent",
         "x-codeSamples" : [ {
@@ -584,7 +584,7 @@
         "method" : "GET"
       },
       "properties" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Get sent SMS by id",
         "description" : "Get sent SMS meta data",
         "x-codeSamples" : [ {
@@ -602,7 +602,7 @@
         "method" : "GET"
       },
       "properties" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "List sent SMS",
         "description" : "Retrieve sent SMS",
         "x-codeSamples" : [ {
@@ -620,7 +620,7 @@
         "method" : "POST"
       },
       "properties" : {
-        "tags" : [ "Fax Send" ],
+        "tags" : [ "SMS" ],
         "summary" : "Send SMS",
         "description" : "Submit SMS to be sent",
         "x-codeSamples" : [ {
