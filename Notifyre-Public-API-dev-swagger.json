@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2020-12-29T04:21:19Z",
+    "version" : "2020-12-30T04:22:35Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -146,7 +146,7 @@
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/Empty"
+              "$ref" : "#/definitions/SendFaxResponse"
             }
           }
         },
@@ -376,14 +376,93 @@
     }
   },
   "definitions" : {
+    "SendFaxResponse" : {
+      "type" : "object",
+      "properties" : {
+        "Success" : {
+          "type" : "boolean"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Payload" : {
+          "type" : "object",
+          "properties" : {
+            "FaxID" : {
+              "type" : "string"
+            },
+            "SubmittedFaxes" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItem"
+              }
+            }
+          }
+        },
+        "Errors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      },
+      "title" : "SendFaxResponse"
+    },
     "Empty" : {
       "type" : "object",
       "title" : "Empty Schema"
+    },
+    "SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem" : {
+      "type" : "object",
+      "properties" : {
+        "Filename" : {
+          "type" : "string"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Submitted" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "SendFaxResponsePayloadSubmittedFaxesItem" : {
+      "type" : "object",
+      "properties" : {
+        "Documents" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem"
+          }
+        },
+        "Success" : {
+          "type" : "boolean"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "JobID" : {
+          "type" : "string"
+        },
+        "ToNumber" : {
+          "type" : "string"
+        },
+        "ValidationErrors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.4",
-    "createdDate" : "2020-12-30T02:36:26Z",
+    "version" : "v1.7",
+    "createdDate" : "2020-12-30T04:23:36Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -413,56 +492,7 @@
         }, {
           "name" : "SMS",
           "tags" : [ "SMS" ]
-        } ],
-        "definitions" : {
-          "Empty" : {
-            "type" : "object",
-            "title" : "Empty Schema"
-          },
-          "SendFaxResponse" : {
-            "type" : "object",
-            "properties" : {
-              "Documents" : {
-                "type" : "array",
-                "items" : {
-                  "$ref" : "#/definitions/ResponseDocument"
-                }
-              },
-              "Success" : {
-                "type" : "boolean"
-              },
-              "Message" : {
-                "type" : "string"
-              },
-              "JobID" : {
-                "type" : "string"
-              },
-              "ToNumber" : {
-                "type" : "string"
-              },
-              "ValidationErrors" : {
-                "type" : "array",
-                "items" : {
-                  "type" : "string"
-                }
-              }
-            }
-          },
-          "ResponseDocument" : {
-            "type" : "object",
-            "properties" : {
-              "Filename" : {
-                "type" : "string"
-              },
-              "Message" : {
-                "type" : "string"
-              },
-              "Submitted" : {
-                "type" : "boolean"
-              }
-            }
-          }
-        }
+        } ]
       }
     }, {
       "location" : {
@@ -606,47 +636,7 @@
         }, {
           "lang" : "JavaScript",
           "source" : "console.log('Hello World');"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "type" : "object",
-              "properties" : {
-                "Success" : {
-                  "type" : "boolean"
-                },
-                "StatusCode" : {
-                  "type" : "integer",
-                  "format" : "int32"
-                },
-                "Message" : {
-                  "type" : "string"
-                },
-                "Payload" : {
-                  "type" : "object",
-                  "properties" : {
-                    "FaxID" : {
-                      "type" : "string"
-                    },
-                    "SubmittedFaxes" : {
-                      "type" : "array",
-                      "items" : {
-                        "$ref" : "#/definitions/SendFaxResponse"
-                      }
-                    }
-                  }
-                },
-                "Errors" : {
-                  "type" : "array",
-                  "items" : {
-                    "type" : "string"
-                  }
-                }
-              }
-            }
-          }
-        }
+        } ]
       }
     }, {
       "location" : {
@@ -719,104 +709,6 @@
           "lang" : "JavaScript",
           "source" : "console.log('Hello World');"
         } ]
-      }
-    }, {
-      "location" : {
-        "type" : "MODEL",
-        "name" : "ResponseDocument"
-      },
-      "properties" : {
-        "type" : "object",
-        "properties" : {
-          "Filename" : {
-            "type" : "string"
-          },
-          "Message" : {
-            "type" : "string"
-          },
-          "Submitted" : {
-            "type" : "boolean"
-          }
-        }
-      }
-    }, {
-      "location" : {
-        "type" : "MODEL",
-        "name" : "SendFaxResponse"
-      },
-      "properties" : {
-        "type" : "object",
-        "properties" : {
-          "Documents" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/ResponseDocument"
-            }
-          },
-          "Success" : {
-            "type" : "boolean"
-          },
-          "Message" : {
-            "type" : "string"
-          },
-          "JobID" : {
-            "type" : "string"
-          },
-          "ToNumber" : {
-            "type" : "string"
-          },
-          "ValidationErrors" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string"
-            }
-          }
-        }
-      }
-    }, {
-      "location" : {
-        "type" : "RESPONSE_BODY",
-        "path" : "/fax/send",
-        "method" : "POST",
-        "statusCode" : "200"
-      },
-      "properties" : {
-        "description" : "successful operation",
-        "schema" : {
-          "type" : "object",
-          "properties" : {
-            "Success" : {
-              "type" : "boolean"
-            },
-            "StatusCode" : {
-              "type" : "integer",
-              "format" : "int32"
-            },
-            "Message" : {
-              "type" : "string"
-            },
-            "Payload" : {
-              "type" : "object",
-              "properties" : {
-                "FaxID" : {
-                  "type" : "string"
-                },
-                "SubmittedFaxes" : {
-                  "type" : "array",
-                  "items" : {
-                    "$ref" : "#/definitions/SendFaxResponse"
-                  }
-                }
-              }
-            },
-            "Errors" : {
-              "type" : "array",
-              "items" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
       }
     } ]
   },
