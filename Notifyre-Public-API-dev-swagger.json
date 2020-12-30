@@ -1,415 +1,643 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "version": "2020-12-29T04:17:05Z",
-    "title": "Notifyre Public API",
-    "x-logo": {
-      "url": "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
-      "altText": "Notifyre logo"
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2020-12-29T04:21:19Z",
+    "title" : "Notifyre Public API",
+    "x-logo" : {
+      "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
+      "altText" : "Notifyre logo"
     }
   },
-  "host": "kj37fsnrm8.execute-api.ap-southeast-2.amazonaws.com",
-  "basePath": "/dev",
-  "tags": [
-    {
-      "name": "Fax Send",
-      "description": "Notifyre Fax Send"
-    },
-    {
-      "name": "Fax Received",
-      "description": "Notifyre Fax Received"
-    },
-    {
-      "name": "SMS",
-      "description": "Notifyre SMS"
-    }
-  ],
-  "x-tagGroups": [
-    {
-      "name": "Fax",
-      "tags": [
-        "Fax Send",
-        "Fax Received"
-      ]
-    },
-    {
-      "name": "SMS",
-      "tags": [
-        "SMS"
-      ]
-    }
-  ],
-  "schemes": [
-    "https"
-  ],
-  "paths": {
-    "/fax/received": {
-      "get": {
-        "tags": [
-          "Fax Received"
-        ],
-        "summary": "List received faxes",
-        "description": "Retrieve received faxes.",
-        "produces": [
-          "application/json"
-        ],
-        "x-codeSamples": [
-          {
-            "lang": "C#",
-            "source": "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
-          },
-          {
-            "lang": "JavaScript",
-            "source": "console.log('Hello World');"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+  "host" : "kj37fsnrm8.execute-api.ap-southeast-2.amazonaws.com",
+  "basePath" : "/dev",
+  "tags" : [ {
+    "name" : "Fax Send",
+    "description" : "Notifyre Fax Send"
+  }, {
+    "name" : "Fax Received",
+    "description" : "Notifyre Fax Received"
+  }, {
+    "name" : "SMS",
+    "description" : "Notifyre SMS"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/fax/received" : {
+      "get" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "List received faxes",
+        "description" : "Retrieve received faxes.",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/received/{id}": {
-      "get": {
-        "tags": [
-          "Fax Received"
-        ],
-        "summary": "Get received fax meta data",
-        "description": "Query specific received fax meta data by id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/received/{id}" : {
+      "get" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "Get received fax meta data",
+        "description" : "Query specific received fax meta data by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/received/{id}/download": {
-      "get": {
-        "tags": [
-          "Fax Received"
-        ],
-        "summary": "Download received fax by id",
-        "description": "Download specific received fax (TIFF) by id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/received/{id}/download" : {
+      "get" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "Download received fax by id",
+        "description" : "Download specific received fax (TIFF) by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/send": {
-      "get": {
-        "tags": [
-          "Fax Send"
-        ],
-        "summary": "List sent faxes",
-        "description": "Retrieve sent faxes.",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/send" : {
+      "get" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "List sent faxes",
+        "description" : "Retrieve sent faxes.",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       },
-      "post": {
-        "tags": [
-          "Fax Send"
-        ],
-        "summary": "Send fax",
-        "description": "Submit fax to be sent",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+      "post" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Send fax",
+        "description" : "Submit fax to be sent",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/send/{id}": {
-      "get": {
-        "tags": [
-          "Fax Send"
-        ],
-        "summary": "Get sent fax meta data",
-        "description": "Query specific sent fax meta data by id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/send/{id}" : {
+      "get" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Get sent fax meta data",
+        "description" : "Query specific sent fax meta data by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/send/{id}/download": {
-      "get": {
-        "tags": [
-          "Fax Send"
-        ],
-        "summary": "Download the sent fax",
-        "description": "Download specific sent fax (PDF) by id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/send/{id}/download" : {
+      "get" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Download the sent fax",
+        "description" : "Download specific sent fax (PDF) by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/fax/send/{id}/resend": {
-      "post": {
-        "tags": [
-          "Fax Send"
-        ],
-        "summary": "Resend fax",
-        "description": "Resend fax by id",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/fax/send/{id}/resend" : {
+      "post" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Resend fax",
+        "description" : "Resend fax by id",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/sms/send": {
-      "get": {
-        "tags": [
-          "SMS"
-        ],
-        "summary": "List sent SMS",
-        "description": "Retrieve sent SMS",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/sms/send" : {
+      "get" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "List sent SMS",
+        "description" : "Retrieve sent SMS",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       },
-      "post": {
-        "tags": [
-          "SMS"
-        ],
-        "summary": "Send SMS",
-        "description": "Submit SMS to be sent",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+      "post" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Send SMS",
+        "description" : "Submit SMS to be sent",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/sms/send/cost": {
-      "post": {
-        "tags": [
-          "SMS"
-        ],
-        "summary": "Calcaulate send SMS cost",
-        "description": "Calcaulate cost of the SMS to be sent",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/sms/send/cost" : {
+      "post" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Calcaulate send SMS cost",
+        "description" : "Calcaulate cost of the SMS to be sent",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     },
-    "/sms/send/{id}": {
-      "get": {
-        "tags": [
-          "SMS"
-        ],
-        "summary": "Get sent SMS by id",
-        "description": "Get sent SMS meta data",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "200 response",
-            "schema": {
-              "$ref": "#/definitions/Empty"
+    "/sms/send/{id}" : {
+      "get" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Get sent SMS by id",
+        "description" : "Get sent SMS meta data",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
             }
           }
         },
-        "security": [
-          {
-            "NotifyreAuth": []
-          }
-        ]
+        "security" : [ {
+          "NotifyreAuth" : [ ]
+        } ],
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
       }
     }
   },
-  "securityDefinitions": {
-    "NotifyreAuth": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header",
-      "x-amazon-apigateway-authtype": "custom"
+  "securityDefinitions" : {
+    "NotifyreAuth" : {
+      "type" : "apiKey",
+      "name" : "Authorization",
+      "in" : "header",
+      "x-amazon-apigateway-authtype" : "custom"
     }
   },
-  "definitions": {
-    "Empty": {
-      "type": "object",
-      "title": "Empty Schema"
+  "definitions" : {
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
     }
-  }
+  },
+  "x-amazon-apigateway-documentation" : {
+    "version" : "v1.1",
+    "createdDate" : "2020-12-29T22:26:32Z",
+    "documentationParts" : [ {
+      "location" : {
+        "type" : "API"
+      },
+      "properties" : {
+        "info" : {
+          "version" : "2020-12-29T04:17:05Z",
+          "title" : "Notifyre Public API",
+          "x-logo" : {
+            "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
+            "altText" : "Notifyre logo"
+          }
+        },
+        "tags" : [ {
+          "name" : "Fax Send",
+          "description" : "Notifyre Fax Send"
+        }, {
+          "name" : "Fax Received",
+          "description" : "Notifyre Fax Received"
+        }, {
+          "name" : "SMS",
+          "description" : "Notifyre SMS"
+        } ],
+        "x-tagGroups" : [ {
+          "name" : "Fax",
+          "tags" : [ "Fax Send", "Fax Received" ]
+        }, {
+          "name" : "SMS",
+          "tags" : [ "SMS" ]
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/received/{id}/download",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "Download received fax by id",
+        "description" : "Download specific received fax (TIFF) by id",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/received/{id}",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "Get received fax meta data",
+        "description" : "Query specific received fax meta data by id",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/received",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Received" ],
+        "summary" : "List received faxes",
+        "description" : "Retrieve received faxes.",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/send/{id}/download",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Download the sent fax",
+        "description" : "Download specific sent fax (PDF) by id",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/send/{id}/resend",
+        "method" : "POST"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Resend fax",
+        "description" : "Resend fax by id",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/send/{id}",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Get sent fax meta data",
+        "description" : "Query specific sent fax meta data by id",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/send",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "List sent faxes",
+        "description" : "Retrieve sent faxes.",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/fax/send",
+        "method" : "POST"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Send fax",
+        "description" : "Submit fax to be sent",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/sms/send/cost",
+        "method" : "POST"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Calcaulate send SMS cost",
+        "description" : "Calcaulate cost of the SMS to be sent",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/sms/send/{id}",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Get sent SMS by id",
+        "description" : "Get sent SMS meta data",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/sms/send",
+        "method" : "GET"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "List sent SMS",
+        "description" : "Retrieve sent SMS",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    }, {
+      "location" : {
+        "type" : "METHOD",
+        "path" : "/sms/send",
+        "method" : "POST"
+      },
+      "properties" : {
+        "tags" : [ "Fax Send" ],
+        "summary" : "Send SMS",
+        "description" : "Submit SMS to be sent",
+        "x-codeSamples" : [ {
+          "lang" : "C#",
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+        }, {
+          "lang" : "JavaScript",
+          "source" : "console.log('Hello World');"
+        } ]
+      }
+    } ]
+  },
+  "x-tagGroups" : [ {
+    "name" : "Fax",
+    "tags" : [ "Fax Send", "Fax Received" ]
+  }, {
+    "name" : "SMS",
+    "tags" : [ "SMS" ]
+  } ]
 }
