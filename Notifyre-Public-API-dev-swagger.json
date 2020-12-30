@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2020-12-30T04:22:35Z",
+    "version" : "2020-12-30T06:41:39Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -27,12 +27,27 @@
         "tags" : [ "Fax Received" ],
         "summary" : "List received faxes",
         "description" : "Retrieve received faxes.",
+        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ListReceivedFaxesRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ListReceivedFaxesRequest"
+          }
+        } ],
         "responses" : {
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/Empty"
+              "$ref" : "#/definitions/ListReceivedFaxesResponse"
+            }
+          },
+          "400" : {
+            "description" : "400 response",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
             }
           }
         },
@@ -96,7 +111,7 @@
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/Empty"
+              "$ref" : "#/definitions/DownloadReceivedFaxResponse"
             }
           }
         },
@@ -117,12 +132,27 @@
         "tags" : [ "Fax Send" ],
         "summary" : "List sent faxes",
         "description" : "Retrieve sent faxes.",
+        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ListSentFaxesRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ListSentFaxesRequest"
+          }
+        } ],
         "responses" : {
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/Empty"
+              "$ref" : "#/definitions/ListSentFaxesResponse"
+            }
+          },
+          "400" : {
+            "description" : "400 response",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
             }
           }
         },
@@ -141,12 +171,27 @@
         "tags" : [ "Fax Send" ],
         "summary" : "Send fax",
         "description" : "Submit fax to be sent",
+        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "SendFaxRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SendFaxRequest"
+          }
+        } ],
         "responses" : {
           "200" : {
             "description" : "200 response",
             "schema" : {
               "$ref" : "#/definitions/SendFaxResponse"
+            }
+          },
+          "400" : {
+            "description" : "400 response",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
             }
           }
         },
@@ -201,6 +246,11 @@
         "description" : "Download specific sent fax (PDF) by id",
         "produces" : [ "application/json" ],
         "parameters" : [ {
+          "name" : "FileType",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "id",
           "in" : "path",
           "required" : true,
@@ -210,7 +260,13 @@
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/Empty"
+              "$ref" : "#/definitions/DownloadSentFaxResponse"
+            }
+          },
+          "400" : {
+            "description" : "400 response",
+            "schema" : {
+              "$ref" : "#/definitions/Error"
             }
           }
         },
@@ -376,6 +432,353 @@
     }
   },
   "definitions" : {
+    "ListSentFaxesResponsePayloadFaxesItemHeaders" : {
+      "type" : "object",
+      "properties" : {
+        "Date" : {
+          "type" : "boolean"
+        },
+        "PageNumbers" : {
+          "type" : "boolean"
+        },
+        "Text" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DownloadSentFaxResponse" : {
+      "type" : "object",
+      "properties" : {
+        "Success" : {
+          "type" : "boolean"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Payload" : {
+          "type" : "object",
+          "properties" : {
+            "data" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/DownloadSentFaxResponsePayloadDataItem"
+              }
+            }
+          }
+        },
+        "Errors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      },
+      "title" : "DownloadFaxResponse"
+    },
+    "ListReceivedFaxesRequest" : {
+      "type" : "object",
+      "properties" : {
+        "Limit" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "title" : "ListReceivedFaxesRequest"
+    },
+    "ListSentFaxesResponsePayloadFaxesItemRecipientsItemProvider" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "Result" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DownloadSentFaxResponsePayloadDataItem" : {
+      "type" : "object",
+      "properties" : {
+        "Base64Str" : {
+          "type" : "string",
+          "description" : " Fax data - base64 string"
+        }
+      }
+    },
+    "ListReceivedFaxesResponse" : {
+      "type" : "object",
+      "properties" : {
+        "Success" : {
+          "type" : "boolean"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Payload" : {
+          "type" : "object",
+          "properties" : {
+            "data" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/ListReceivedFaxesResponsePayloadDataItem"
+              }
+            }
+          }
+        },
+        "Errors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      },
+      "title" : "ListReceivedFaxesResponse"
+    },
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    },
+    "SendFaxRequestFaxesItem" : {
+      "type" : "object",
+      "properties" : {
+        "SendToNumbers" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "SendFrom" : {
+          "type" : "string"
+        },
+        "IsHighQuality" : {
+          "type" : "boolean"
+        },
+        "ClientReference" : {
+          "type" : "string"
+        },
+        "Retries" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Subject" : {
+          "type" : "string"
+        },
+        "Documents" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SendFaxRequestFaxesItemDocumentsItem"
+          }
+        },
+        "Header" : {
+          "type" : "string"
+        },
+        "Csid" : {
+          "type" : "string"
+        },
+        "CallbackUrl" : {
+          "type" : "string"
+        }
+      }
+    },
+    "SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem" : {
+      "type" : "object",
+      "properties" : {
+        "Filename" : {
+          "type" : "string"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Submitted" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "ListSentFaxesRequest" : {
+      "type" : "object",
+      "properties" : {
+        "StatusType" : {
+          "type" : "string",
+          "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
+        },
+        "FromDate" : {
+          "type" : "string"
+        },
+        "ToDate" : {
+          "type" : "string"
+        },
+        "Sort" : {
+          "type" : "string",
+          "enum" : [ "asc", "desc" ]
+        },
+        "Limit" : {
+          "type" : "integer",
+          "format" : "int32",
+          "minimum" : 1.0
+        }
+      },
+      "title" : "ListSentFaxesRequest"
+    },
+    "ListSentFaxesResponsePayloadFaxesItemDocumentsItem" : {
+      "type" : "object",
+      "properties" : {
+        "Key" : {
+          "type" : "string"
+        },
+        "FileName" : {
+          "type" : "string"
+        },
+        "ContentType" : {
+          "type" : "string"
+        },
+        "Pages" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "ListReceivedFaxesResponsePayloadDataItem" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string"
+        },
+        "From" : {
+          "type" : "string"
+        },
+        "To" : {
+          "type" : "string"
+        },
+        "Timestamp" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "Pages" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "DownloadReceivedFaxResponsePayloadDataItem" : {
+      "type" : "object",
+      "properties" : {
+        "TiffBase64" : {
+          "type" : "string",
+          "description" : " Fax tiff data - base64 string"
+        }
+      }
+    },
+    "ListSentFaxesResponsePayloadFaxesItemSettings" : {
+      "type" : "object",
+      "properties" : {
+        "HighQuality" : {
+          "type" : "boolean"
+        },
+        "DNCR" : {
+          "type" : "boolean"
+        },
+        "DataSov" : {
+          "type" : "boolean"
+        },
+        "AutoDelete" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "ListSentFaxesResponsePayloadFaxesItemRecipientsItem" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string",
+          "format" : "uuid"
+        },
+        "JobID" : {
+          "type" : "string"
+        },
+        "ToNumber" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "PagesSent" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "TransactionWalletType" : {
+          "type" : "string"
+        },
+        "Error" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItemError"
+        },
+        "TransmissionStart" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "TransmissionEnd" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "Provider" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItemProvider"
+        }
+      }
+    },
+    "SendFaxRequestFaxesItemDocumentsItem" : {
+      "type" : "object",
+      "properties" : {
+        "Filename" : {
+          "type" : "string"
+        },
+        "Data" : {
+          "type" : "string",
+          "description" : "File data - base64 string"
+        }
+      }
+    },
+    "SendFaxResponsePayloadSubmittedFaxesItem" : {
+      "type" : "object",
+      "properties" : {
+        "Documents" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem"
+          }
+        },
+        "Success" : {
+          "type" : "boolean"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "JobID" : {
+          "type" : "string"
+        },
+        "ToNumber" : {
+          "type" : "string"
+        },
+        "ValidationErrors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
     "SendFaxResponse" : {
       "type" : "object",
       "properties" : {
@@ -412,57 +815,176 @@
       },
       "title" : "SendFaxResponse"
     },
-    "Empty" : {
-      "type" : "object",
-      "title" : "Empty Schema"
-    },
-    "SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem" : {
+    "ListSentFaxesResponse" : {
       "type" : "object",
       "properties" : {
-        "Filename" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Submitted" : {
-          "type" : "boolean"
-        }
-      }
-    },
-    "SendFaxResponsePayloadSubmittedFaxesItem" : {
-      "type" : "object",
-      "properties" : {
-        "Documents" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem"
-          }
-        },
         "Success" : {
           "type" : "boolean"
         },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "Message" : {
           "type" : "string"
         },
-        "JobID" : {
-          "type" : "string"
+        "Payload" : {
+          "type" : "object",
+          "properties" : {
+            "Faxes" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItem"
+              }
+            }
+          }
         },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "ValidationErrors" : {
+        "Errors" : {
           "type" : "array",
           "items" : {
             "type" : "string"
           }
         }
+      },
+      "title" : "ListSentFaxesResponse"
+    },
+    "SendFaxRequest" : {
+      "type" : "object",
+      "properties" : {
+        "Faxes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SendFaxRequestFaxesItem"
+          }
+        },
+        "TemplateId" : {
+          "type" : "string"
+        }
+      },
+      "title" : "SendFaxRequest"
+    },
+    "ListSentFaxesResponsePayloadFaxesItemRecipientsItemError" : {
+      "type" : "object",
+      "properties" : {
+        "Code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        }
       }
+    },
+    "Error" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "title" : "Error Schema"
+    },
+    "ListSentFaxesResponsePayloadFaxesItemCreatedBy" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ListSentFaxesResponsePayloadFaxesItem" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string",
+          "format" : "uuid"
+        },
+        "CreatedBy" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemCreatedBy"
+        },
+        "CreatedDateUtc" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "UpdatedBy" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemCreatedBy"
+        },
+        "LastModifiedDateUtc" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "FromNumber" : {
+          "type" : "string"
+        },
+        "Subject" : {
+          "type" : "string"
+        },
+        "Reference" : {
+          "type" : "string"
+        },
+        "Source" : {
+          "type" : "string"
+        },
+        "Settings" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemSettings"
+        },
+        "Headers" : {
+          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemHeaders"
+        },
+        "Documents" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemDocumentsItem"
+          }
+        },
+        "Recipients" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItem"
+          }
+        },
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DownloadReceivedFaxResponse" : {
+      "type" : "object",
+      "properties" : {
+        "Success" : {
+          "type" : "boolean"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Payload" : {
+          "type" : "object",
+          "properties" : {
+            "data" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/DownloadReceivedFaxResponsePayloadDataItem"
+              }
+            }
+          }
+        },
+        "Errors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      },
+      "title" : "DownloadReceivedFaxResponse"
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.7",
-    "createdDate" : "2020-12-30T04:23:36Z",
+    "version" : "v1.8",
+    "createdDate" : "2020-12-30T06:43:04Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -709,6 +1231,17 @@
           "lang" : "JavaScript",
           "source" : "console.log('Hello World');"
         } ]
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/fax/send/{id}/download",
+        "method" : "GET",
+        "name" : "FileType"
+      },
+      "properties" : {
+        "type" : "string",
+        "enum" : [ "pdf", "tiff" ]
       }
     } ]
   },
