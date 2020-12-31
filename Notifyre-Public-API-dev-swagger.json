@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2020-12-31T02:08:33Z",
+    "version" : "2020-12-31T03:06:29Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -859,60 +859,36 @@
       },
       "title" : "ListReceivedFaxesResponse"
     },
-    "ListSentSmsResponsePayloadFaxesItem" : {
+    "ListSentSmsResponsePayloadSmsMessagesItemRecipientsItem" : {
       "type" : "object",
       "properties" : {
         "ID" : {
           "type" : "string",
           "format" : "uuid"
         },
-        "UserID" : {
+        "ToNumber" : {
           "type" : "string"
         },
-        "Recipients" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/ListSentSmsResponsePayloadFaxesItemRecipientsItem"
-          }
+        "Cost" : {
+          "type" : "number",
+          "format" : "double"
         },
-        "FromNumber" : {
-          "type" : "string"
+        "MessageParts" : {
+          "type" : "integer",
+          "format" : "int32"
         },
-        "ReplyToNumber" : {
-          "type" : "string"
-        },
-        "ReplyToEmail" : {
-          "type" : "string"
-        },
-        "SenderName" : {
-          "type" : "string"
-        },
-        "SenderEmail" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
+        "CostPerPart" : {
+          "type" : "number",
+          "format" : "double"
         },
         "Status" : {
           "type" : "string"
         },
-        "TotalCost" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "ExternalJobID" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "CreatedDateUtc" : {
+        "QueuedDateUtc" : {
           "type" : "string",
           "format" : "date-time"
         },
         "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "LastModifiedDateUtc" : {
           "type" : "string",
           "format" : "date-time"
         }
@@ -1087,10 +1063,10 @@
         "Payload" : {
           "type" : "object",
           "properties" : {
-            "Faxes" : {
+            "SmsMessages" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/ListSentSmsResponsePayloadFaxesItem"
+                "$ref" : "#/definitions/ListSentSmsResponsePayloadSmsMessagesItem"
               }
             }
           }
@@ -1154,41 +1130,6 @@
         },
         "AutoDelete" : {
           "type" : "boolean"
-        }
-      }
-    },
-    "ListSentSmsResponsePayloadFaxesItemRecipientsItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "Cost" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "MessageParts" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "CostPerPart" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "QueuedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
         }
       }
     },
@@ -1376,6 +1317,65 @@
         },
         "Message" : {
           "type" : "string"
+        }
+      }
+    },
+    "ListSentSmsResponsePayloadSmsMessagesItem" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string",
+          "format" : "uuid"
+        },
+        "UserID" : {
+          "type" : "string"
+        },
+        "Recipients" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/ListSentSmsResponsePayloadSmsMessagesItemRecipientsItem"
+          }
+        },
+        "FromNumber" : {
+          "type" : "string"
+        },
+        "ReplyToNumber" : {
+          "type" : "string"
+        },
+        "ReplyToEmail" : {
+          "type" : "string"
+        },
+        "SenderName" : {
+          "type" : "string"
+        },
+        "SenderEmail" : {
+          "type" : "string"
+        },
+        "Message" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "TotalCost" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ExternalJobID" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "CreatedDateUtc" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "CompletedDateUtc" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "LastModifiedDateUtc" : {
+          "type" : "string",
+          "format" : "date-time"
         }
       }
     },
@@ -1642,8 +1642,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.1",
-    "createdDate" : "2020-12-31T02:11:17Z",
+    "version" : "v1.9.3",
+    "createdDate" : "2020-12-31T03:07:16Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
