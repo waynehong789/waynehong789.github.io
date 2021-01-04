@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2021-01-04T03:00:04Z",
+    "version" : "2021-01-04T04:54:01Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -308,10 +308,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -1353,8 +1353,21 @@
     "Error" : {
       "type" : "object",
       "properties" : {
-        "message" : {
+        "Success" : {
+          "type" : "boolean"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "Message" : {
           "type" : "string"
+        },
+        "Errors" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
         }
       },
       "title" : "Error Schema"
@@ -1613,8 +1626,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.5",
-    "createdDate" : "2021-01-04T03:00:30Z",
+    "version" : "v1.9.6",
+    "createdDate" : "2021-01-04T04:54:15Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -1784,10 +1797,10 @@
         "description" : "Submit fax to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
