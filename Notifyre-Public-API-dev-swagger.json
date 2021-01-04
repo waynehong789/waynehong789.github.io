@@ -275,8 +275,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.10",
-    "createdDate" : "2021-01-04T22:32:52Z",
+    "version" : "v1.9",
+    "createdDate" : "2020-12-30T23:36:16Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -320,10 +320,10 @@
         "description" : "Download specific received fax (TIFF) by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received/' + faxId + '/download';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received/${faxId}/download`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -338,10 +338,10 @@
         "description" : "Query specific received fax meta data by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received/' + faxId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received/${faxId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -353,13 +353,13 @@
       "properties" : {
         "tags" : [ "Fax Received" ],
         "summary" : "List received faxes",
-        "description" : "Retrieve received faxes. \n('Limit' >= 1)",
+        "description" : "Retrieve received faxes.",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -374,10 +374,10 @@
         "description" : "Download specific sent fax (PDF) by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/download';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/download`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -392,10 +392,10 @@
         "description" : "Resend fax by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -410,10 +410,10 @@
         "description" : "Query specific sent fax meta data by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -425,13 +425,13 @@
       "properties" : {
         "tags" : [ "Fax Send" ],
         "summary" : "List sent faxes",
-        "description" : "Retrieve sent faxes. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
+        "description" : "Retrieve sent faxes.",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -446,10 +446,10 @@
         "description" : "Submit fax to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -464,10 +464,10 @@
         "description" : "Calcaulate cost of the SMS to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -482,10 +482,10 @@
         "description" : "Get sent SMS meta data",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/' + smsId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/${smsId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -497,13 +497,13 @@
       "properties" : {
         "tags" : [ "SMS" ],
         "summary" : "List sent SMS",
-        "description" : "Retrieve sent SMS. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
+        "description" : "Retrieve sent SMS",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -518,10 +518,10 @@
         "description" : "Submit SMS to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "console.log('Hello World');"
         } ]
       }
     }, {
@@ -534,74 +534,6 @@
       "properties" : {
         "type" : "string",
         "enum" : [ "pdf", "tiff" ]
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/fax/send",
-        "method" : "GET",
-        "name" : "Limit"
-      },
-      "properties" : {
-        "type" : "integer",
-        "format" : "int32",
-        "minimum" : 1
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/sms/send",
-        "method" : "GET",
-        "name" : "Limit"
-      },
-      "properties" : {
-        "type" : "integer",
-        "format" : "int32",
-        "minimum" : 1
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/fax/send",
-        "method" : "GET",
-        "name" : "Sort"
-      },
-      "properties" : {
-        "type" : "string",
-        "enum" : [ "asc", "desc" ]
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/sms/send",
-        "method" : "GET",
-        "name" : "Sort"
-      },
-      "properties" : {
-        "type" : "string",
-        "enum" : [ "asc", "desc" ]
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/fax/send",
-        "method" : "GET",
-        "name" : "StatusType"
-      },
-      "properties" : {
-        "type" : "string",
-        "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
-      }
-    }, {
-      "location" : {
-        "type" : "QUERY_PARAMETER",
-        "path" : "/sms/send",
-        "method" : "GET",
-        "name" : "StatusType"
-      },
-      "properties" : {
-        "type" : "string",
-        "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
       }
     } ]
   },
