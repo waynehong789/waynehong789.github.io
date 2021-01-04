@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2020-12-08T05:02:49Z",
+    "version" : "2020-12-08T05:24:08Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -61,7 +61,6 @@
     },
     "/fax/gofax" : {
       "post" : {
-        "consumes" : [ "application/x-www-form-urlencoded" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "userName",
@@ -276,8 +275,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.11",
-    "createdDate" : "2021-01-04T22:41:09Z",
+    "version" : "v1.9.10",
+    "createdDate" : "2021-01-04T22:32:52Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -432,7 +431,7 @@
           "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -504,7 +503,7 @@
           "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
