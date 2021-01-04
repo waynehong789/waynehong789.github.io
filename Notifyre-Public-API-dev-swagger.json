@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2021-01-04T05:19:58Z",
+    "version" : "2021-01-04T05:27:53Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -320,10 +320,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -523,10 +523,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -653,10 +653,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar newSms = new SMS()\nvar messageBody = JsonConvert.SerializeObject(newSms); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new SMS() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -713,10 +713,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar newSms = new SMS()\nvar messageBody = JsonConvert.SerializeObject(newSms); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new SMS() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -1670,8 +1670,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.8",
-    "createdDate" : "2021-01-04T05:20:13Z",
+    "version" : "v1.9.9",
+    "createdDate" : "2021-01-04T05:28:20Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -1787,10 +1787,10 @@
         "description" : "Resend fax by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1841,10 +1841,10 @@
         "description" : "Submit fax to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar newFax = new Fax()\nvar messageBody = JsonConvert.SerializeObject(newFax); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Fax() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1859,10 +1859,10 @@
         "description" : "Calcaulate cost of the SMS to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar newSms = new SMS()\nvar messageBody = JsonConvert.SerializeObject(newSms); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new SMS() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1913,10 +1913,10 @@
         "description" : "Submit SMS to be sent",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar newSms = new SMS()\nvar messageBody = JsonConvert.SerializeObject(newSms); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new SMS() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
