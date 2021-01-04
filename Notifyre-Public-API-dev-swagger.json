@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2020-12-31T03:06:29Z",
+    "version" : "2021-01-04T01:24:38Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -26,16 +26,13 @@
       "get" : {
         "tags" : [ "Fax Received" ],
         "summary" : "List received faxes",
-        "description" : "Retrieve received faxes.",
-        "consumes" : [ "application/json" ],
+        "description" : "Retrieve received faxes. \n('Limit' >= 1)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "in" : "body",
-          "name" : "ListReceivedFaxesRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/ListReceivedFaxesRequest"
-          }
+          "name" : "Limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -181,10 +178,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url);\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "console.log('Hello World');"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "options" : {
@@ -215,16 +212,33 @@
       "get" : {
         "tags" : [ "Fax Send" ],
         "summary" : "List sent faxes",
-        "description" : "Retrieve sent faxes.",
-        "consumes" : [ "application/json" ],
+        "description" : "Retrieve sent faxes. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "in" : "body",
-          "name" : "ListSentFaxesRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/ListSentFaxesRequest"
-          }
+          "name" : "Sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "StatusType",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "Limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "ToDate",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "FromDate",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -250,10 +264,10 @@
         } ],
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url);\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "console.log('Hello World');"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       },
       "post" : {
@@ -519,16 +533,33 @@
       "get" : {
         "tags" : [ "SMS" ],
         "summary" : "List sent SMS",
-        "description" : "Retrieve sent SMS",
-        "consumes" : [ "application/json" ],
+        "description" : "Retrieve sent SMS. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "in" : "body",
-          "name" : "ListSentSmsRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/ListSentSmsRequest"
-          }
+          "name" : "Sort",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "StatusType",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "Limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "ToDate",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "FromDate",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -793,16 +824,6 @@
       },
       "title" : "DownloadFaxResponse"
     },
-    "ListReceivedFaxesRequest" : {
-      "type" : "object",
-      "properties" : {
-        "Limit" : {
-          "type" : "integer",
-          "format" : "int32"
-        }
-      },
-      "title" : "ListReceivedFaxesRequest"
-    },
     "ListSentFaxesResponsePayloadFaxesItemRecipientsItemProvider" : {
       "type" : "object",
       "properties" : {
@@ -894,6 +915,10 @@
         }
       }
     },
+    "Empty" : {
+      "type" : "object",
+      "title" : "Empty Schema"
+    },
     "SendFaxRequestFaxesItem" : {
       "type" : "object",
       "properties" : {
@@ -936,35 +961,6 @@
         }
       }
     },
-    "Empty" : {
-      "type" : "object",
-      "title" : "Empty Schema"
-    },
-    "ListSentSmsRequest" : {
-      "type" : "object",
-      "properties" : {
-        "StatusType" : {
-          "type" : "string",
-          "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
-        },
-        "FromDate" : {
-          "type" : "string"
-        },
-        "ToDate" : {
-          "type" : "string"
-        },
-        "Sort" : {
-          "type" : "string",
-          "enum" : [ "asc", "desc" ]
-        },
-        "Limit" : {
-          "type" : "integer",
-          "format" : "int32",
-          "minimum" : 1.0
-        }
-      },
-      "title" : "ListSentSmsRequest"
-    },
     "SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem" : {
       "type" : "object",
       "properties" : {
@@ -979,31 +975,6 @@
         }
       }
     },
-    "ListSentFaxesRequest" : {
-      "type" : "object",
-      "properties" : {
-        "StatusType" : {
-          "type" : "string",
-          "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
-        },
-        "FromDate" : {
-          "type" : "string"
-        },
-        "ToDate" : {
-          "type" : "string"
-        },
-        "Sort" : {
-          "type" : "string",
-          "enum" : [ "asc", "desc" ]
-        },
-        "Limit" : {
-          "type" : "integer",
-          "format" : "int32",
-          "minimum" : 1.0
-        }
-      },
-      "title" : "ListSentFaxesRequest"
-    },
     "ListSentFaxesResponsePayloadFaxesItemDocumentsItem" : {
       "type" : "object",
       "properties" : {
@@ -1014,31 +985,6 @@
           "type" : "string"
         },
         "ContentType" : {
-          "type" : "string"
-        },
-        "Pages" : {
-          "type" : "integer",
-          "format" : "int32"
-        }
-      }
-    },
-    "ListReceivedFaxesResponsePayloadDataItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string"
-        },
-        "From" : {
-          "type" : "string"
-        },
-        "To" : {
-          "type" : "string"
-        },
-        "Timestamp" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "Status" : {
           "type" : "string"
         },
         "Pages" : {
@@ -1106,6 +1052,31 @@
         }
       },
       "title" : "SendFaxRequest"
+    },
+    "ListReceivedFaxesResponsePayloadDataItem" : {
+      "type" : "object",
+      "properties" : {
+        "ID" : {
+          "type" : "string"
+        },
+        "From" : {
+          "type" : "string"
+        },
+        "To" : {
+          "type" : "string"
+        },
+        "Timestamp" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "Pages" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
     },
     "DownloadReceivedFaxResponsePayloadDataItem" : {
       "type" : "object",
@@ -1642,8 +1613,8 @@
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.3",
-    "createdDate" : "2020-12-31T03:07:16Z",
+    "version" : "v1.9.4",
+    "createdDate" : "2021-01-04T01:25:06Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -1687,10 +1658,10 @@
         "description" : "Download specific received fax (TIFF) by id",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url);\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "console.log('Hello World');"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1720,7 +1691,7 @@
       "properties" : {
         "tags" : [ "Fax Received" ],
         "summary" : "List received faxes",
-        "description" : "Retrieve received faxes.",
+        "description" : "Retrieve received faxes. \n('Limit' >= 1)",
         "x-codeSamples" : [ {
           "lang" : "C#",
           "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
@@ -1792,13 +1763,13 @@
       "properties" : {
         "tags" : [ "Fax Send" ],
         "summary" : "List sent faxes",
-        "description" : "Retrieve sent faxes.",
+        "description" : "Retrieve sent faxes. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
         "x-codeSamples" : [ {
           "lang" : "C#",
-          "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
+          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url);\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "console.log('Hello World');"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1864,7 +1835,7 @@
       "properties" : {
         "tags" : [ "SMS" ],
         "summary" : "List sent SMS",
-        "description" : "Retrieve sent SMS",
+        "description" : "Retrieve sent SMS. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
         "x-codeSamples" : [ {
           "lang" : "C#",
           "source" : "PetStore.v1.Pet pet = new PetStore.v1.Pet();\npet.setApiKey('your api key');\npet.petType = PetStore.v1.Pet.TYPE_DOG;\npet.name = 'Rex';\n// set other fields\nPetStoreResponse response = pet.create();\nif (response.statusCode == HttpStatusCode.Created)\n{\n// Successfully created\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.getRawResponse());\n}"
@@ -1901,6 +1872,74 @@
       "properties" : {
         "type" : "string",
         "enum" : [ "pdf", "tiff" ]
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/fax/send",
+        "method" : "GET",
+        "name" : "Limit"
+      },
+      "properties" : {
+        "type" : "integer",
+        "format" : "int32",
+        "minimum" : 1
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/sms/send",
+        "method" : "GET",
+        "name" : "Limit"
+      },
+      "properties" : {
+        "type" : "integer",
+        "format" : "int32",
+        "minimum" : 1
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/fax/send",
+        "method" : "GET",
+        "name" : "Sort"
+      },
+      "properties" : {
+        "type" : "string",
+        "enum" : [ "asc", "desc" ]
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/sms/send",
+        "method" : "GET",
+        "name" : "Sort"
+      },
+      "properties" : {
+        "type" : "string",
+        "enum" : [ "asc", "desc" ]
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/fax/send",
+        "method" : "GET",
+        "name" : "StatusType"
+      },
+      "properties" : {
+        "type" : "string",
+        "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
+      }
+    }, {
+      "location" : {
+        "type" : "QUERY_PARAMETER",
+        "path" : "/sms/send",
+        "method" : "GET",
+        "name" : "StatusType"
+      },
+      "properties" : {
+        "type" : "string",
+        "enum" : [ "draft", "incomplete", "insufficient_credits", "queued", "complete" ]
       }
     } ]
   },
