@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2021-01-04T05:27:53Z",
+    "version" : "2020-12-08T05:02:49Z",
     "title" : "Notifyre Public API",
     "x-logo" : {
       "url" : "https://www.notifyre.com/wp-content/uploads/2019/10/notifyre-dark-logo-2x.png",
@@ -22,48 +22,7 @@
   } ],
   "schemes" : [ "https" ],
   "paths" : {
-    "/fax/received" : {
-      "get" : {
-        "tags" : [ "Fax Received" ],
-        "summary" : "List received faxes",
-        "description" : "Retrieve received faxes. \n('Limit' >= 1)",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "Limit",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/ListReceivedFaxesResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
+    "/fax" : {
       "options" : {
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -86,51 +45,8 @@
             }
           }
         }
-      }
-    },
-    "/fax/received/{id}" : {
-      "get" : {
-        "tags" : [ "Fax Received" ],
-        "summary" : "Get received fax meta data",
-        "description" : "Query specific received fax meta data by id",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received/' + faxId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received/${faxId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
       },
-      "options" : {
+      "x-amazon-apigateway-any-method" : {
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "responses" : {
@@ -138,298 +54,23 @@
             "description" : "200 response",
             "schema" : {
               "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
             }
           }
         }
       }
     },
-    "/fax/received/{id}/download" : {
-      "get" : {
-        "tags" : [ "Fax Received" ],
-        "summary" : "Download received fax by id",
-        "description" : "Download specific received fax (TIFF) by id",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/DownloadReceivedFaxResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/received/' + faxId + '/download';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/received/${faxId}/download`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/fax/send" : {
-      "get" : {
-        "tags" : [ "Fax Send" ],
-        "summary" : "List sent faxes",
-        "description" : "Retrieve sent faxes. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "Sort",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "StatusType",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "Limit",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "ToDate",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "FromDate",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/ListSentFaxesResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
+    "/fax/gofax" : {
       "post" : {
-        "tags" : [ "Fax Send" ],
-        "summary" : "Send fax",
-        "description" : "Submit fax to be sent",
-        "consumes" : [ "application/json" ],
+        "consumes" : [ "application/x-www-form-urlencoded" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "in" : "body",
-          "name" : "SendFaxRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/SendFaxRequest"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/SendFaxResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/fax/send/{id}" : {
-      "get" : {
-        "tags" : [ "Fax Send" ],
-        "summary" : "Get sent fax meta data",
-        "description" : "Query specific sent fax meta data by id",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/fax/send/{id}/download" : {
-      "get" : {
-        "tags" : [ "Fax Send" ],
-        "summary" : "Download the sent fax",
-        "description" : "Download specific sent fax (PDF) by id",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "FileType",
+          "name" : "userName",
           "in" : "query",
-          "required" : false,
+          "required" : true,
           "type" : "string"
         }, {
-          "name" : "id",
-          "in" : "path",
+          "name" : "password",
+          "in" : "query",
           "required" : true,
           "type" : "string"
         } ],
@@ -437,32 +78,13 @@
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/DownloadSentFaxResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
+              "$ref" : "#/definitions/Empty"
             }
           }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey',apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/download';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/download`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
+        }
+      }
+    },
+    "/fax/{proxy+}" : {
       "options" : {
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -485,179 +107,142 @@
             }
           }
         }
+      },
+      "x-amazon-apigateway-any-method" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "proxy",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : { }
       }
     },
-    "/fax/send/{id}/resend" : {
+    "/sms" : {
       "post" : {
-        "tags" : [ "Fax Send" ],
-        "summary" : "Resend fax",
-        "description" : "Resend fax by id",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        }
+      },
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            },
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "x-amazon-apigateway-any-method" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/sms/gofax" : {
+      "post" : {
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "id",
+          "name" : "userName",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "password",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            }
+          }
+        }
+      }
+    },
+    "/sms/{proxy+}" : {
+      "options" : {
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "schema" : {
+              "$ref" : "#/definitions/Empty"
+            },
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Methods" : {
+                "type" : "string"
+              },
+              "Access-Control-Allow-Headers" : {
+                "type" : "string"
+              }
+            }
+          }
+        }
+      },
+      "x-amazon-apigateway-any-method" : {
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "proxy",
           "in" : "path",
           "required" : true,
           "type" : "string"
         } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send/' + faxId + '/resend';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send/${faxId}/resend` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
+        "responses" : { }
       }
     },
-    "/sms/send" : {
-      "get" : {
-        "tags" : [ "SMS" ],
-        "summary" : "List sent SMS",
-        "description" : "Retrieve sent SMS. \n('StatusType'-'draft' / 'incomplete' / 'insufficient_credits' / 'queued' / 'complete') \n('Sort'-'asc'/'desc') \n('Limit' >= 1)",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "Sort",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "StatusType",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "Limit",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "ToDate",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "FromDate",
-          "in" : "query",
-          "required" : false,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/ListSentSmsResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
+    "/ws" : {
       "post" : {
-        "tags" : [ "SMS" ],
-        "summary" : "Send SMS",
-        "description" : "Submit SMS to be sent",
-        "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "SendSmsRequest",
-          "required" : true,
-          "schema" : {
-            "$ref" : "#/definitions/SendSmsRequest"
-          }
-        } ],
         "responses" : {
           "200" : {
             "description" : "200 response",
             "schema" : {
-              "$ref" : "#/definitions/SendSmsResponse"
+              "$ref" : "#/definitions/Empty"
             },
             "headers" : {
               "Access-Control-Allow-Origin" : {
                 "type" : "string"
               }
             }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
           }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
+        }
       },
       "options" : {
         "consumes" : [ "application/json" ],
@@ -682,996 +267,17 @@
           }
         }
       }
-    },
-    "/sms/send/cost" : {
-      "post" : {
-        "tags" : [ "SMS" ],
-        "summary" : "Calcaulate send SMS cost",
-        "description" : "Calcaulate cost of the SMS to be sent",
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/cost';\nvar payload = new Payload()\nvar messageBody = JsonConvert.SerializeObject(payload); \nvar httpContent = new StringContent(messageBody, Encoding.UTF8, 'application/json');\nvar response = await _httpClient.PostAsync(url, httpContent); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/cost` \nconst payload = new Payload() \nconst response = await httpClient.post(url, payload, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/sms/send/{id}" : {
-      "get" : {
-        "tags" : [ "SMS" ],
-        "summary" : "Get sent SMS by id",
-        "description" : "Get sent SMS meta data",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/GetSmsByIdResponse"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              }
-            }
-          },
-          "400" : {
-            "description" : "400 response",
-            "schema" : {
-              "$ref" : "#/definitions/Error"
-            }
-          }
-        },
-        "security" : [ {
-          "NotifyreAuth" : [ ]
-        } ],
-        "x-codeSamples" : [ {
-          "lang" : "C#",
-          "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send/' + smsId;\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
-        }, {
-          "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send/${smsId}`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
-        } ]
-      },
-      "options" : {
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "200 response",
-            "schema" : {
-              "$ref" : "#/definitions/Empty"
-            },
-            "headers" : {
-              "Access-Control-Allow-Origin" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Methods" : {
-                "type" : "string"
-              },
-              "Access-Control-Allow-Headers" : {
-                "type" : "string"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "securityDefinitions" : {
-    "NotifyreAuth" : {
-      "type" : "apiKey",
-      "name" : "Authorization",
-      "in" : "header",
-      "x-amazon-apigateway-authtype" : "custom"
     }
   },
   "definitions" : {
-    "ListSentFaxesResponsePayloadFaxesItemHeaders" : {
-      "type" : "object",
-      "properties" : {
-        "Date" : {
-          "type" : "boolean"
-        },
-        "PageNumbers" : {
-          "type" : "boolean"
-        },
-        "Text" : {
-          "type" : "string"
-        }
-      }
-    },
-    "DownloadSentFaxResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "data" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/DownloadSentFaxResponsePayloadDataItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "DownloadFaxResponse"
-    },
-    "ListSentFaxesResponsePayloadFaxesItemRecipientsItemProvider" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "Result" : {
-          "type" : "string"
-        }
-      }
-    },
-    "DownloadSentFaxResponsePayloadDataItem" : {
-      "type" : "object",
-      "properties" : {
-        "Base64Str" : {
-          "type" : "string",
-          "description" : " Fax data - base64 string"
-        }
-      }
-    },
-    "ListReceivedFaxesResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "data" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/ListReceivedFaxesResponsePayloadDataItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "ListReceivedFaxesResponse"
-    },
-    "ListSentSmsResponsePayloadSmsMessagesItemRecipientsItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "Cost" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "MessageParts" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "CostPerPart" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "QueuedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        }
-      }
-    },
     "Empty" : {
       "type" : "object",
       "title" : "Empty Schema"
-    },
-    "SendFaxRequestFaxesItem" : {
-      "type" : "object",
-      "properties" : {
-        "SendToNumbers" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "SendFrom" : {
-          "type" : "string"
-        },
-        "IsHighQuality" : {
-          "type" : "boolean"
-        },
-        "ClientReference" : {
-          "type" : "string"
-        },
-        "Retries" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Subject" : {
-          "type" : "string"
-        },
-        "Documents" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/SendFaxRequestFaxesItemDocumentsItem"
-          }
-        },
-        "Header" : {
-          "type" : "string"
-        },
-        "Csid" : {
-          "type" : "string"
-        },
-        "CallbackUrl" : {
-          "type" : "string"
-        }
-      }
-    },
-    "SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem" : {
-      "type" : "object",
-      "properties" : {
-        "Filename" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Submitted" : {
-          "type" : "boolean"
-        }
-      }
-    },
-    "ListSentFaxesResponsePayloadFaxesItemDocumentsItem" : {
-      "type" : "object",
-      "properties" : {
-        "Key" : {
-          "type" : "string"
-        },
-        "FileName" : {
-          "type" : "string"
-        },
-        "ContentType" : {
-          "type" : "string"
-        },
-        "Pages" : {
-          "type" : "integer",
-          "format" : "int32"
-        }
-      }
-    },
-    "ListSentSmsResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "SmsMessages" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/ListSentSmsResponsePayloadSmsMessagesItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "ListSentSmsResponse"
-    },
-    "SendSmsRequest" : {
-      "type" : "object",
-      "properties" : {
-        "Body" : {
-          "type" : "string"
-        },
-        "ToNumbers" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        },
-        "From" : {
-          "type" : "string"
-        },
-        "ReplyTo" : {
-          "type" : "string"
-        },
-        "SenderName" : {
-          "type" : "string"
-        },
-        "SenderEmail" : {
-          "type" : "string"
-        }
-      },
-      "title" : "SendFaxRequest"
-    },
-    "ListReceivedFaxesResponsePayloadDataItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string"
-        },
-        "From" : {
-          "type" : "string"
-        },
-        "To" : {
-          "type" : "string"
-        },
-        "Timestamp" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "Pages" : {
-          "type" : "integer",
-          "format" : "int32"
-        }
-      }
-    },
-    "DownloadReceivedFaxResponsePayloadDataItem" : {
-      "type" : "object",
-      "properties" : {
-        "TiffBase64" : {
-          "type" : "string",
-          "description" : " Fax tiff data - base64 string"
-        }
-      }
-    },
-    "ListSentFaxesResponsePayloadFaxesItemSettings" : {
-      "type" : "object",
-      "properties" : {
-        "HighQuality" : {
-          "type" : "boolean"
-        },
-        "DNCR" : {
-          "type" : "boolean"
-        },
-        "DataSov" : {
-          "type" : "boolean"
-        },
-        "AutoDelete" : {
-          "type" : "boolean"
-        }
-      }
-    },
-    "ListSentFaxesResponsePayloadFaxesItemRecipientsItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "JobID" : {
-          "type" : "string"
-        },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "PagesSent" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "TransactionWalletType" : {
-          "type" : "string"
-        },
-        "Error" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItemError"
-        },
-        "TransmissionStart" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "TransmissionEnd" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "Provider" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItemProvider"
-        }
-      }
-    },
-    "SendFaxRequestFaxesItemDocumentsItem" : {
-      "type" : "object",
-      "properties" : {
-        "Filename" : {
-          "type" : "string"
-        },
-        "Data" : {
-          "type" : "string",
-          "description" : "File data - base64 string"
-        }
-      }
-    },
-    "SendFaxResponsePayloadSubmittedFaxesItem" : {
-      "type" : "object",
-      "properties" : {
-        "Documents" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItemDocumentsItem"
-          }
-        },
-        "Success" : {
-          "type" : "boolean"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "JobID" : {
-          "type" : "string"
-        },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "ValidationErrors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      }
-    },
-    "SendFaxResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "FaxID" : {
-              "type" : "string"
-            },
-            "SubmittedFaxes" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/SendFaxResponsePayloadSubmittedFaxesItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "SendFaxResponse"
-    },
-    "ListSentFaxesResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "Faxes" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "ListSentFaxesResponse"
-    },
-    "SendSmsResponsePayloadInvalidToNumbersItem" : {
-      "type" : "object",
-      "properties" : {
-        "Number" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
-        }
-      }
-    },
-    "SendFaxRequest" : {
-      "type" : "object",
-      "properties" : {
-        "Faxes" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/SendFaxRequestFaxesItem"
-          }
-        },
-        "TemplateId" : {
-          "type" : "string"
-        }
-      },
-      "title" : "SendFaxRequest"
-    },
-    "ListSentFaxesResponsePayloadFaxesItemRecipientsItemError" : {
-      "type" : "object",
-      "properties" : {
-        "Code" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        }
-      }
-    },
-    "ListSentSmsResponsePayloadSmsMessagesItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "UserID" : {
-          "type" : "string"
-        },
-        "Recipients" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/ListSentSmsResponsePayloadSmsMessagesItemRecipientsItem"
-          }
-        },
-        "FromNumber" : {
-          "type" : "string"
-        },
-        "ReplyToNumber" : {
-          "type" : "string"
-        },
-        "ReplyToEmail" : {
-          "type" : "string"
-        },
-        "SenderName" : {
-          "type" : "string"
-        },
-        "SenderEmail" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "TotalCost" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "ExternalJobID" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "CreatedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "LastModifiedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        }
-      }
-    },
-    "Error" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean",
-          "default" : false
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32",
-          "default" : 400
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "Error Schema"
-    },
-    "GetSmsByIdResponsePayload" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "UserID" : {
-          "type" : "string"
-        },
-        "Recipients" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetSmsByIdResponsePayloadRecipientsItem"
-          }
-        },
-        "FromNumber" : {
-          "type" : "string"
-        },
-        "ReplyToNumber" : {
-          "type" : "string"
-        },
-        "ReplyToEmail" : {
-          "type" : "string"
-        },
-        "SenderName" : {
-          "type" : "string"
-        },
-        "SenderEmail" : {
-          "type" : "string"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "TotalCost" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "ExternalJobID" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "CreatedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "LastModifiedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        }
-      }
-    },
-    "ListSentFaxesResponsePayloadFaxesItemCreatedBy" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string"
-        }
-      }
-    },
-    "GetSmsByIdResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "$ref" : "#/definitions/GetSmsByIdResponsePayload"
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "GetSmsByIdResponse"
-    },
-    "ListSentFaxesResponsePayloadFaxesItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "CreatedBy" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemCreatedBy"
-        },
-        "CreatedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "UpdatedBy" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemCreatedBy"
-        },
-        "LastModifiedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "FromNumber" : {
-          "type" : "string"
-        },
-        "Subject" : {
-          "type" : "string"
-        },
-        "Reference" : {
-          "type" : "string"
-        },
-        "Source" : {
-          "type" : "string"
-        },
-        "Settings" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemSettings"
-        },
-        "Headers" : {
-          "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemHeaders"
-        },
-        "Documents" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemDocumentsItem"
-          }
-        },
-        "Recipients" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/ListSentFaxesResponsePayloadFaxesItemRecipientsItem"
-          }
-        },
-        "Status" : {
-          "type" : "string"
-        }
-      }
-    },
-    "GetSmsByIdResponsePayloadRecipientsItem" : {
-      "type" : "object",
-      "properties" : {
-        "ID" : {
-          "type" : "string",
-          "format" : "uuid"
-        },
-        "ToNumber" : {
-          "type" : "string"
-        },
-        "Cost" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "MessageParts" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "CostPerPart" : {
-          "type" : "number",
-          "format" : "double"
-        },
-        "Status" : {
-          "type" : "string"
-        },
-        "QueuedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "CompletedDateUtc" : {
-          "type" : "string",
-          "format" : "date-time"
-        }
-      }
-    },
-    "DownloadReceivedFaxResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "data" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/DownloadReceivedFaxResponsePayloadDataItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "DownloadReceivedFaxResponse"
-    },
-    "SendSmsResponse" : {
-      "type" : "object",
-      "properties" : {
-        "Success" : {
-          "type" : "boolean"
-        },
-        "StatusCode" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "Message" : {
-          "type" : "string"
-        },
-        "Payload" : {
-          "type" : "object",
-          "properties" : {
-            "SmsMessageID" : {
-              "type" : "string"
-            },
-            "InvalidToNumbers" : {
-              "type" : "array",
-              "items" : {
-                "$ref" : "#/definitions/SendSmsResponsePayloadInvalidToNumbersItem"
-              }
-            }
-          }
-        },
-        "Errors" : {
-          "type" : "array",
-          "items" : {
-            "type" : "string"
-          }
-        }
-      },
-      "title" : "SendSmsResponse"
     }
   },
   "x-amazon-apigateway-documentation" : {
-    "version" : "v1.9.10",
-    "createdDate" : "2021-01-04T22:32:52Z",
+    "version" : "v1.9.11",
+    "createdDate" : "2021-01-04T22:41:09Z",
     "documentationParts" : [ {
       "location" : {
         "type" : "API"
@@ -1826,7 +432,7 @@
           "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/fax/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/fax/send`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
@@ -1898,7 +504,7 @@
           "source" : "var _httpClient = new HttpClient();\n_httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue('ApiKey', apiKey); // apiKey - your API key\nvar url = {notifyrePublicApiUrl} + '/sms/send';\nvar response = await _httpClient.GetAsync(url); \nvar jsonStr = await response.Content.ReadAsStringAsync(); \nvar result = JsonConvert.DeserializeObject(jsonStr);\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.WriteLine(response.message);\n}"
         }, {
           "lang" : "JavaScript",
-          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
+          "source" : "const httpHeaders = new HttpHeaders({\n'Content-Type': 'application/json',\nAuthorization: 'ApiKey ' + apiKey // your API key\n});\n\nconst httpClient = new HttpClient();\nconst url = `${notifyrePublicApiUrl}/sms/send`\n\nconst response = await httpClient.get(url, {headers: httpHeaders})\nif (response.statusCode == '200')\n{\n// Successfully\n}\nelse\n{\n// Something wrong -- check response for errors\nConsole.log(response.message);\n}"
         } ]
       }
     }, {
