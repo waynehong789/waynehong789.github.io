@@ -1,76 +1,266 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Welcome To Queenstown</title>
-	<link rel="StyleSheet" href="css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selective Practice – Daily Hub</title>
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2b6cb0;
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --text: #2d3748;
+      --muted: #718096;
+      --border: #e2e8f0;
+      --success: #38a169;
+      --accent: #dd6b20;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 16px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-top: 12px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .today-banner {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .today-banner .day {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .today-banner .focus {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+    .today-banner .time {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-top: 6px;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .card-grid {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .practice-card {
+      background: var(--card);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .practice-card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .practice-card.recommended {
+      border-color: var(--primary-light);
+      background: #ebf8ff;
+    }
+    .practice-card .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: white;
+      margin-bottom: 8px;
+    }
+    .practice-card h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .practice-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .practice-card .meta {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .schedule-table th,
+    .schedule-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .schedule-table th {
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+    }
+    .schedule-table tr:last-child td {
+      border-bottom: none;
+    }
+    .schedule-table tr.today {
+      background: #ebf8ff;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
 </head>
-<body background="pic/queenstown_2.jpg">
-	<header align="center">
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<img src="pic/queenstown_3.jpg" style="width:100%">
-				<div class="slide-text">Welcome to Queenstown</div>
-			</div>
+<body>
+  <div class="container">
+    <header>
+      <h1>Selective Practice Hub</h1>
+      <p class="subtitle">NSW Selective High School Preparation</p>
+    </header>
 
-			<div class="mySlides fade">
-				<img src="pic/queenstown_4.jpg" style="width:100%">
-				<div class="slide-text">Welcome to Queenstown</div>
-			</div>
+    <div class="today-banner" id="today-banner">
+      <div class="day" id="today-day">Loading...</div>
+      <div class="focus" id="today-focus"></div>
+      <div class="time" id="today-time"></div>
+    </div>
 
-			<div class="mySlides fade">
-				<img src="pic/queenstown_5.jpg" style="width:100%">
-				<div class="slide-text">Welcome to Queenstown</div>
-			</div>
-		</div>
-	</header>
-	
-	<div class="container"> 		
-		<nav class="navClass">
-			<ul><b>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="visit.html">Visit</a></li>
-				<li><a href="food.html">Food</a></li>
-				<li><a href="accommodation.html">Accommodation</a>
-					<ul class="sub-menu">
-						<li><a href="hotel.html">Hotel</a></li>
-						<li><a href="motel.html">Motel</a></li>
-						<li><a href="BnB.html">Bed & Breakfast</a></li>
-						<li><a href="backpacker.html">Backpacker</a></li>
-					</ul>
-					<span class="arrow">&#9660;</span>
-				</li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="signup.html">Signup</a></li>
-			</b></ul>
-		</nav>
-		
-		<div class="Intro">
-		<h3>Queenstown, New Zealand, <br/>is the Southern Hemisphere’s premier four season lake and alpine resort. </h3>
-		<p class="text">Feel inspired by Queenstown’s stunning scenery, huge range of activities and renowned warm welcome. Surrounded by majestic mountains and set on the shores of crystal clear Lake Wakatipu, the natural beauty and the unique energy of the region create the perfect backdrop for a holiday full of adventure, discovery and rejuvenation. You’ll find everything you need to plan your next trip to Queenstown, from accommodation options to the endless array of activities and attractions, as well as a full calendar of events for the year.</p>	
-		</div>
-		
-		<div align="center"><iframe width="1120" height="630" src="https://www.youtube.com/embed/oh-FiNzEYIg" frameborder="0" allowfullscreen></iframe></div>
-		
-		<h3>Queenstown’s Upcoming Events</h3>
-		<div class="events">
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/akarua-arrowtown-autumn-festival" target="_blank">
-			<img src="pic/AutumnFest1.jpg" alt="AutumnFest"></a>
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/luma-southern-light-project" target="_blank">
-			<img src="pic/LUMA1.jpg" alt="LUMA"></a>
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/queenstown-winter-festival" target="_blank">
-			<img src="pic/Winterfestival1.jpg" alt="Winterfestival"></a>
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/audi-quattro-winter-games-nz-2017" target="_blank">
-			<img src="pic/WinterGame1.jpg" alt="WinterGame"></a>
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/skycity-queenstown-karaoke" target="_blank">
-			<img src="pic/Karaoke1.jpg" alt="Karaoke"></a>
-			<a href="https://www.queenstownnz.co.nz/things-to-do/events/listing/air-new-zealand-queenstown-international-marathon" target="_blank">
-			<img src="pic/Marathon1.jpg" alt="Marathon"></a>
-		</div>
-		<footer>Copyright &copy; Wayne Hong</footer>
-	</div>
-	
-	<script src="js/index.js">	</script>
-	
+    <h2 class="section-title">Choose Today's Practice</h2>
+    <div class="card-grid" id="practice-cards">
+    </div>
+
+    <h2 class="section-title">Weekly Schedule</h2>
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-body">
+      </tbody>
+    </table>
+
+    <footer>
+      Practice according to the weekly plan · Good luck!
+    </footer>
+  </div>
+
+  <script>
+    const SCHEDULE = {
+      0: { name: "Sunday",    focus: "Writing + Review",                     time: "7:20 – 8:20",  file: null,          desc: "Write one piece and review the week's error book" },
+      1: { name: "Monday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test.html", desc: "Cloze, details & comprehension (Timed 45 min)" },
+      2: { name: "Tuesday",   focus: "Math Focus",                           time: "4:20 – 5:05",  file: null,          desc: "Algebra & Geometry practice" },
+      3: { name: "Wednesday", focus: "Reading + Thinking Skills",            time: "7:20 – 8:20",  file: "reading-test.html", desc: "Implied meaning + Thinking Skills" },
+      4: { name: "Thursday",  focus: "Math Focus",                           time: "4:20 – 5:05",  file: null,          desc: "Word problems + review mistakes" },
+      5: { name: "Friday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test.html", desc: "Mixed Reading practice" },
+      6: { name: "Saturday",  focus: "Full Section Practice",                time: "4:30 – 6:00",  file: "reading-test.html", desc: "Full timed Reading or Math section" }
+    };
+
+    const today = new Date().getDay();
+    const todayInfo = SCHEDULE[today];
+
+    document.getElementById("today-day").textContent = todayInfo.name;
+    document.getElementById("today-focus").textContent = todayInfo.focus;
+    document.getElementById("today-time").textContent = "Suggested time: " + todayInfo.time;
+
+    const cardsContainer = document.getElementById("practice-cards");
+
+    const recommended = document.createElement("a");
+    recommended.className = "practice-card recommended";
+    if (todayInfo.file) {
+      recommended.href = todayInfo.file;
+    } else {
+      recommended.href = "#";
+      recommended.onclick = (e) => { e.preventDefault(); alert("This section is coming soon. Please practise offline today."); };
+    }
+    recommended.innerHTML = `
+      <span class="badge">Recommended Today</span>
+      <h3>${todayInfo.focus}</h3>
+      <p>${todayInfo.desc}</p>
+      <div class="meta">${todayInfo.time}</div>
+    `;
+    cardsContainer.appendChild(recommended);
+
+    const available = [
+      { title: "Reading Practice Test", desc: "Timed 45-minute Reading section (sample questions)", file: "reading-test.html", meta: "45 minutes" }
+    ];
+
+    available.forEach(item => {
+      if (todayInfo.file === item.file) return;
+      const card = document.createElement("a");
+      card.className = "practice-card";
+      card.href = item.file;
+      card.innerHTML = `
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
+        <div class="meta">${item.meta}</div>
+      `;
+      cardsContainer.appendChild(card);
+    });
+
+    const tbody = document.getElementById("schedule-body");
+    for (let d = 1; d <= 6; d++) {
+      const s = SCHEDULE[d];
+      const tr = document.createElement("tr");
+      if (d === today) tr.classList.add("today");
+      tr.innerHTML = `<td>${s.name}</td><td>${s.focus}</td><td>${s.time}</td>`;
+      tbody.appendChild(tr);
+    }
+    const sun = SCHEDULE[0];
+    const sunTr = document.createElement("tr");
+    if (today === 0) sunTr.classList.add("today");
+    sunTr.innerHTML = `<td>${sun.name}</td><td>${sun.focus}</td><td>${sun.time}</td>`;
+    tbody.appendChild(sunTr);
+  </script>
 </body>
 </html>
