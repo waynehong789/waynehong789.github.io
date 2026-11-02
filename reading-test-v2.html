@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading Practice Test (Official Style) – 17 Questions</title>
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2b6cb0;
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --text: #2d3748;
+      --muted: #718096;
+      --border: #e2e8f0;
+      --success: #38a169;
+      --danger: #e53e3e;
+      --warning: #d69e2e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 12px; }
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    header h1 { font-size: 1.2rem; }
+    .timer {
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 8px;
+      min-width: 100px;
+      text-align: center;
+    }
+    .timer.warning { background: #c53030; animation: pulse 1s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.75} }
+    .card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 18px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .btn {
+      border: none; border-radius: 8px; padding: 10px 20px;
+      font-size: 0.95rem; font-weight: 600; cursor: pointer;
+    }
+    .btn-primary { background: var(--primary-light); color: white; }
+    .btn-primary:hover { background: var(--primary); }
+    .btn-secondary { background: var(--border); color: var(--text); }
+    .btn-danger { background: var(--danger); color: white; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .hidden { display: none !important; }
+    .question-nav {
+      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
+    }
+    .q-btn {
+      width: 34px; height: 34px; border-radius: 6px;
+      border: 2px solid var(--border); background: white;
+      font-weight: 600; font-size: 0.85rem; cursor: pointer;
+    }
+    .q-btn.current { border-color: var(--primary-light); background: #ebf8ff; }
+    .q-btn.answered { background: #c6f6d5; border-color: var(--success); }
+    .q-btn.flagged { background: #fefcbf; border-color: var(--warning); }
+    .extract-tabs {
+      display: flex; gap: 0; margin-bottom: 12px;
+    }
+    .extract-tab {
+      padding: 8px 16px; border: 1px solid var(--border);
+      background: #edf2f7; cursor: pointer; font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .extract-tab.active {
+      background: white; border-bottom-color: white;
+      color: var(--primary);
+    }
+    .passage-box {
+      background: #f7fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 16px;
+      font-size: 0.92rem;
+      max-height: 280px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+    .question-text {
+      font-size: 1rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+    .options { display: flex; flex-direction: column; gap: 8px; }
+    .option {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 12px; border: 2px solid var(--border);
+      border-radius: 8px; cursor: pointer;
+    }
+    .option:hover { border-color: var(--primary-light); }
+    .option.selected { border-color: var(--primary-light); background: #ebf8ff; }
+    .option input { margin-top: 3px; }
+    .nav-buttons {
+      display: flex; justify-content: space-between; gap: 10px; margin-top: 18px;
+    }
+    .status-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 10px; font-size: 0.85rem; color: var(--muted);
+    }
+    .flag-btn {
+      background: none; border: 1px solid var(--warning);
+      color: #b7791f; padding: 5px 10px; border-radius: 6px;
+      cursor: pointer; font-size: 0.8rem;
+    }
+    #result-section { text-align: center; }
+    .summary-box {
+      text-align: left; background: #f7fafc; padding: 14px;
+      border-radius: 8px; margin: 14px 0; font-size: 0.9rem;
+      max-height: 320px; overflow-y: auto; white-space: pre-wrap;
+    }
+    .cloze-select {
+      margin: 0 4px; padding: 4px 8px; font-size: 0.9rem;
+      border: 1px solid var(--primary-light); border-radius: 4px;
+    }
+    footer { text-align: center; padding: 16px; font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Start Screen -->
+    <div id="start-screen" class="card">
+      <h2 style="color:var(--primary);margin-bottom:10px;">Reading Practice Test – Official Style</h2>
+      <p>This practice set follows the structure and difficulty of the NSW Selective High School Placement Test (Reading section).</p>
+      <ul style="margin:12px 0 12px 20px;">
+        <li><strong>Questions:</strong> 17 (mixed types)</li>
+        <li><strong>Time allowed:</strong> 45 minutes</li>
+        <li>Question types include: dual-extract comparison, cloze, poetry, sentence insertion, multi-extract matching</li>
+        <li>You may move freely between questions and change answers before final submit</li>
+        <li>Time expiry will auto-submit; answers cannot be changed afterwards</li>
+      </ul>
+      <button id="start-btn" class="btn btn-primary">Start 45-Minute Reading Test</button>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="test-screen" class="hidden">
+      <header>
+        <div>
+          <h1>Reading Practice</h1>
+          <div style="font-size:0.8rem;opacity:0.9;" id="progress-text">Question 1 of 17</div>
+        </div>
+        <div class="timer" id="timer">45:00</div>
+      </header>
+
+      <div class="card">
+        <div class="status-bar">
+          <span id="answered-count">Answered: 0 / 17</span>
+          <button class="flag-btn" id="flag-btn">🚩 Flag</button>
+        </div>
+        <div class="question-nav" id="question-nav"></div>
+        <div id="question-area"></div>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" id="prev-btn">← Previous</button>
+          <button class="btn btn-primary" id="next-btn">Next →</button>
+        </div>
+      </div>
+      <div style="text-align:center;margin:12px 0;">
+        <button class="btn btn-danger" id="submit-btn">Submit All Answers</button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="card hidden">
+      <div id="result-section">
+        <h2>Test Submitted</h2>
+        <p id="result-message"></p>
+        <div class="summary-box" id="summary-box"></div>
+        <a id="email-link" class="btn btn-primary" href="#">Email Results to waynehong789@gmail.com</a>
+        <br><br>
+        <button class="btn btn-secondary" onclick="location.reload()">Back to Start</button>
+      </div>
+    </div>
+  </div>
+  <footer>NSW Selective-style Reading Practice · 17 Questions</footer>
+
+  <script>
+    // ===================== QUESTIONS (17) =====================
+    const QUESTIONS = [
+      // Q1-Q4: Dual extract – Travel / Journey theme
+      {
+        id: 1,
+        type: "dual",
+        extracts: {
+          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
+          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+        },
+        text: "Both extracts mention that during the journey the travellers",
+        options: [
+          "argued with one another",
+          "experienced physical discomfort",
+          "saw a famous landmark",
+          "arrived after dark"
+        ],
+        answer: 1
+      },
+      {
+        id: 2,
+        type: "dual",
+        extracts: {
+          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
+          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+        },
+        text: "Which group of travellers is described as stopping to let animals drink?",
+        options: [
+          "The family in Extract A",
+          "The family in Extract B",
+          "Both",
+          "Neither"
+        ],
+        answer: 0
+      },
+      {
+        id: 3,
+        type: "dual",
+        extracts: {
+          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
+          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+        },
+        text: "In Extract B, the narrator’s parents banned talking because",
+        options: [
+          "the children were making too much noise about the scenery",
+          "the children were arguing over space",
+          "they wanted the children to sleep",
+          "the radio was playing"
+        ],
+        answer: 1
+      },
+      {
+        id: 4,
+        type: "dual",
+        extracts: {
+          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
+          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+        },
+        text: "Which statement is true of both extracts?",
+        options: [
+          "The travellers reached their destination before midday.",
+          "The travellers felt relief when they were able to stop.",
+          "The travellers were travelling to a theme park.",
+          "The travellers used public transport."
+        ],
+        answer: 1
+      },
+
+      // Q5-Q8: Single longer passage comprehension
+      {
+        id: 5,
+        type: "single",
+        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
+        text: "What is the main purpose of the lighthouse described in the passage?",
+        options: [
+          "to attract tourists",
+          "to warn ships of danger",
+          "to house a museum",
+          "to mark the edge of the town"
+        ],
+        answer: 1
+      },
+      {
+        id: 6,
+        type: "single",
+        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
+        text: "The phrase “the world shrank to a circle of grey” suggests that in fog",
+        options: [
+          "the lighthouse became invisible",
+          "visibility was severely limited",
+          "the sea turned a different colour",
+          "visitors were not allowed to climb"
+        ],
+        answer: 1
+      },
+      {
+        id: 7,
+        type: "single",
+        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
+        text: "According to the passage, the keeper’s cottage is now used as",
+        options: [
+          "a private home",
+          "a small museum",
+          "a restaurant",
+          "an office for park rangers"
+        ],
+        answer: 1
+      },
+      {
+        id: 8,
+        type: "single",
+        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
+        text: "The peeling paint on the lighthouse is most likely the result of",
+        options: [
+          "lack of visitors",
+          "exposure to salt wind and weather",
+          "recent construction work",
+          "deliberate artistic choice"
+        ],
+        answer: 1
+      },
+
+      // Q9-Q11: Cloze style (dropdown simulation with options)
+      {
+        id: 9,
+        type: "cloze",
+        passage: `The first Olympic Games of the modern era were held in Athens in 1896. Athletes from fourteen nations took part. The games were a modest affair compared with today’s vast spectacles, yet they __________ the revival of a tradition that had slept for more than fifteen centuries. Crowds filled the newly restored Panathenaic Stadium and __________ the winners with genuine enthusiasm.`,
+        text: "Which pair of words best completes the two gaps in order?",
+        options: [
+          "prevented / ignored",
+          "marked / cheered",
+          "delayed / criticised",
+          "copied / forgot"
+        ],
+        answer: 1
+      },
+      {
+        id: 10,
+        type: "cloze",
+        passage: `Early bicycles were heavy and dangerous. Riders sat high above the ground and used their feet to slow the front wheel. There were no brakes as we know them. Tyres were solid rubber, and the whole machine weighed far more than a modern racing bike. Nevertheless, the invention __________ people a new kind of personal freedom: the ability to travel further and faster under their own power.`,
+        text: "Which word best fits the gap?",
+        options: [
+          "denied",
+          "offered",
+          "sold",
+          "cost"
+        ],
+        answer: 1
+      },
+      {
+        id: 11,
+        type: "cloze",
+        passage: `In the days before electric street lighting, cities became dangerous after sunset. Link-boys carried torches to guide wealthy citizens home, while poorer people simply stayed indoors. The arrival of gas lighting in the early nineteenth century __________ the urban night. Streets that had once emptied at dusk now remained busy, and shops could stay open later.`,
+        text: "Which word best fits the gap?",
+        options: [
+          "darkened",
+          "transformed",
+          "shortened",
+          "ignored"
+        ],
+        answer: 1
+      },
+
+      // Q12-Q13: Poetry
+      {
+        id: 12,
+        type: "poem",
+        passage: `The Crow\n\nA black shape cuts the morning sky,\nthen settles on the wire.\nOne cold eye regards the street\nas if it owns the hour.\n\nNo song, only a scraped cry\nthat scrapes the air itself.\nIt waits. The world below goes by,\nbusy with smaller self.`,
+        text: "The crow in the poem is presented mainly as",
+        options: [
+          "a cheerful and friendly bird",
+          "a silent and powerless creature",
+          "an observant and slightly superior presence",
+          "a symbol of spring and renewal"
+        ],
+        answer: 2
+      },
+      {
+        id: 13,
+        type: "poem",
+        passage: `The Crow\n\nA black shape cuts the morning sky,\nthen settles on the wire.\nOne cold eye regards the street\nas if it owns the hour.\n\nNo song, only a scraped cry\nthat scrapes the air itself.\nIt waits. The world below goes by,\nbusy with smaller self.`,
+        text: "The phrase “as if it owns the hour” suggests that the crow",
+        options: [
+          "is about to fly away",
+          "appears confident and in control",
+          "is afraid of the people below",
+          "has lost its sense of time"
+        ],
+        answer: 1
+      },
+
+      // Q14-Q15: Sentence insertion style
+      {
+        id: 14,
+        type: "insert",
+        passage: `City councils across the country are planting more trees along busy roads. They hope the trees will reduce air pollution and make streets more pleasant for walkers and cyclists. (1) __________ Some residents, however, complain that falling leaves block gutters and that roots damage footpaths. (2) __________ Councils reply that the long-term benefits outweigh these short-term problems.`,
+        text: "Which sentence best fits gap (1)?",
+        options: [
+          "Trees also provide shade in summer and can lower local temperatures.",
+          "Many councils have stopped planting trees altogether.",
+          "Drivers say that trees make it harder to see traffic lights.",
+          "The cost of watering young trees is extremely high."
+        ],
+        answer: 0
+      },
+      {
+        id: 15,
+        type: "insert",
+        passage: `City councils across the country are planting more trees along busy roads. They hope the trees will reduce air pollution and make streets more pleasant for walkers and cyclists. (1) __________ Some residents, however, complain that falling leaves block gutters and that roots damage footpaths. (2) __________ Councils reply that the long-term benefits outweigh these short-term problems.`,
+        text: "Which sentence best fits gap (2)?",
+        options: [
+          "These complaints have led some councils to remove newly planted trees.",
+          "Scientists have proved that trees have no effect on air quality.",
+          "Most residents actually prefer concrete surfaces.",
+          "Leaf fall only happens in tropical climates."
+        ],
+        answer: 0
+      },
+
+      // Q16-Q17: Multi-extract matching style
+      {
+        id: 16,
+        type: "match",
+        extracts: {
+          A: `Extract A\nI dreamt I was standing at the edge of a cliff. I knew I could not fly, yet in the dream I stepped forward and the air held me. For a moment I felt weightless and completely safe.`,
+          B: `Extract B\nMost of the dreams people remember are about ordinary events – missing a train, being late for school, or talking with someone they know. Strange or impossible dreams are less common than we think.`,
+          C: `Extract C\nSome writers keep a notebook by the bed and write down their dreams as soon as they wake. They say the images often give them ideas for stories or solutions to problems they have been thinking about.`,
+          D: `Extract D\nWhen we wake, the powerful feelings of a dream usually fade within minutes. What seemed urgent and real in the night becomes hard to recall by breakfast time.`
+        },
+        text: "Which extract describes a dream in which something impossible happens?",
+        options: ["Extract A", "Extract B", "Extract C", "Extract D"],
+        answer: 0
+      },
+      {
+        id: 17,
+        type: "match",
+        extracts: {
+          A: `Extract A\nI dreamt I was standing at the edge of a cliff. I knew I could not fly, yet in the dream I stepped forward and the air held me. For a moment I felt weightless and completely safe.`,
+          B: `Extract B\nMost of the dreams people remember are about ordinary events – missing a train, being late for school, or talking with someone they know. Strange or impossible dreams are less common than we think.`,
+          C: `Extract C\nSome writers keep a notebook by the bed and write down their dreams as soon as they wake. They say the images often give them ideas for stories or solutions to problems they have been thinking about.`,
+          D: `Extract D\nWhen we wake, the powerful feelings of a dream usually fade within minutes. What seemed urgent and real in the night becomes hard to recall by breakfast time.`
+        },
+        text: "Which extract says that dreams can be useful for creative work?",
+        options: ["Extract A", "Extract B", "Extract C", "Extract D"],
+        answer: 2
+      }
+    ];
+
+    // ===================== STATE =====================
+    const TOTAL_TIME = 45 * 60;
+    let timeLeft = TOTAL_TIME;
+    let timerInterval = null;
+    let currentIndex = 0;
+    let answers = new Array(QUESTIONS.length).fill(null);
+    let flagged = new Array(QUESTIONS.length).fill(false);
+    let testSubmitted = false;
+    let currentExtract = "A";
+
+    // ===================== RENDER =====================
+    function formatTime(s) {
+      const m = Math.floor(s / 60).toString().padStart(2, "0");
+      const sec = (s % 60).toString().padStart(2, "0");
+      return `${m}:${sec}`;
+    }
+
+    function startTimer() {
+      document.getElementById("timer").textContent = formatTime(timeLeft);
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").textContent = formatTime(timeLeft);
+        if (timeLeft <= 120) document.getElementById("timer").classList.add("warning");
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          submitTest(true);
+        }
+      }, 1000);
+    }
+
+    function renderNav() {
+      const nav = document.getElementById("question-nav");
+      nav.innerHTML = "";
+      QUESTIONS.forEach((_, i) => {
+        const btn = document.createElement("button");
+        btn.className = "q-btn";
+        btn.textContent = i + 1;
+        if (i === currentIndex) btn.classList.add("current");
+        if (answers[i] !== null) btn.classList.add("answered");
+        if (flagged[i]) btn.classList.add("flagged");
+        btn.onclick = () => { if (!testSubmitted) { currentIndex = i; renderQuestion(); } };
+        nav.appendChild(btn);
+      });
+    }
+
+    function renderQuestion() {
+      const q = QUESTIONS[currentIndex];
+      document.getElementById("progress-text").textContent = `Question ${currentIndex + 1} of ${QUESTIONS.length}`;
+      document.getElementById("answered-count").textContent = `Answered: ${answers.filter(a => a !== null).length} / ${QUESTIONS.length}`;
+      document.getElementById("flag-btn").textContent = flagged[currentIndex] ? "🚩 Flagged" : "🚩 Flag";
+
+      const area = document.getElementById("question-area");
+      let html = "";
+
+      if (q.type === "dual" || q.type === "match") {
+        const keys = Object.keys(q.extracts);
+        html += `<div class="extract-tabs">`;
+        keys.forEach(k => {
+          html += `<div class="extract-tab ${currentExtract === k ? "active" : ""}" data-ext="${k}">Extract ${k}</div>`;
+        });
+        html += `</div>`;
+        html += `<div class="passage-box" id="passage-box">${q.extracts[currentExtract] || q.extracts[keys[0]]}</div>`;
+      } else if (q.passage) {
+        html += `<div class="passage-box">${q.passage}</div>`;
+      }
+
+      html += `<div class="question-text">${q.text}</div>`;
+      html += `<div class="options">`;
+      q.options.forEach((opt, i) => {
+        const sel = answers[currentIndex] === i ? "selected" : "";
+        html += `<label class="option ${sel}">
+          <input type="radio" name="q${currentIndex}" value="${i}" ${answers[currentIndex] === i ? "checked" : ""} ${testSubmitted ? "disabled" : ""}/>
+          <span>${opt}</span>
+        </label>`;
+      });
+      html += `</div>`;
+
+      area.innerHTML = html;
+
+      // Tab clicks
+      area.querySelectorAll(".extract-tab").forEach(tab => {
+        tab.onclick = () => {
+          currentExtract = tab.dataset.ext;
+          renderQuestion();
+        };
+      });
+
+      // Option clicks
+      if (!testSubmitted) {
+        area.querySelectorAll(".option").forEach(opt => {
+          opt.onclick = () => {
+            const val = parseInt(opt.querySelector("input").value, 10);
+            answers[currentIndex] = val;
+            renderQuestion();
+          };
+        });
+      }
+
+      document.getElementById("prev-btn").disabled = currentIndex === 0;
+      document.getElementById("next-btn").textContent = currentIndex === QUESTIONS.length - 1 ? "Review & Submit" : "Next →";
+      renderNav();
+    }
+
+    // ===================== EVENTS =====================
+    document.getElementById("start-btn").onclick = () => {
+      document.getElementById("start-screen").classList.add("hidden");
+      document.getElementById("test-screen").classList.remove("hidden");
+      startTimer();
+      renderQuestion();
+    };
+
+    document.getElementById("prev-btn").onclick = () => {
+      if (currentIndex > 0) { currentIndex--; currentExtract = "A"; renderQuestion(); }
+    };
+
+    document.getElementById("next-btn").onclick = () => {
+      if (currentIndex < QUESTIONS.length - 1) {
+        currentIndex++;
+        currentExtract = "A";
+        renderQuestion();
+      } else {
+        if (confirm("Submit all answers now?")) submitTest(false);
+      }
+    };
+
+    document.getElementById("flag-btn").onclick = () => {
+      flagged[currentIndex] = !flagged[currentIndex];
+      renderQuestion();
+    };
+
+    document.getElementById("submit-btn").onclick = () => {
+      if (confirm("Are you sure you want to submit?")) submitTest(false);
+    };
+
+    function submitTest(auto) {
+      if (testSubmitted) return;
+      testSubmitted = true;
+      clearInterval(timerInterval);
+
+      const answered = answers.filter(a => a !== null).length;
+      const correct = answers.filter((a, i) => a === QUESTIONS[i].answer).length;
+
+      let summary = `Reading Practice Test (Official Style) – Results\n`;
+      summary += `Date: ${new Date().toLocaleString()}\n`;
+      summary += `Time used: ${formatTime(TOTAL_TIME - Math.max(0, timeLeft))}\n`;
+      summary += `Auto-submitted: ${auto ? "Yes" : "No"}\n`;
+      summary += `Answered: ${answered} / 17\n`;
+      summary += `Correct: ${correct} / 17\n\nDetailed:\n`;
+
+      QUESTIONS.forEach((q, i) => {
+        const ua = answers[i];
+        summary += `Q${i+1}: ${ua === null ? "No answer" : q.options[ua]} → ${ua === q.answer ? "Correct" : "Incorrect"}\n`;
+      });
+
+      document.getElementById("test-screen").classList.add("hidden");
+      document.getElementById("result-screen").classList.remove("hidden");
+      document.getElementById("result-message").textContent = auto
+        ? "Time expired. Answers have been submitted automatically."
+        : "You have submitted your answers.";
+      document.getElementById("summary-box").textContent = summary;
+
+      const subject = encodeURIComponent("Reading Practice Test Results – Official Style");
+      const body = encodeURIComponent(summary);
+      document.getElementById("email-link").href = `mailto:waynehong789@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
