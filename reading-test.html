@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reading Practice Test (Official Style) – 17 Questions</title>
+  <title>Reading Practice Test – Harder Version (17 Questions)</title>
   <style>
     :root {
       --primary: #1a365d;
@@ -24,7 +24,7 @@
       color: var(--text);
       line-height: 1.55;
     }
-    .container { max-width: 900px; margin: 0 auto; padding: 12px; }
+    .container { max-width: 920px; margin: 0 auto; padding: 12px; }
     header {
       background: var(--primary);
       color: white;
@@ -37,9 +37,9 @@
       flex-wrap: wrap;
       gap: 10px;
     }
-    header h1 { font-size: 1.2rem; }
+    header h1 { font-size: 1.15rem; }
     .timer {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       background: rgba(255,255,255,0.15);
       padding: 6px 14px;
@@ -55,7 +55,6 @@
       padding: 18px;
       margin-bottom: 14px;
       border: 1px solid var(--border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
     .btn {
       border: none; border-radius: 8px; padding: 10px 20px;
@@ -67,9 +66,7 @@
     .btn-danger { background: var(--danger); color: white; }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; }
     .hidden { display: none !important; }
-    .question-nav {
-      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px;
-    }
+    .question-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
     .q-btn {
       width: 34px; height: 34px; border-radius: 6px;
       border: 2px solid var(--border); background: white;
@@ -78,34 +75,24 @@
     .q-btn.current { border-color: var(--primary-light); background: #ebf8ff; }
     .q-btn.answered { background: #c6f6d5; border-color: var(--success); }
     .q-btn.flagged { background: #fefcbf; border-color: var(--warning); }
-    .extract-tabs {
-      display: flex; gap: 0; margin-bottom: 12px;
-    }
+    .extract-tabs { display: flex; gap: 0; margin-bottom: 10px; flex-wrap: wrap; }
     .extract-tab {
-      padding: 8px 16px; border: 1px solid var(--border);
-      background: #edf2f7; cursor: pointer; font-weight: 600;
-      font-size: 0.9rem;
+      padding: 7px 14px; border: 1px solid var(--border);
+      background: #edf2f7; cursor: pointer; font-weight: 600; font-size: 0.85rem;
     }
-    .extract-tab.active {
-      background: white; border-bottom-color: white;
-      color: var(--primary);
-    }
+    .extract-tab.active { background: white; border-bottom-color: white; color: var(--primary); }
     .passage-box {
       background: #f7fafc;
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 14px;
-      margin-bottom: 16px;
-      font-size: 0.92rem;
-      max-height: 280px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      max-height: 300px;
       overflow-y: auto;
       white-space: pre-wrap;
     }
-    .question-text {
-      font-size: 1rem;
-      margin-bottom: 14px;
-      font-weight: 500;
-    }
+    .question-text { font-size: 1rem; margin-bottom: 14px; font-weight: 500; }
     .options { display: flex; flex-direction: column; gap: 8px; }
     .option {
       display: flex; align-items: flex-start; gap: 10px;
@@ -115,9 +102,7 @@
     .option:hover { border-color: var(--primary-light); }
     .option.selected { border-color: var(--primary-light); background: #ebf8ff; }
     .option input { margin-top: 3px; }
-    .nav-buttons {
-      display: flex; justify-content: space-between; gap: 10px; margin-top: 18px;
-    }
+    .nav-buttons { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; }
     .status-bar {
       display: flex; justify-content: space-between; align-items: center;
       margin-bottom: 10px; font-size: 0.85rem; color: var(--muted);
@@ -131,36 +116,28 @@
     .summary-box {
       text-align: left; background: #f7fafc; padding: 14px;
       border-radius: 8px; margin: 14px 0; font-size: 0.9rem;
-      max-height: 320px; overflow-y: auto; white-space: pre-wrap;
-    }
-    .cloze-select {
-      margin: 0 4px; padding: 4px 8px; font-size: 0.9rem;
-      border: 1px solid var(--primary-light); border-radius: 4px;
+      max-height: 340px; overflow-y: auto; white-space: pre-wrap;
     }
     footer { text-align: center; padding: 16px; font-size: 0.8rem; color: var(--muted); }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Start Screen -->
     <div id="start-screen" class="card">
-      <h2 style="color:var(--primary);margin-bottom:10px;">Reading Practice Test – Official Style</h2>
-      <p>This practice set follows the structure and difficulty of the NSW Selective High School Placement Test (Reading section).</p>
+      <h2 style="color:var(--primary);margin-bottom:10px;">Reading Practice – Harder Version</h2>
+      <p>This set is deliberately more demanding than the previous version. Texts are denser, inferences are finer, and distractors are closer.</p>
       <ul style="margin:12px 0 12px 20px;">
-        <li><strong>Questions:</strong> 17 (mixed types)</li>
-        <li><strong>Time allowed:</strong> 45 minutes</li>
-        <li>Question types include: dual-extract comparison, cloze, poetry, sentence insertion, multi-extract matching</li>
-        <li>You may move freely between questions and change answers before final submit</li>
-        <li>Time expiry will auto-submit; answers cannot be changed afterwards</li>
+        <li><strong>17 questions</strong> · <strong>45 minutes</strong></li>
+        <li>Dual-extract comparison, extended single passages, cloze, poetry, sentence insertion, multi-extract matching</li>
+        <li>Free navigation and answer changes until final submit or time expiry</li>
       </ul>
-      <button id="start-btn" class="btn btn-primary">Start 45-Minute Reading Test</button>
+      <button id="start-btn" class="btn btn-primary">Start Harder Reading Test</button>
     </div>
 
-    <!-- Test Screen -->
     <div id="test-screen" class="hidden">
       <header>
         <div>
-          <h1>Reading Practice</h1>
+          <h1>Reading – Harder Set</h1>
           <div style="font-size:0.8rem;opacity:0.9;" id="progress-text">Question 1 of 17</div>
         </div>
         <div class="timer" id="timer">45:00</div>
@@ -183,7 +160,6 @@
       </div>
     </div>
 
-    <!-- Result Screen -->
     <div id="result-screen" class="card hidden">
       <div id="result-section">
         <h2>Test Submitted</h2>
@@ -195,25 +171,24 @@
       </div>
     </div>
   </div>
-  <footer>NSW Selective-style Reading Practice · 17 Questions</footer>
+  <footer>Harder Reading Practice · Official-style difficulty</footer>
 
   <script>
-    // ===================== QUESTIONS (17) =====================
     const QUESTIONS = [
-      // Q1-Q4: Dual extract – Travel / Journey theme
+      // Q1–4 Dual extracts – denser literary comparison
       {
         id: 1,
         type: "dual",
         extracts: {
-          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
-          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+          A: `Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.`,
+          B: `Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier.`
         },
-        text: "Both extracts mention that during the journey the travellers",
+        text: "Both extracts suggest that the travellers",
         options: [
-          "argued with one another",
-          "experienced physical discomfort",
-          "saw a famous landmark",
-          "arrived after dark"
+          "were in high spirits throughout the journey",
+          "experienced a change in atmosphere as they moved",
+          "relied on a map to find their way",
+          "were racing against time"
         ],
         answer: 1
       },
@@ -221,31 +196,31 @@
         id: 2,
         type: "dual",
         extracts: {
-          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
-          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+          A: `Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.`,
+          B: `Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier.`
         },
-        text: "Which group of travellers is described as stopping to let animals drink?",
+        text: "In Extract A, the youngest child’s action of stepping in the exact prints most likely shows",
         options: [
-          "The family in Extract A",
-          "The family in Extract B",
-          "Both",
-          "Neither"
+          "a desire to leave no trace",
+          "imitation and perhaps a need for security",
+          "an attempt to walk faster than the others",
+          "disagreement with the chosen path"
         ],
-        answer: 0
+        answer: 1
       },
       {
         id: 3,
         type: "dual",
         extracts: {
-          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
-          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+          A: `Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.`,
+          B: `Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier.`
         },
-        text: "In Extract B, the narrator’s parents banned talking because",
+        text: "Which extract ends on a note of continued difficulty rather than relief?",
         options: [
-          "the children were making too much noise about the scenery",
-          "the children were arguing over space",
-          "they wanted the children to sleep",
-          "the radio was playing"
+          "Extract A only",
+          "Extract B only",
+          "Both extracts",
+          "Neither extract"
         ],
         answer: 1
       },
@@ -253,200 +228,200 @@
         id: 4,
         type: "dual",
         extracts: {
-          A: `Extract A – from a historical novel\n\nThey set off at dawn, the wagon creaking under the weight of supplies. For the first hour the track was familiar, winding past the old mill and the stand of eucalypts where the children usually played. Then the road climbed and the air grew thinner. Dust rose in red clouds behind them. By mid-morning the heat inside the covered wagon was fierce; the younger children grew restless and the baby began to cry. The driver called a halt beside a narrow creek so the horses could drink and the family could stretch their legs. Hats were removed, water bottles passed around, and for a few minutes everyone sat in the sparse shade of a single gum tree.`,
-          B: `Extract B – from a modern memoir\n\nOur family never enjoyed long car trips. Five of us squeezed into a small sedan, suitcases strapped to the roof. The air-conditioning struggled. My younger brother and I argued over the middle seat until our parents banned all talking for twenty minutes. Legs went numb. The back of my neck stuck to the vinyl. When we finally stopped at a service station three hours later, we spilled out of the car like freed animals, gulping the cooler air and buying ice-creams we did not really need.`
+          A: `Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.`,
+          B: `Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier.`
         },
-        text: "Which statement is true of both extracts?",
+        text: "The crow in Extract A and the snake in Extract B both function mainly to",
         options: [
-          "The travellers reached their destination before midday.",
-          "The travellers felt relief when they were able to stop.",
-          "The travellers were travelling to a theme park.",
-          "The travellers used public transport."
+          "add a sense of threat or unease to the scene",
+          "show that the travellers are in a nature reserve",
+          "provide comic relief",
+          "indicate the time of year"
         ],
-        answer: 1
+        answer: 0
       },
 
-      // Q5-Q8: Single longer passage comprehension
+      // Q5–8 Extended single passage – denser non-fiction / reflective
       {
         id: 5,
         type: "single",
-        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
-        text: "What is the main purpose of the lighthouse described in the passage?",
+        passage: `For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.`,
+        text: "The author suggests that earlier explorers’ language of “conquering” the ice",
         options: [
-          "to attract tourists",
-          "to warn ships of danger",
-          "to house a museum",
-          "to mark the edge of the town"
+          "accurately reflected their technological superiority",
+          "contrasted with moments of genuine awe recorded in their journals",
+          "was mainly used to attract funding for expeditions",
+          "has been adopted unchanged by modern scientists"
         ],
         answer: 1
       },
       {
         id: 6,
         type: "single",
-        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
-        text: "The phrase “the world shrank to a circle of grey” suggests that in fog",
+        passage: `For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.`,
+        text: "In the final sentence, “an eternal stage” most nearly means",
         options: [
-          "the lighthouse became invisible",
-          "visibility was severely limited",
-          "the sea turned a different colour",
-          "visitors were not allowed to climb"
+          "a place of permanent theatrical performance",
+          "a setting assumed to be unchanging and permanent",
+          "a platform built by the explorers themselves",
+          "a religious idea of heaven"
         ],
         answer: 1
       },
       {
         id: 7,
         type: "single",
-        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
-        text: "According to the passage, the keeper’s cottage is now used as",
+        passage: `For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.`,
+        text: "The passage as a whole moves from",
         options: [
-          "a private home",
-          "a small museum",
-          "a restaurant",
-          "an office for park rangers"
+          "personal anecdote to scientific data",
+          "historical attitude to present physical change",
+          "celebration of exploration to criticism of modern technology",
+          "description of animals to description of people"
         ],
         answer: 1
       },
       {
         id: 8,
         type: "single",
-        passage: `The old lighthouse stood on a rocky headland, its white paint peeling in the salt wind. For more than a hundred years its lamp had swept the sea every night, warning ships away from the hidden reef. Now the light was electric and the keeper’s cottage was a small museum. Visitors climbed the narrow spiral stairs, ran their hands along the thick stone walls, and tried to imagine the isolation of the men who had once lived there through winter storms. On clear days the view stretched to the horizon; on foggy mornings the world shrank to a circle of grey.`,
-        text: "The peeling paint on the lighthouse is most likely the result of",
+        passage: `For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.`,
+        text: "Which of the following is an assumption underlying the author’s argument?",
         options: [
-          "lack of visitors",
-          "exposure to salt wind and weather",
-          "recent construction work",
-          "deliberate artistic choice"
+          "Satellite technology is less reliable than explorers’ journals.",
+          "The thinning of polar ice is a significant and observable fact.",
+          "All early explorers felt only triumph and never humility.",
+          "Maps should never show blank spaces."
         ],
         answer: 1
       },
 
-      // Q9-Q11: Cloze style (dropdown simulation with options)
+      // Q9–11 Harder cloze
       {
         id: 9,
         type: "cloze",
-        passage: `The first Olympic Games of the modern era were held in Athens in 1896. Athletes from fourteen nations took part. The games were a modest affair compared with today’s vast spectacles, yet they __________ the revival of a tradition that had slept for more than fifteen centuries. Crowds filled the newly restored Panathenaic Stadium and __________ the winners with genuine enthusiasm.`,
-        text: "Which pair of words best completes the two gaps in order?",
+        passage: `The archive smelled of dust and slow time. Bound reports from the nineteenth century leaned against boxes of fragile photographs. Nothing here had been digitised; the catalogue itself was a set of handwritten cards that crackled when touched. Researchers who came looking for a particular name or date often left with something else entirely—an unexpected letter, a marginal note—that __________ their original question and sent them in a new direction.`,
+        text: "Which word best completes the sentence?",
         options: [
-          "prevented / ignored",
-          "marked / cheered",
-          "delayed / criticised",
-          "copied / forgot"
+          "confirmed",
+          "complicated",
+          "answered",
+          "repeated"
         ],
         answer: 1
       },
       {
         id: 10,
         type: "cloze",
-        passage: `Early bicycles were heavy and dangerous. Riders sat high above the ground and used their feet to slow the front wheel. There were no brakes as we know them. Tyres were solid rubber, and the whole machine weighed far more than a modern racing bike. Nevertheless, the invention __________ people a new kind of personal freedom: the ability to travel further and faster under their own power.`,
+        passage: `Critics of the plan argued that building the new highway through the wetland would cause irreversible damage. Supporters replied that the economic gains would be substantial and that careful engineering could __________ most of the environmental harm. The debate continued for months without either side yielding.`,
         text: "Which word best fits the gap?",
         options: [
-          "denied",
-          "offered",
-          "sold",
-          "cost"
+          "increase",
+          "mitigate",
+          "ignore",
+          "celebrate"
         ],
         answer: 1
       },
       {
         id: 11,
         type: "cloze",
-        passage: `In the days before electric street lighting, cities became dangerous after sunset. Link-boys carried torches to guide wealthy citizens home, while poorer people simply stayed indoors. The arrival of gas lighting in the early nineteenth century __________ the urban night. Streets that had once emptied at dusk now remained busy, and shops could stay open later.`,
+        passage: `Her early stories were praised for their sharp observation of ordinary lives. Later work, however, grew increasingly __________ , full of symbols and shifting timelines that some readers found rewarding and others simply confusing.`,
         text: "Which word best fits the gap?",
         options: [
-          "darkened",
-          "transformed",
-          "shortened",
-          "ignored"
+          "predictable",
+          "elliptical",
+          "humorous",
+          "short"
         ],
         answer: 1
       },
 
-      // Q12-Q13: Poetry
+      // Q12–13 Poetry – denser
       {
         id: 12,
         type: "poem",
-        passage: `The Crow\n\nA black shape cuts the morning sky,\nthen settles on the wire.\nOne cold eye regards the street\nas if it owns the hour.\n\nNo song, only a scraped cry\nthat scrapes the air itself.\nIt waits. The world below goes by,\nbusy with smaller self.`,
-        text: "The crow in the poem is presented mainly as",
+        passage: `Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty.`,
+        text: "The poem suggests that the apparent change in the garden is caused by",
         options: [
-          "a cheerful and friendly bird",
-          "a silent and powerless creature",
-          "an observant and slightly superior presence",
-          "a symbol of spring and renewal"
+          "actual movement of the plants",
+          "a change in light and the viewer’s perception",
+          "damage to the glass itself",
+          "the passage of seasons"
         ],
-        answer: 2
+        answer: 1
       },
       {
         id: 13,
         type: "poem",
-        passage: `The Crow\n\nA black shape cuts the morning sky,\nthen settles on the wire.\nOne cold eye regards the street\nas if it owns the hour.\n\nNo song, only a scraped cry\nthat scrapes the air itself.\nIt waits. The world below goes by,\nbusy with smaller self.`,
-        text: "The phrase “as if it owns the hour” suggests that the crow",
+        passage: `Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty.`,
+        text: "The final stanza implies that certainty",
         options: [
-          "is about to fly away",
-          "appears confident and in control",
-          "is afraid of the people below",
-          "has lost its sense of time"
+          "is always reliable if one looks carefully enough",
+          "can be undermined by changes in conditions and perspective",
+          "belongs only to the morning",
+          "is impossible for human beings"
         ],
         answer: 1
       },
 
-      // Q14-Q15: Sentence insertion style
+      // Q14–15 Sentence insertion – closer options
       {
         id: 14,
         type: "insert",
-        passage: `City councils across the country are planting more trees along busy roads. They hope the trees will reduce air pollution and make streets more pleasant for walkers and cyclists. (1) __________ Some residents, however, complain that falling leaves block gutters and that roots damage footpaths. (2) __________ Councils reply that the long-term benefits outweigh these short-term problems.`,
+        passage: `Many coastal towns now face regular flooding at high tide even on calm days. Engineers have proposed a range of responses, from sea walls to the managed retreat of buildings. (1) __________ Local residents are often divided: some demand immediate protective structures, while others argue that such defences only postpone an inevitable adjustment. (2) __________ The underlying difficulty is that any chosen path carries both costs and uncertainties.`,
         text: "Which sentence best fits gap (1)?",
         options: [
-          "Trees also provide shade in summer and can lower local temperatures.",
-          "Many councils have stopped planting trees altogether.",
-          "Drivers say that trees make it harder to see traffic lights.",
-          "The cost of watering young trees is extremely high."
+          "Each option involves trade-offs that are not purely technical.",
+          "Most engineers privately believe that sea walls are useless.",
+          "Flooding has decreased in the last decade.",
+          "Tourism has been unaffected by the changes."
         ],
         answer: 0
       },
       {
         id: 15,
         type: "insert",
-        passage: `City councils across the country are planting more trees along busy roads. They hope the trees will reduce air pollution and make streets more pleasant for walkers and cyclists. (1) __________ Some residents, however, complain that falling leaves block gutters and that roots damage footpaths. (2) __________ Councils reply that the long-term benefits outweigh these short-term problems.`,
+        passage: `Many coastal towns now face regular flooding at high tide even on calm days. Engineers have proposed a range of responses, from sea walls to the managed retreat of buildings. (1) __________ Local residents are often divided: some demand immediate protective structures, while others argue that such defences only postpone an inevitable adjustment. (2) __________ The underlying difficulty is that any chosen path carries both costs and uncertainties.`,
         text: "Which sentence best fits gap (2)?",
         options: [
-          "These complaints have led some councils to remove newly planted trees.",
-          "Scientists have proved that trees have no effect on air quality.",
-          "Most residents actually prefer concrete surfaces.",
-          "Leaf fall only happens in tropical climates."
+          "Neither group has yet found a solution that satisfies everyone.",
+          "All residents now support managed retreat.",
+          "Sea walls have already been built in every affected town.",
+          "The government has refused to fund any further studies."
         ],
         answer: 0
       },
 
-      // Q16-Q17: Multi-extract matching style
+      // Q16–17 Multi-extract matching – finer distinctions
       {
         id: 16,
         type: "match",
         extracts: {
-          A: `Extract A\nI dreamt I was standing at the edge of a cliff. I knew I could not fly, yet in the dream I stepped forward and the air held me. For a moment I felt weightless and completely safe.`,
-          B: `Extract B\nMost of the dreams people remember are about ordinary events – missing a train, being late for school, or talking with someone they know. Strange or impossible dreams are less common than we think.`,
-          C: `Extract C\nSome writers keep a notebook by the bed and write down their dreams as soon as they wake. They say the images often give them ideas for stories or solutions to problems they have been thinking about.`,
-          D: `Extract D\nWhen we wake, the powerful feelings of a dream usually fade within minutes. What seemed urgent and real in the night becomes hard to recall by breakfast time.`
+          A: `Extract A\nThe first time I tried to meditate I spent the entire twenty minutes planning dinner and wondering whether I had locked the car. Only later did I realise that noticing the drift of attention was itself the beginning of the practice.`,
+          B: `Extract B\nSome traditions treat dreams as messages that arrive in symbolic form. A house may stand for the self; water may stand for emotion. The work is not to accept the symbols at face value but to explore what they evoke in the dreamer.`,
+          C: `Extract C\nUnder experimental conditions, people who were told they had slept well performed better on memory tests the next day—even when the information was false. Expectation alone appeared to influence cognitive performance.`,
+          D: `Extract D\nChildren’s imaginary companions are sometimes dismissed as mere play. Yet longitudinal studies suggest that children who create such companions often show advanced abilities in perspective-taking and narrative construction.`
         },
-        text: "Which extract describes a dream in which something impossible happens?",
+        text: "Which extract describes a situation in which a false belief affected later performance?",
         options: ["Extract A", "Extract B", "Extract C", "Extract D"],
-        answer: 0
+        answer: 2
       },
       {
         id: 17,
         type: "match",
         extracts: {
-          A: `Extract A\nI dreamt I was standing at the edge of a cliff. I knew I could not fly, yet in the dream I stepped forward and the air held me. For a moment I felt weightless and completely safe.`,
-          B: `Extract B\nMost of the dreams people remember are about ordinary events – missing a train, being late for school, or talking with someone they know. Strange or impossible dreams are less common than we think.`,
-          C: `Extract C\nSome writers keep a notebook by the bed and write down their dreams as soon as they wake. They say the images often give them ideas for stories or solutions to problems they have been thinking about.`,
-          D: `Extract D\nWhen we wake, the powerful feelings of a dream usually fade within minutes. What seemed urgent and real in the night becomes hard to recall by breakfast time.`
+          A: `Extract A\nThe first time I tried to meditate I spent the entire twenty minutes planning dinner and wondering whether I had locked the car. Only later did I realise that noticing the drift of attention was itself the beginning of the practice.`,
+          B: `Extract B\nSome traditions treat dreams as messages that arrive in symbolic form. A house may stand for the self; water may stand for emotion. The work is not to accept the symbols at face value but to explore what they evoke in the dreamer.`,
+          C: `Extract C\nUnder experimental conditions, people who were told they had slept well performed better on memory tests the next day—even when the information was false. Expectation alone appeared to influence cognitive performance.`,
+          D: `Extract D\nChildren’s imaginary companions are sometimes dismissed as mere play. Yet longitudinal studies suggest that children who create such companions often show advanced abilities in perspective-taking and narrative construction.`
         },
-        text: "Which extract says that dreams can be useful for creative work?",
+        text: "Which extract presents an activity that is often underestimated but may indicate developmental strengths?",
         options: ["Extract A", "Extract B", "Extract C", "Extract D"],
-        answer: 2
+        answer: 3
       }
     ];
 
-    // ===================== STATE =====================
+    // State & logic (same structure as v2)
     const TOTAL_TIME = 45 * 60;
     let timeLeft = TOTAL_TIME;
     let timerInterval = null;
@@ -456,7 +431,6 @@
     let testSubmitted = false;
     let currentExtract = "A";
 
-    // ===================== RENDER =====================
     function formatTime(s) {
       const m = Math.floor(s / 60).toString().padStart(2, "0");
       const sec = (s % 60).toString().padStart(2, "0");
@@ -507,13 +481,12 @@
           html += `<div class="extract-tab ${currentExtract === k ? "active" : ""}" data-ext="${k}">Extract ${k}</div>`;
         });
         html += `</div>`;
-        html += `<div class="passage-box" id="passage-box">${q.extracts[currentExtract] || q.extracts[keys[0]]}</div>`;
+        html += `<div class="passage-box">${q.extracts[currentExtract] || q.extracts[keys[0]]}</div>`;
       } else if (q.passage) {
         html += `<div class="passage-box">${q.passage}</div>`;
       }
 
-      html += `<div class="question-text">${q.text}</div>`;
-      html += `<div class="options">`;
+      html += `<div class="question-text">${q.text}</div><div class="options">`;
       q.options.forEach((opt, i) => {
         const sel = answers[currentIndex] === i ? "selected" : "";
         html += `<label class="option ${sel}">
@@ -522,23 +495,16 @@
         </label>`;
       });
       html += `</div>`;
-
       area.innerHTML = html;
 
-      // Tab clicks
       area.querySelectorAll(".extract-tab").forEach(tab => {
-        tab.onclick = () => {
-          currentExtract = tab.dataset.ext;
-          renderQuestion();
-        };
+        tab.onclick = () => { currentExtract = tab.dataset.ext; renderQuestion(); };
       });
 
-      // Option clicks
       if (!testSubmitted) {
         area.querySelectorAll(".option").forEach(opt => {
           opt.onclick = () => {
-            const val = parseInt(opt.querySelector("input").value, 10);
-            answers[currentIndex] = val;
+            answers[currentIndex] = parseInt(opt.querySelector("input").value, 10);
             renderQuestion();
           };
         });
@@ -549,7 +515,6 @@
       renderNav();
     }
 
-    // ===================== EVENTS =====================
     document.getElementById("start-btn").onclick = () => {
       document.getElementById("start-screen").classList.add("hidden");
       document.getElementById("test-screen").classList.remove("hidden");
@@ -563,12 +528,8 @@
 
     document.getElementById("next-btn").onclick = () => {
       if (currentIndex < QUESTIONS.length - 1) {
-        currentIndex++;
-        currentExtract = "A";
-        renderQuestion();
-      } else {
-        if (confirm("Submit all answers now?")) submitTest(false);
-      }
+        currentIndex++; currentExtract = "A"; renderQuestion();
+      } else if (confirm("Submit all answers now?")) submitTest(false);
     };
 
     document.getElementById("flag-btn").onclick = () => {
@@ -588,13 +549,11 @@
       const answered = answers.filter(a => a !== null).length;
       const correct = answers.filter((a, i) => a === QUESTIONS[i].answer).length;
 
-      let summary = `Reading Practice Test (Official Style) – Results\n`;
+      let summary = `Reading Practice – Harder Version Results\n`;
       summary += `Date: ${new Date().toLocaleString()}\n`;
       summary += `Time used: ${formatTime(TOTAL_TIME - Math.max(0, timeLeft))}\n`;
       summary += `Auto-submitted: ${auto ? "Yes" : "No"}\n`;
-      summary += `Answered: ${answered} / 17\n`;
-      summary += `Correct: ${correct} / 17\n\nDetailed:\n`;
-
+      summary += `Answered: ${answered} / 17\nCorrect: ${correct} / 17\n\n`;
       QUESTIONS.forEach((q, i) => {
         const ua = answers[i];
         summary += `Q${i+1}: ${ua === null ? "No answer" : q.options[ua]} → ${ua === q.answer ? "Correct" : "Incorrect"}\n`;
@@ -603,11 +562,11 @@
       document.getElementById("test-screen").classList.add("hidden");
       document.getElementById("result-screen").classList.remove("hidden");
       document.getElementById("result-message").textContent = auto
-        ? "Time expired. Answers have been submitted automatically."
+        ? "Time expired. Answers submitted automatically."
         : "You have submitted your answers.";
       document.getElementById("summary-box").textContent = summary;
 
-      const subject = encodeURIComponent("Reading Practice Test Results – Official Style");
+      const subject = encodeURIComponent("Reading Harder Version – Results");
       const body = encodeURIComponent(summary);
       document.getElementById("email-link").href = `mailto:waynehong789@gmail.com?subject=${subject}&body=${body}`;
     }
