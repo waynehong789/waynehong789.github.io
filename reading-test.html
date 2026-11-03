@@ -118,6 +118,20 @@
       border-radius: 8px; margin: 14px 0; font-size: 0.9rem;
       max-height: 340px; overflow-y: auto; white-space: pre-wrap;
     }
+    
+    /* Anti-copy protection */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .option, .question-text, .passage-box {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
     footer { text-align: center; padding: 16px; font-size: 0.8rem; color: var(--muted); }
   </style>
 </head>
@@ -421,8 +435,9 @@
       }
     ];
 
-    // State & logic (same structure as v2)
+    // State & logic
     const TOTAL_TIME = 45 * 60;
+    const STORAGE_KEY = "reading_harder_v3_progress";
     let timeLeft = TOTAL_TIME;
     let timerInterval = null;
     let currentIndex = 0;
@@ -430,6 +445,38 @@
     let flagged = new Array(QUESTIONS.length).fill(false);
     let testSubmitted = false;
     let currentExtract = "A";
+    let testStarted = false;
+
+    function saveProgress() {
+      if (testSubmitted) return;
+      const data = {
+        answers,
+        flagged,
+        timeLeft,
+        currentIndex,
+        testStarted
+      };
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+    }
+
+    function loadProgress() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        const data = JSON.parse(raw);
+        if (!data || !Array.isArray(data.answers) || data.answers.length !== QUESTIONS.length) return false;
+        answers = data.answers;
+        flagged = data.flagged || new Array(QUESTIONS.length).fill(false);
+        timeLeft = typeof data.timeLeft === "number" ? data.timeLeft : TOTAL_TIME;
+        currentIndex = typeof data.currentIndex === "number" ? data.currentIndex : 0;
+        testStarted = !!data.testStarted;
+        return testStarted;
+      } catch(e) { return false; }
+    }
+
+    function clearProgress() {
+      try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    }
 
     function formatTime(s) {
       const m = Math.floor(s / 60).toString().padStart(2, "0");
@@ -442,6 +489,7 @@
       timerInterval = setInterval(() => {
         timeLeft--;
         document.getElementById("timer").textContent = formatTime(timeLeft);
+        if (timeLeft % 15 === 0) saveProgress(); // auto-save every 15 seconds
         if (timeLeft <= 120) document.getElementById("timer").classList.add("warning");
         if (timeLeft <= 0) {
           clearInterval(timerInterval);
@@ -505,6 +553,7 @@
         area.querySelectorAll(".option").forEach(opt => {
           opt.onclick = () => {
             answers[currentIndex] = parseInt(opt.querySelector("input").value, 10);
+            saveProgress();
             renderQuestion();
           };
         });
@@ -516,6 +565,8 @@
     }
 
     document.getElementById("start-btn").onclick = () => {
+      testStarted = true;
+      saveProgress();
       document.getElementById("start-screen").classList.add("hidden");
       document.getElementById("test-screen").classList.remove("hidden");
       startTimer();
@@ -523,17 +574,18 @@
     };
 
     document.getElementById("prev-btn").onclick = () => {
-      if (currentIndex > 0) { currentIndex--; currentExtract = "A"; renderQuestion(); }
+      if (currentIndex > 0) { currentIndex--; currentExtract = "A"; saveProgress(); renderQuestion(); }
     };
 
     document.getElementById("next-btn").onclick = () => {
       if (currentIndex < QUESTIONS.length - 1) {
-        currentIndex++; currentExtract = "A"; renderQuestion();
+        currentIndex++; currentExtract = "A"; saveProgress(); renderQuestion();
       } else if (confirm("Submit all answers now?")) submitTest(false);
     };
 
     document.getElementById("flag-btn").onclick = () => {
       flagged[currentIndex] = !flagged[currentIndex];
+      saveProgress();
       renderQuestion();
     };
 
@@ -545,6 +597,7 @@
       if (testSubmitted) return;
       testSubmitted = true;
       clearInterval(timerInterval);
+      clearProgress();
 
       const answered = answers.filter(a => a !== null).length;
       const correct = answers.filter((a, i) => a === QUESTIONS[i].answer).length;
@@ -570,6 +623,35 @@
       const body = encodeURIComponent(summary);
       document.getElementById("email-link").href = `mailto:waynehong789@gmail.com?subject=${subject}&body=${body}`;
     }
+
+    // Restore progress on page load (if test was already started and not submitted)
+    (function initRestore() {
+      const restored = loadProgress();
+      if (restored && timeLeft > 0) {
+        document.getElementById("start-screen").classList.add("hidden");
+        document.getElementById("test-screen").classList.remove("hidden");
+        startTimer();
+        renderQuestion();
+      }
+    })();
+
+    // Anti-copy / anti-cheat measures
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      // Disable Ctrl+C, Ctrl+A, Ctrl+X, Ctrl+U, F12, Ctrl+Shift+I
+      if ((e.ctrlKey || e.metaKey) && ['c','C','a','A','x','X','u','U','s','S'].includes(e.key)) {
+        e.preventDefault();
+        return false;
+      }
+      if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i','I','j','J'].includes(e.key))) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
   </script>
 </body>
 </html>
