@@ -197,13 +197,13 @@
 
   <script>
     const SCHEDULE = {
-      0: { name: "Sunday",    focus: "Writing + Review",                     time: "7:20 – 8:20",  file: null,          desc: "Write one piece and review the week's error book" },
-      1: { name: "Monday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test.html", desc: "Cloze, details & comprehension (Timed 45 min)" },
-      2: { name: "Tuesday",   focus: "Math Focus",                           time: "4:20 – 5:05",  file: null,          desc: "Algebra & Geometry practice" },
-      3: { name: "Wednesday", focus: "Reading + Thinking Skills",            time: "7:20 – 8:20",  file: "reading-test.html", desc: "Implied meaning + Thinking Skills" },
-      4: { name: "Thursday",  focus: "Math Focus",                           time: "4:20 – 5:05",  file: null,          desc: "Word problems + review mistakes" },
-      5: { name: "Friday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test.html", desc: "Mixed Reading practice" },
-      6: { name: "Saturday",  focus: "Full Section Practice",                time: "4:30 – 6:00",  file: "reading-test.html", desc: "Full timed Reading or Math section" }
+      0: { name: "Sunday",    focus: "Writing + Review",                     time: "7:20 – 8:20",  file: null,                    desc: "Write one piece and review the week's error book" },
+      1: { name: "Monday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test-v3.html",   desc: "Harder Reading – 17 questions (Timed 45 min)" },
+      2: { name: "Tuesday",   focus: "Math Focus",                           time: "4:20 – 5:05",  file: "math-test.html",         desc: "Mathematical Reasoning – 15 questions (Timed 40 min)" },
+      3: { name: "Wednesday", focus: "Reading + Thinking Skills",            time: "7:20 – 8:20",  file: "reading-test-v3.html",   desc: "Reading practice + Thinking Skills" },
+      4: { name: "Thursday",  focus: "Math Focus",                           time: "4:20 – 5:05",  file: "math-test.html",         desc: "Mathematical Reasoning practice" },
+      5: { name: "Friday",    focus: "Reading Focus",                        time: "4:20 – 5:10",  file: "reading-test-v3.html",   desc: "Mixed Reading practice" },
+      6: { name: "Saturday",  focus: "Full Section Practice",                time: "4:30 – 6:00",  file: "reading-test-v3.html",   desc: "Full timed Reading or Math section" }
     };
 
     const today = new Date().getDay();
@@ -215,6 +215,7 @@
 
     const cardsContainer = document.getElementById("practice-cards");
 
+    // Recommended card
     const recommended = document.createElement("a");
     recommended.className = "practice-card recommended";
     if (todayInfo.file) {
@@ -231,12 +232,14 @@
     `;
     cardsContainer.appendChild(recommended);
 
+    // Other available practices
     const available = [
-      { title: "Reading Practice Test", desc: "Timed 45-minute Reading section (sample questions)", file: "reading-test.html", meta: "45 minutes" }
+      { title: "Reading Practice (Harder)", desc: "17 questions – dual extracts, cloze, poetry, matching (45 min)", file: "reading-test-v3.html", meta: "45 minutes" },
+      { title: "Mathematical Reasoning", desc: "15 questions – algebra, geometry, multi-step problems (40 min)", file: "math-test.html", meta: "40 minutes" }
     ];
 
     available.forEach(item => {
-      if (todayInfo.file === item.file) return;
+      if (todayInfo.file === item.file) return; // already shown as recommended
       const card = document.createElement("a");
       card.className = "practice-card";
       card.href = item.file;
@@ -248,6 +251,7 @@
       cardsContainer.appendChild(card);
     });
 
+    // Schedule table
     const tbody = document.getElementById("schedule-body");
     for (let d = 1; d <= 6; d++) {
       const s = SCHEDULE[d];
