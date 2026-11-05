@@ -38,6 +38,18 @@
     .flag-btn { background:none; border:1px solid var(--warning); color:#b7791f; padding:5px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem; }
     #result-section { text-align:center; }
     .summary-box { -webkit-user-select: text; user-select: text; cursor: text; text-align:left; background:#f7fafc; padding:14px; border-radius:8px; margin:14px 0; font-size:0.88rem; max-height:360px; overflow-y:auto; white-space:pre-wrap; }
+    
+    .diagram {
+      background: #f7fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 14px;
+      text-align: center;
+      overflow-x: auto;
+    }
+    .diagram svg { max-width: 100%; height: auto; }
+
     footer { text-align:center; padding:16px; font-size:0.8rem; color:var(--muted); }
   </style>
 </head>
@@ -102,11 +114,31 @@
       {id:5, text:"Amira argues: “Free repair kiosks in libraries will reduce landfill because people will fix items instead of throwing them away.”\\n\\nWhich statement, if true, most strengthens her argument?", options:["Some repaired items later break again","At existing kiosks most items brought in were successfully repaired after owners had planned to discard them","Repair kiosks require trained staff","Some residents prefer to buy new items","Libraries already have limited space"], answer:1},
       {id:6, text:"In a code, each letter stands for a digit.  SEND + MORE = MONEY is a famous puzzle. Using the same idea, if  A + A + A = BI  and each letter is a different digit, which could be true?", options:["A=5, B=1, I=5","A=4, B=1, I=2","A=3, B=0, I=9","A=6, B=1, I=8","A=2, B=0, I=6"], answer:1},
       {id:7, text:"All the students who joined the chess club this year also joined the maths club. Some maths-club members did not join the chess club.\\n\\nWhich statement must be true?", options:["Every maths-club member joined chess","No chess-club member joined maths","At least one maths-club member is not in chess","Chess club is larger than maths club","Everyone joined both clubs"], answer:2},
-      {id:8, text:"A square garden is divided into 4 smaller identical squares. Then each of those is divided into 4 even smaller identical squares.\\n\\nHow many of the smallest squares are there?", options:["8","12","16","20","24"], answer:2},
+      {id:8, text:"A square garden is divided into 4 smaller identical squares. Then each of those is divided into 4 even smaller identical squares.\\n\\nHow many of the smallest squares are there?", options:["8","12","16","20","24"], answer:2, diagram:`<svg width="220" height="120" viewBox="0 0 220 120">
+  <rect x="10" y="10" width="90" height="90" fill="none" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="55" y1="10" x2="55" y2="100" stroke="#2b6cb0" stroke-width="1.5"/>
+  <line x1="10" y1="55" x2="100" y2="55" stroke="#2b6cb0" stroke-width="1.5"/>
+  <rect x="120" y="10" width="40" height="40" fill="#ebf8ff" stroke="#2b6cb0"/>
+  <rect x="160" y="10" width="40" height="40" fill="#ebf8ff" stroke="#2b6cb0"/>
+  <rect x="120" y="50" width="40" height="40" fill="#ebf8ff" stroke="#2b6cb0"/>
+  <rect x="160" y="50" width="40" height="40" fill="#ebf8ff" stroke="#2b6cb0"/>
+  <text x="55" y="115" text-anchor="middle" font-size="11" fill="#4a5568">Large square</text>
+  <text x="160" y="115" text-anchor="middle" font-size="11" fill="#4a5568">4 smaller squares</text>
+</svg>`},
       {id:9, text:"If today is Wednesday, what day of the week will it be 100 days from now?", options:["Thursday","Friday","Saturday","Sunday","Monday"], answer:1},
       {id:10, text:"Which number continues the pattern?\\n2, 6, 12, 20, 30, …", options:["36","40","42","48","56"], answer:2},
       {id:11, text:"A statement says: “If it is raining, then the ground is wet.”\\nThe ground is wet.\\n\\nWhat can we correctly conclude?", options:["It must be raining","It cannot be raining","It may or may not be raining","The statement is false","Someone turned on a sprinkler"], answer:2},
-      {id:12, text:"Four people – W, X, Y, Z – are sitting in a row facing north.\\n• Y is to the left of X\\n• Z is to the right of X\\n• W is at one of the ends\\n• Y is not next to W\\n\\nWho is sitting at the left end?", options:["W","X","Y","Z","Cannot be determined"], answer:0},
+      {id:12, text:"Four people – W, X, Y, Z – are sitting in a row facing north.\\n• Y is to the left of X\\n• Z is to the right of X\\n• W is at one of the ends\\n• Y is not next to W\\n\\nWho is sitting at the left end?", options:["W","X","Y","Z","Cannot be determined"], answer:0, diagram:`<svg width="280" height="80" viewBox="0 0 280 80">
+  <rect x="20" y="25" width="50" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="80" y="25" width="50" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="140" y="25" width="50" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="200" y="25" width="50" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="45" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1a365d">?</text>
+  <text x="105" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1a365d">?</text>
+  <text x="165" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1a365d">?</text>
+  <text x="225" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1a365d">?</text>
+  <text x="140" y="75" text-anchor="middle" font-size="11" fill="#4a5568">Four seats facing North →</text>
+</svg>`},
       {id:13, text:"A teacher says: “All students who handed in the draft on time received feedback.”\\nMaya received feedback.\\n\\nWhich conclusion is safe?", options:["Maya handed in the draft on time","Maya may or may not have handed in the draft on time","Maya did not hand in the draft","No one who was late received feedback","Everyone received feedback"], answer:1},
       {id:14, text:"Find the odd one out:\\nTriangle, Square, Pentagon, Cube, Hexagon", options:["Triangle","Square","Pentagon","Cube","Hexagon"], answer:3},
       {id:15, text:"If ☆ means “add 3” and ◇ means “multiply by 2”, what is the value of (5 ☆ 2) ◇ 3 ?", options:["13","16","19","22","25"], answer:1},
@@ -117,7 +149,14 @@
       {id:20, text:"A company claims: “Our new battery lasts 30% longer than ordinary batteries.”\\n\\nWhich additional information would most help you judge the claim?", options:["The colour of the battery packaging","How the 30% figure was measured and under what conditions","The price of the battery","The number of shops that sell it","Whether celebrities use it"], answer:1},
       {id:21, text:"If all Bloops are Razzies and some Razzies are Lazzies, which conclusion follows?", options:["All Bloops are Lazzies","Some Bloops are Lazzies","Some Lazzies are Bloops","No definite conclusion about Bloops and Lazzies","All Lazzies are Bloops"], answer:3},
       {id:22, text:"A sequence is formed by alternating two rules: add 4, then multiply by 2, then add 4, then multiply by 2, and so on. Starting with 3:\\n\\nWhat is the 5th term?", options:["22","28","32","40","44"], answer:2},
-      {id:23, text:"Which shape can be folded from this net description: four squares in a row with one extra square attached to the side of the second square?", options:["Cube","Square pyramid","Triangular prism","Rectangular box that is not a cube","Cannot form a closed box"], answer:0},
+      {id:23, text:"Which shape can be folded from this net description: four squares in a row with one extra square attached to the side of the second square?", options:["Cube","Square pyramid","Triangular prism","Rectangular box that is not a cube","Cannot form a closed box"], answer:0, diagram:`<svg width="200" height="100" viewBox="0 0 200 100">
+  <rect x="10" y="30" width="35" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="45" y="30" width="35" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="80" y="30" width="35" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="115" y="30" width="35" height="35" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <rect x="45" y="65" width="35" height="35" fill="#c6f6d5" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="100" y="20" text-anchor="middle" font-size="12" fill="#4a5568">Cube net (example)</text>
+</svg>`},
       {id:24, text:"A notice says: “Dogs must be kept on a lead in this park.”\\nYou see a dog running freely.\\n\\nWhat can you conclude?", options:["The owner is breaking the rule","The rule is only a suggestion","The dog is a special exception","The notice is in the wrong place","Nothing definite without more information about ownership"], answer:0},
       {id:25, text:"Find the next number: 1, 4, 9, 16, 25, 36, …", options:["42","45","49","52","56"], answer:2},
       {id:26, text:"In a group of 30 students, 18 play tennis, 12 play cricket, and 6 play both.\\n\\nHow many play neither sport?", options:["0","3","6","9","12"], answer:2},
@@ -131,9 +170,35 @@
       {id:34, text:"Which conclusion follows logically?\\nAll athletes are fit. Some teachers are athletes.\\n\\nTherefore:", options:["All teachers are fit","Some teachers are fit","No teachers are fit","All fit people are teachers","Some fit people are not teachers"], answer:1},
       {id:35, text:"A pattern of numbers: each number is the sum of the two preceding numbers (like Fibonacci). The sequence starts 2, 5, …\\n\\nWhat is the 6th term?", options:["19","24","29","31","34"], answer:2},
       {id:36, text:"In a certain code language, “pine apple” means “juice fruit”, “apple orange” means “fruit salad”, and “pine orange” means “juice salad”.\\n\\nWhat does “orange” mean?", options:["juice","fruit","salad","pine","apple"], answer:2},
-      {id:37, text:"A balanced scale has 3 identical balls on the left and 1 identical ball plus a 20 g weight on the right. All balls have the same unknown mass.\\n\\nWhat is the mass of one ball?", options:["5 g","10 g","15 g","20 g","25 g"], answer:1},
+      {id:37, text:"A balanced scale has 3 identical balls on the left and 1 identical ball plus a 20 g weight on the right. All balls have the same unknown mass.\\n\\nWhat is the mass of one ball?", options:["5 g","10 g","15 g","20 g","25 g"], answer:1, diagram:`<svg width="260" height="100" viewBox="0 0 260 100">
+  <!-- balance scale -->
+  <line x1="130" y1="20" x2="130" y2="70" stroke="#4a5568" stroke-width="3"/>
+  <line x1="40" y1="40" x2="220" y2="40" stroke="#4a5568" stroke-width="3"/>
+  <circle cx="130" cy="40" r="4" fill="#2b6cb0"/>
+  <!-- left pan -->
+  <rect x="30" y="45" width="60" height="8" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+  <circle cx="45" cy="70" r="10" fill="#fc8181" stroke="#c53030"/>
+  <circle cx="60" cy="70" r="10" fill="#fc8181" stroke="#c53030"/>
+  <circle cx="75" cy="70" r="10" fill="#fc8181" stroke="#c53030"/>
+  <!-- right pan -->
+  <rect x="170" y="45" width="60" height="8" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+  <circle cx="185" cy="70" r="10" fill="#fc8181" stroke="#c53030"/>
+  <rect x="200" y="62" width="30" height="16" fill="#faf089" stroke="#d69e2e"/>
+  <text x="215" y="74" text-anchor="middle" font-size="10" fill="#744210">20g</text>
+  <text x="60" y="95" text-anchor="middle" font-size="11" fill="#4a5568">3 balls</text>
+  <text x="200" y="95" text-anchor="middle" font-size="11" fill="#4a5568">1 ball + 20g</text>
+</svg>`},
       {id:38, text:"Which of the following statements is logically equivalent to “If it is a square, then it is a rectangle”?", options:["If it is a rectangle, then it is a square","If it is not a rectangle, then it is not a square","If it is not a square, then it is not a rectangle","All rectangles are squares","Some squares are not rectangles"], answer:1},
-      {id:39, text:"A cube is painted red on all sides and then cut into 27 smaller equal cubes (3×3×3).\\n\\nHow many of the small cubes have exactly two faces painted?", options:["6","8","12","16","24"], answer:2},
+      {id:39, text:"A cube is painted red on all sides and then cut into 27 smaller equal cubes (3×3×3).\\n\\nHow many of the small cubes have exactly two faces painted?", options:["6","8","12","16","24"], answer:2, diagram:`<svg width="180" height="140" viewBox="0 0 180 140">
+  <!-- 3x3x3 cube representation -->
+  <rect x="40" y="30" width="90" height="90" fill="#feb2b2" stroke="#c53030" stroke-width="2"/>
+  <line x1="70" y1="30" x2="70" y2="120" stroke="#c53030"/>
+  <line x1="100" y1="30" x2="100" y2="120" stroke="#c53030"/>
+  <line x1="40" y1="60" x2="130" y2="60" stroke="#c53030"/>
+  <line x1="40" y1="90" x2="130" y2="90" stroke="#c53030"/>
+  <text x="85" y="20" text-anchor="middle" font-size="12" fill="#4a5568">3×3×3 cube (painted)</text>
+  <text x="85" y="135" text-anchor="middle" font-size="11" fill="#4a5568">How many small cubes have exactly 2 faces painted?</text>
+</svg>`},
       {id:40, text:"Two statements are given:\\n1. All roses are flowers.\\n2. Some flowers fade quickly.\\n\\nWhich conclusion can be drawn?", options:["All roses fade quickly","Some roses fade quickly","No roses fade quickly","Some flowers that fade quickly are roses","None of the above conclusions definitely follow"], answer:4}
     ];
 
@@ -192,7 +257,9 @@
       document.getElementById("answered-count").textContent=`Answered: ${answers.filter(a=>a!==null).length} / ${QUESTIONS.length}`;
       document.getElementById("flag-btn").textContent=flagged[currentIndex]?"🚩 Flagged":"🚩 Flag";
       const area=document.getElementById("question-area");
-      let html=`<div class="question-text">${q.text.replace(/\n/g,"<br>")}</div><div class="options">`;
+      let html = "";
+      if (q.diagram) html += `<div class="diagram">${q.diagram}</div>`;
+      html += `<div class="question-text">${q.text.replace(/\n/g,"<br>")}</div><div class="options">`;
       q.options.forEach((opt,i)=>{
         const sel=answers[currentIndex]===i?"selected":"";
         html+=`<label class="option ${sel}"><input type="radio" name="q${currentIndex}" value="${i}" ${answers[currentIndex]===i?"checked":""} ${testSubmitted?"disabled":""}/><span>${opt}</span></label>`;
@@ -245,13 +312,22 @@
       if (!e.target.closest || !e.target.closest('.summary-box, #summary-box, #result-message')) e.preventDefault();
     });
     document.addEventListener("dragstart",e=>e.preventDefault());
-    document.addEventListener("keydown",function(e){
-      if ((e.ctrlKey || e.metaKey) && ['c','C','a','A','x','X','u','U','s','S'].includes(e.key)) {
+    document.addEventListener("keydown", function(e) {
+      if ((e.ctrlKey || e.metaKey) && ["c","C","a","A","x","X","u","U","s","S"].includes(e.key)) {
         const sel = window.getSelection();
-        const inSummary = sel && sel.rangeCount > 0 && sel.getRangeAt(0).commonAncestorContainer.closest &&
-          (sel.getRangeAt(0).commonAncestorContainer.closest('.summary-box') || sel.getRangeAt(0).commonAncestorContainer.closest('#summary-box'));
-        if (!inSummary) { e.preventDefault(); return false; }();return false;}
-      if(e.key==="F12"||((e.ctrlKey||e.metaKey)&&e.shiftKey&&["i","I","j","J"].includes(e.key))){e.preventDefault();return false;}
+        let inSummary = false;
+        try {
+          if (sel && sel.rangeCount > 0) {
+            let node = sel.getRangeAt(0).commonAncestorContainer;
+            if (node.nodeType === 3) node = node.parentNode;
+            inSummary = !!(node.closest && node.closest(".summary-box, #summary-box, #result-message"));
+          }
+        } catch (err) {}
+        if (!inSummary) { e.preventDefault(); return false; }
+      }
+      if (e.key === "F12" || ((e.ctrlKey || e.metaKey) && e.shiftKey && ["i","I","j","J"].includes(e.key))) {
+        e.preventDefault(); return false;
+      }
     });
 
     (function(){ if(loadProgress()&&timeLeft>0){ document.getElementById("start-screen").classList.add("hidden"); document.getElementById("test-screen").classList.remove("hidden"); startTimer(); renderQuestion(); } })();
