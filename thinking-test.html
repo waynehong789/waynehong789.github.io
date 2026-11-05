@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thinking Skills Practice – 40 Questions</title>
+  <style>
+    :root { --primary:#1a365d; --primary-light:#2b6cb0; --bg:#f0f4f8; --card:#fff; --text:#2d3748; --muted:#718096; --border:#e2e8f0; --success:#38a169; --danger:#e53e3e; --warning:#d69e2e; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; -webkit-user-select:none; user-select:none; }
+    .container { max-width:860px; margin:0 auto; padding:12px; }
+    header { background:var(--primary); color:white; padding:14px 18px; border-radius:10px; margin-bottom:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    header h1 { font-size:1.15rem; }
+    .timer { font-size:1.35rem; font-weight:700; background:rgba(255,255,255,0.15); padding:6px 14px; border-radius:8px; min-width:100px; text-align:center; }
+    .timer.warning { background:#c53030; animation:pulse 1s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.75} }
+    .card { background:var(--card); border-radius:10px; padding:18px; margin-bottom:14px; border:1px solid var(--border); }
+    .btn { border:none; border-radius:8px; padding:10px 20px; font-size:0.95rem; font-weight:600; cursor:pointer; }
+    .btn-primary { background:var(--primary-light); color:white; }
+    .btn-primary:hover { background:var(--primary); }
+    .btn-secondary { background:var(--border); color:var(--text); }
+    .btn-danger { background:var(--danger); color:white; }
+    .btn:disabled { opacity:0.5; cursor:not-allowed; }
+    .hidden { display:none !important; }
+    .question-nav { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+    .q-btn { width:32px; height:32px; border-radius:6px; border:2px solid var(--border); background:white; font-weight:600; font-size:0.8rem; cursor:pointer; }
+    .q-btn.current { border-color:var(--primary-light); background:#ebf8ff; }
+    .q-btn.answered { background:#c6f6d5; border-color:var(--success); }
+    .q-btn.flagged { background:#fefcbf; border-color:var(--warning); }
+    .question-text { font-size:0.98rem; margin-bottom:16px; white-space:pre-wrap; }
+    .options { display:flex; flex-direction:column; gap:8px; }
+    .option { display:flex; align-items:flex-start; gap:10px; padding:11px; border:2px solid var(--border); border-radius:8px; cursor:pointer; }
+    .option:hover { border-color:var(--primary-light); }
+    .option.selected { border-color:var(--primary-light); background:#ebf8ff; }
+    .option input { margin-top:3px; }
+    .nav-buttons { display:flex; justify-content:space-between; gap:10px; margin-top:18px; }
+    .status-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:0.85rem; color:var(--muted); }
+    .flag-btn { background:none; border:1px solid var(--warning); color:#b7791f; padding:5px 10px; border-radius:6px; cursor:pointer; font-size:0.8rem; }
+    #result-section { text-align:center; }
+    .summary-box { text-align:left; background:#f7fafc; padding:14px; border-radius:8px; margin:14px 0; font-size:0.88rem; max-height:360px; overflow-y:auto; white-space:pre-wrap; }
+    footer { text-align:center; padding:16px; font-size:0.8rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen" class="card">
+      <h2 style="color:var(--primary);margin-bottom:10px;">Thinking Skills Practice</h2>
+      <p>Full-length practice matching the official NSW Selective format (40 questions, 40 minutes).</p>
+      <ul style="margin:12px 0 12px 20px;">
+        <li><strong>Questions:</strong> 40</li>
+        <li><strong>Time allowed:</strong> 40 minutes</li>
+        <li>Logic, spatial, critical reasoning, arguments, patterns</li>
+        <li>Free navigation · auto-save · anti-copy · email results</li>
+      </ul>
+      <button id="start-btn" class="btn btn-primary">Start 40-Minute Thinking Skills Test</button>
+    </div>
+
+    <div id="test-screen" class="hidden">
+      <header>
+        <div>
+          <h1>Thinking Skills</h1>
+          <div style="font-size:0.8rem;opacity:0.9;" id="progress-text">Question 1 of 40</div>
+        </div>
+        <div class="timer" id="timer">40:00</div>
+      </header>
+      <div class="card">
+        <div class="status-bar">
+          <span id="answered-count">Answered: 0 / 40</span>
+          <button class="flag-btn" id="flag-btn">🚩 Flag</button>
+        </div>
+        <div class="question-nav" id="question-nav"></div>
+        <div id="question-area"></div>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" id="prev-btn">← Previous</button>
+          <button class="btn btn-primary" id="next-btn">Next →</button>
+        </div>
+      </div>
+      <div style="text-align:center;margin:12px 0;">
+        <button class="btn btn-danger" id="submit-btn">Submit All Answers</button>
+      </div>
+    </div>
+
+    <div id="result-screen" class="card hidden">
+      <div id="result-section">
+        <h2>Test Submitted</h2>
+        <p id="result-message"></p>
+        <div class="summary-box" id="summary-box"></div>
+        <a id="email-link" class="btn btn-primary" href="#">Email Results to waynehong789@gmail.com</a>
+        <br><br>
+        <button class="btn btn-secondary" onclick="location.reload()">Back to Start</button>
+      </div>
+    </div>
+  </div>
+  <footer>Thinking Skills · 40 Questions · 40 Minutes</footer>
+
+  <script>
+    const QUESTIONS = [
+      {id:1, text:"Five friends – Asha, Ben, Cora, Dylan and Ella – each chose a different locker code from 12, 15, 18, 21 and 24.\\n\\n• Ella’s code is higher than Cora’s.\\n• Ben’s code is 6 more than Asha’s.\\n• Dylan’s code is a multiple of 8.\\n• Cora’s code is 3 more than Asha’s.\\n\\nWhich statement must be true?", options:["Ella’s code is 24","Ben’s code is 18","Dylan’s code is 24","Asha’s code is 15","Cora’s code is 18"], answer:2},
+      {id:2, text:"To win a science prize, a student must:\\n1. Submit an original experiment report, and\\n2. Give a short presentation to the judges.\\n\\nSam submitted an original report but did not win the prize.\\n\\nWhich conclusion is valid?", options:["Sam must have failed the presentation","Sam may have given a presentation; the rules only state what is required, not that it is sufficient","Sam did not submit an original report","Anyone who presents automatically wins","The judges only look at the report"], answer:1},
+      {id:3, text:"Three runners start together. Amy takes 120 seconds per lap, Ben 180 seconds, and Chris 150 seconds. They run at constant speeds.\\n\\nAfter how many seconds will all three next be together at the start line?", options:["900","1200","1500","1800","2400"], answer:3},
+      {id:4, text:"An ordinary bicycle and an electric scooter both have two wheels and handlebars.\\nTalia says: “Therefore they must move forward in exactly the same way.”\\n\\nWhich sentence best shows Talia’s mistake?", options:["Both can be parked near a bike rack","An electric scooter may be moved by a motor while a bicycle is moved by pedalling","Both can have lights","Both are used for transport","Both can carry a rider"], answer:1},
+      {id:5, text:"Amira argues: “Free repair kiosks in libraries will reduce landfill because people will fix items instead of throwing them away.”\\n\\nWhich statement, if true, most strengthens her argument?", options:["Some repaired items later break again","At existing kiosks most items brought in were successfully repaired after owners had planned to discard them","Repair kiosks require trained staff","Some residents prefer to buy new items","Libraries already have limited space"], answer:1},
+      {id:6, text:"In a code, each letter stands for a digit.  SEND + MORE = MONEY is a famous puzzle. Using the same idea, if  A + A + A = BI  and each letter is a different digit, which could be true?", options:["A=5, B=1, I=5","A=4, B=1, I=2","A=3, B=0, I=9","A=6, B=1, I=8","A=2, B=0, I=6"], answer:1},
+      {id:7, text:"All the students who joined the chess club this year also joined the maths club. Some maths-club members did not join the chess club.\\n\\nWhich statement must be true?", options:["Every maths-club member joined chess","No chess-club member joined maths","At least one maths-club member is not in chess","Chess club is larger than maths club","Everyone joined both clubs"], answer:2},
+      {id:8, text:"A square garden is divided into 4 smaller identical squares. Then each of those is divided into 4 even smaller identical squares.\\n\\nHow many of the smallest squares are there?", options:["8","12","16","20","24"], answer:2},
+      {id:9, text:"If today is Wednesday, what day of the week will it be 100 days from now?", options:["Thursday","Friday","Saturday","Sunday","Monday"], answer:1},
+      {id:10, text:"Which number continues the pattern?\\n2, 6, 12, 20, 30, …", options:["36","40","42","48","56"], answer:2},
+      {id:11, text:"A statement says: “If it is raining, then the ground is wet.”\\nThe ground is wet.\\n\\nWhat can we correctly conclude?", options:["It must be raining","It cannot be raining","It may or may not be raining","The statement is false","Someone turned on a sprinkler"], answer:2},
+      {id:12, text:"Four people – W, X, Y, Z – are sitting in a row facing north.\\n• Y is to the left of X\\n• Z is to the right of X\\n• W is at one of the ends\\n• Y is not next to W\\n\\nWho is sitting at the left end?", options:["W","X","Y","Z","Cannot be determined"], answer:0},
+      {id:13, text:"A teacher says: “All students who handed in the draft on time received feedback.”\\nMaya received feedback.\\n\\nWhich conclusion is safe?", options:["Maya handed in the draft on time","Maya may or may not have handed in the draft on time","Maya did not hand in the draft","No one who was late received feedback","Everyone received feedback"], answer:1},
+      {id:14, text:"Find the odd one out:\\nTriangle, Square, Pentagon, Cube, Hexagon", options:["Triangle","Square","Pentagon","Cube","Hexagon"], answer:3},
+      {id:15, text:"If ☆ means “add 3” and ◇ means “multiply by 2”, what is the value of (5 ☆ 2) ◇ 3 ?", options:["13","16","19","22","25"], answer:1},
+      {id:16, text:"A box contains 3 red, 4 blue and 5 green pencils. Two pencils are drawn at random without replacement.\\n\\nWhich statement is true?", options:["The probability of two red is higher than two green","The probability of two blue equals the probability of two green","The probability of two green is higher than two red","It is impossible to draw two of the same colour","All probabilities are equal"], answer:2},
+      {id:17, text:"Which of the following arguments contains a logical flaw?\\n\\n“Every time the rooster crows, the sun rises soon after. Therefore the rooster’s crowing causes the sun to rise.”", options:["It correctly identifies a cause","It mistakes a regular sequence for a causal relationship","It uses incorrect data","It is based on a false premise about roosters","It is a valid scientific conclusion"], answer:1},
+      {id:18, text:"A pattern of tiles repeats every 6 tiles: Blue, Blue, Red, Green, Green, Yellow.\\n\\nWhat colour is the 50th tile?", options:["Blue","Red","Green","Yellow","Cannot be determined"], answer:0},
+      {id:19, text:"In a race, Ali finished before Ben, Ben finished before Cara, and Dana finished before Ali.\\n\\nWhich statement must be true?", options:["Dana finished first","Cara finished last","Ben finished after Dana","Ali finished after Cara","Dana finished after Ben"], answer:2},
+      {id:20, text:"A company claims: “Our new battery lasts 30% longer than ordinary batteries.”\\n\\nWhich additional information would most help you judge the claim?", options:["The colour of the battery packaging","How the 30% figure was measured and under what conditions","The price of the battery","The number of shops that sell it","Whether celebrities use it"], answer:1},
+      {id:21, text:"If all Bloops are Razzies and some Razzies are Lazzies, which conclusion follows?", options:["All Bloops are Lazzies","Some Bloops are Lazzies","Some Lazzies are Bloops","No definite conclusion about Bloops and Lazzies","All Lazzies are Bloops"], answer:3},
+      {id:22, text:"A sequence is formed by alternating two rules: add 4, then multiply by 2, then add 4, then multiply by 2, and so on. Starting with 3:\\n\\nWhat is the 5th term?", options:["22","28","32","40","44"], answer:2},
+      {id:23, text:"Which shape can be folded from this net description: four squares in a row with one extra square attached to the side of the second square?", options:["Cube","Square pyramid","Triangular prism","Rectangular box that is not a cube","Cannot form a closed box"], answer:0},
+      {id:24, text:"A notice says: “Dogs must be kept on a lead in this park.”\\nYou see a dog running freely.\\n\\nWhat can you conclude?", options:["The owner is breaking the rule","The rule is only a suggestion","The dog is a special exception","The notice is in the wrong place","Nothing definite without more information about ownership"], answer:0},
+      {id:25, text:"Find the next number: 1, 4, 9, 16, 25, 36, …", options:["42","45","49","52","56"], answer:2},
+      {id:26, text:"In a group of 30 students, 18 play tennis, 12 play cricket, and 6 play both.\\n\\nHow many play neither sport?", options:["0","3","6","9","12"], answer:2},
+      {id:27, text:"A statement: “No mammals can fly.”\\nWhich of the following, if true, would disprove the statement?", options:["Some birds can fly","Bats are mammals and can fly","Fish cannot fly","Some mammals swim","Insects can fly"], answer:1},
+      {id:28, text:"Three boxes are labelled “Apples”, “Oranges” and “Apples & Oranges”. Every label is wrong.\\nYou draw one fruit from the box labelled “Apples & Oranges” and it is an apple.\\n\\nWhat is in the box labelled “Oranges”?", options:["Only apples","Only oranges","Apples and oranges","Empty","Cannot be determined"], answer:0},
+      {id:29, text:"Which of the following is the best analogy?\\nBook is to Reading as Fork is to ________.", options:["Kitchen","Eating","Metal","Spoon","Drawer"], answer:1},
+      {id:30, text:"A light flashes every 8 seconds. Another light flashes every 12 seconds. They flash together at time zero.\\n\\nAfter how many seconds do they next flash together?", options:["16","20","24","36","48"], answer:2},
+      {id:31, text:"If “some cats are black” is true, which of the following cannot be true?", options:["Some cats are not black","All cats are black","No cats are white","Some black things are cats","All black things are cats"], answer:4},
+      {id:32, text:"A code replaces each letter with the letter three places later in the alphabet (A→D, B→E, …).\\n\\nWhat does “KHOOR” decode to?", options:["HELLO","WORLD","APPLE","GRAPE","PEAR"], answer:0},
+      {id:33, text:"Five books are stacked. History is above Science. Maths is below Science. English is between History and Science. Art is at the bottom.\\n\\nWhich book is in the middle?", options:["History","Science","Maths","English","Art"], answer:1},
+      {id:34, text:"Which conclusion follows logically?\\nAll athletes are fit. Some teachers are athletes.\\n\\nTherefore:", options:["All teachers are fit","Some teachers are fit","No teachers are fit","All fit people are teachers","Some fit people are not teachers"], answer:1},
+      {id:35, text:"A pattern of numbers: each number is the sum of the two preceding numbers (like Fibonacci). The sequence starts 2, 5, …\\n\\nWhat is the 6th term?", options:["19","24","29","31","34"], answer:2},
+      {id:36, text:"In a certain code language, “pine apple” means “juice fruit”, “apple orange” means “fruit salad”, and “pine orange” means “juice salad”.\\n\\nWhat does “orange” mean?", options:["juice","fruit","salad","pine","apple"], answer:2},
+      {id:37, text:"A balanced scale has 3 identical balls on the left and 1 identical ball plus a 20 g weight on the right. All balls have the same unknown mass.\\n\\nWhat is the mass of one ball?", options:["5 g","10 g","15 g","20 g","25 g"], answer:1},
+      {id:38, text:"Which of the following statements is logically equivalent to “If it is a square, then it is a rectangle”?", options:["If it is a rectangle, then it is a square","If it is not a rectangle, then it is not a square","If it is not a square, then it is not a rectangle","All rectangles are squares","Some squares are not rectangles"], answer:1},
+      {id:39, text:"A cube is painted red on all sides and then cut into 27 smaller equal cubes (3×3×3).\\n\\nHow many of the small cubes have exactly two faces painted?", options:["6","8","12","16","24"], answer:2},
+      {id:40, text:"Two statements are given:\\n1. All roses are flowers.\\n2. Some flowers fade quickly.\\n\\nWhich conclusion can be drawn?", options:["All roses fade quickly","Some roses fade quickly","No roses fade quickly","Some flowers that fade quickly are roses","None of the above conclusions definitely follow"], answer:4}
+    ];
+
+    const TOTAL_TIME = 40 * 60;
+    const STORAGE_KEY = "thinking_40_progress_v1";
+    let timeLeft = TOTAL_TIME, timerInterval = null, currentIndex = 0;
+    let answers = new Array(QUESTIONS.length).fill(null);
+    let flagged = new Array(QUESTIONS.length).fill(false);
+    let testSubmitted = false, testStarted = false;
+
+    function saveProgress() {
+      if (testSubmitted) return;
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify({answers,flagged,timeLeft,currentIndex,testStarted})); } catch(e){}
+    }
+    function loadProgress() {
+      try {
+        const d = JSON.parse(localStorage.getItem(STORAGE_KEY));
+        if (!d || !Array.isArray(d.answers) || d.answers.length !== QUESTIONS.length) return false;
+        answers=d.answers; flagged=d.flagged||new Array(QUESTIONS.length).fill(false);
+        timeLeft=typeof d.timeLeft==="number"?d.timeLeft:TOTAL_TIME;
+        currentIndex=d.currentIndex||0; testStarted=!!d.testStarted;
+        return testStarted;
+      } catch(e){return false;}
+    }
+    function clearProgress(){ try{localStorage.removeItem(STORAGE_KEY);}catch(e){} }
+
+    function formatTime(s){ const m=Math.floor(s/60).toString().padStart(2,"0"); const sec=(s%60).toString().padStart(2,"0"); return m+":"+sec; }
+
+    function startTimer(){
+      document.getElementById("timer").textContent=formatTime(timeLeft);
+      timerInterval=setInterval(()=>{
+        timeLeft--;
+        document.getElementById("timer").textContent=formatTime(timeLeft);
+        if(timeLeft%15===0) saveProgress();
+        if(timeLeft<=120) document.getElementById("timer").classList.add("warning");
+        if(timeLeft<=0){ clearInterval(timerInterval); submitTest(true); }
+      },1000);
+    }
+
+    function renderNav(){
+      const nav=document.getElementById("question-nav"); nav.innerHTML="";
+      QUESTIONS.forEach((_,i)=>{
+        const btn=document.createElement("button");
+        btn.className="q-btn"; btn.textContent=i+1;
+        if(i===currentIndex) btn.classList.add("current");
+        if(answers[i]!==null) btn.classList.add("answered");
+        if(flagged[i]) btn.classList.add("flagged");
+        btn.onclick=()=>{ if(!testSubmitted){ currentIndex=i; saveProgress(); renderQuestion(); } };
+        nav.appendChild(btn);
+      });
+    }
+
+    function renderQuestion(){
+      const q=QUESTIONS[currentIndex];
+      document.getElementById("progress-text").textContent=`Question ${currentIndex+1} of ${QUESTIONS.length}`;
+      document.getElementById("answered-count").textContent=`Answered: ${answers.filter(a=>a!==null).length} / ${QUESTIONS.length}`;
+      document.getElementById("flag-btn").textContent=flagged[currentIndex]?"🚩 Flagged":"🚩 Flag";
+      const area=document.getElementById("question-area");
+      let html=`<div class="question-text">${q.text}</div><div class="options">`;
+      q.options.forEach((opt,i)=>{
+        const sel=answers[currentIndex]===i?"selected":"";
+        html+=`<label class="option ${sel}"><input type="radio" name="q${currentIndex}" value="${i}" ${answers[currentIndex]===i?"checked":""} ${testSubmitted?"disabled":""}/><span>${opt}</span></label>`;
+      });
+      html+=`</div>`;
+      area.innerHTML=html;
+      if(!testSubmitted){
+        area.querySelectorAll(".option").forEach(opt=>{
+          opt.onclick=()=>{ answers[currentIndex]=parseInt(opt.querySelector("input").value,10); saveProgress(); renderQuestion(); };
+        });
+      }
+      document.getElementById("prev-btn").disabled=currentIndex===0;
+      document.getElementById("next-btn").textContent=currentIndex===QUESTIONS.length-1?"Review & Submit":"Next →";
+      renderNav();
+    }
+
+    document.getElementById("start-btn").onclick=()=>{
+      testStarted=true; saveProgress();
+      document.getElementById("start-screen").classList.add("hidden");
+      document.getElementById("test-screen").classList.remove("hidden");
+      startTimer(); renderQuestion();
+    };
+    document.getElementById("prev-btn").onclick=()=>{ if(currentIndex>0){ currentIndex--; saveProgress(); renderQuestion(); } };
+    document.getElementById("next-btn").onclick=()=>{
+      if(currentIndex<QUESTIONS.length-1){ currentIndex++; saveProgress(); renderQuestion(); }
+      else if(confirm("Submit all answers now?")) submitTest(false);
+    };
+    document.getElementById("flag-btn").onclick=()=>{ flagged[currentIndex]=!flagged[currentIndex]; saveProgress(); renderQuestion(); };
+    document.getElementById("submit-btn").onclick=()=>{ if(confirm("Are you sure you want to submit?")) submitTest(false); };
+
+    function submitTest(auto){
+      if(testSubmitted) return;
+      testSubmitted=true; clearInterval(timerInterval); clearProgress();
+      const answered=answers.filter(a=>a!==null).length;
+      const correct=answers.filter((a,i)=>a===QUESTIONS[i].answer).length;
+      let summary=`Thinking Skills – 40 Questions Results\\nDate: ${new Date().toLocaleString()}\\nTime used: ${formatTime(TOTAL_TIME-Math.max(0,timeLeft))}\\nAuto-submitted: ${auto?"Yes":"No"}\\nAnswered: ${answered} / 40\\nCorrect: ${correct} / 40\\n\\n`;
+      QUESTIONS.forEach((q,i)=>{ const ua=answers[i]; summary+=`Q${i+1}: ${ua===null?"No answer":q.options[ua]} → ${ua===q.answer?"Correct":"Incorrect"}\\n`; });
+      document.getElementById("test-screen").classList.add("hidden");
+      document.getElementById("result-screen").classList.remove("hidden");
+      document.getElementById("result-message").textContent=auto?"Time expired. Answers submitted automatically.":"You have submitted your answers.";
+      document.getElementById("summary-box").textContent=summary;
+      document.getElementById("email-link").href=`mailto:waynehong789@gmail.com?subject=${encodeURIComponent("Thinking Skills 40 Results")}&body=${encodeURIComponent(summary)}`;
+    }
+
+    document.addEventListener("contextmenu",e=>e.preventDefault());
+    document.addEventListener("copy",e=>e.preventDefault());
+    document.addEventListener("cut",e=>e.preventDefault());
+    document.addEventListener("dragstart",e=>e.preventDefault());
+    document.addEventListener("keydown",function(e){
+      if((e.ctrlKey||e.metaKey)&&["c","C","a","A","x","X","u","U","s","S"].includes(e.key)){e.preventDefault();return false;}
+      if(e.key==="F12"||((e.ctrlKey||e.metaKey)&&e.shiftKey&&["i","I","j","J"].includes(e.key))){e.preventDefault();return false;}
+    });
+
+    (function(){ if(loadProgress()&&timeLeft>0){ document.getElementById("start-screen").classList.add("hidden"); document.getElementById("test-screen").classList.remove("hidden"); startTimer(); renderQuestion(); } })();
+  </script>
+</body>
+</html>
