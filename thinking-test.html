@@ -259,7 +259,7 @@
       const area=document.getElementById("question-area");
       let html = "";
       if (q.diagram) html += `<div class="diagram">${q.diagram}</div>`;
-      html += `<div class="question-text">${q.text.replace(/\n/g,"<br>")}</div><div class="options">`;
+      html += `<div class="question-text">${q.text.replace(/\\n/g,"<br>").replace(/\n/g,"<br>")}</div><div class="options">`;
       q.options.forEach((opt,i)=>{
         const sel=answers[currentIndex]===i?"selected":"";
         html+=`<label class="option ${sel}"><input type="radio" name="q${currentIndex}" value="${i}" ${answers[currentIndex]===i?"checked":""} ${testSubmitted?"disabled":""}/><span>${opt}</span></label>`;
