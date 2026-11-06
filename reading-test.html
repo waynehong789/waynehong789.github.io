@@ -113,7 +113,8 @@
       cursor: pointer; font-size: 0.8rem;
     }
     #result-section { text-align: center; }
-    .summary-box {
+    #result-section .summary-box, #result-message { -webkit-user-select: text; user-select: text; }
+    .summary-box { -webkit-user-select: text; user-select: text; cursor: text;
       text-align: left; background: #f7fafc; padding: 14px;
       border-radius: 8px; margin: 14px 0; font-size: 0.9rem;
       max-height: 340px; overflow-y: auto; white-space: pre-wrap;
@@ -637,13 +638,24 @@
 
     // Anti-copy / anti-cheat measures
     document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('copy', e => e.preventDefault());
-    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('copy', e => {
+      if (!e.target.closest || !e.target.closest('.summary-box, #result-message, #summary-box')) {
+        e.preventDefault();
+      }
+    });
+    document.addEventListener('cut', e => {
+      if (!e.target.closest || !e.target.closest('.summary-box, #result-message, #summary-box')) {
+        e.preventDefault();
+      }
+    });
     document.addEventListener('dragstart', e => e.preventDefault());
     document.addEventListener('keydown', function(e) {
       // Disable Ctrl+C, Ctrl+A, Ctrl+X, Ctrl+U, F12, Ctrl+Shift+I
       if ((e.ctrlKey || e.metaKey) && ['c','C','a','A','x','X','u','U','s','S'].includes(e.key)) {
-        e.preventDefault();
+        const sel = window.getSelection();
+        const inSummary = sel && sel.rangeCount > 0 && sel.getRangeAt(0).commonAncestorContainer.closest &&
+          (sel.getRangeAt(0).commonAncestorContainer.closest('.summary-box') || sel.getRangeAt(0).commonAncestorContainer.closest('#summary-box'));
+        if (!inSummary) { e.preventDefault(); return false; }();
         return false;
       }
       if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i','I','j','J'].includes(e.key))) {
