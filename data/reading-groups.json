@@ -1,0 +1,1041 @@
+[
+  {
+    "id": "R01",
+    "title": "Question 1 · Comparing literary extracts",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Extract A",
+        "text": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken."
+      },
+      {
+        "label": "Extract B",
+        "text": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+      }
+    ],
+    "items": [
+      {
+        "id": "R01-1",
+        "prompt": "Both extracts suggest that the travellers",
+        "inputType": "single_choice",
+        "options": [
+          "were in high spirits throughout the journey",
+          "experienced a change in atmosphere as they moved",
+          "relied on a map to find their way",
+          "were racing against time"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "Both groups move into a changed setting: cooler trees after silt flats in A, and an exposed ridge after the dusty track in B."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R02",
+    "title": "Question 2 · Comparing literary extracts",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Extract A",
+        "text": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken."
+      },
+      {
+        "label": "Extract B",
+        "text": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+      }
+    ],
+    "items": [
+      {
+        "id": "R02-1",
+        "prompt": "In Extract A, the youngest child’s action of stepping in the exact prints most likely shows",
+        "inputType": "single_choice",
+        "options": [
+          "a desire to leave no trace",
+          "imitation and perhaps a need for security",
+          "an attempt to walk faster than the others",
+          "disagreement with the chosen path"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The child follows the footprints of the person ahead exactly, suggesting imitation and comfort in following an older walker."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R03",
+    "title": "Question 3 · Comparing literary extracts",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Extract A",
+        "text": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken."
+      },
+      {
+        "label": "Extract B",
+        "text": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+      }
+    ],
+    "items": [
+      {
+        "id": "R03-1",
+        "prompt": "Which extract ends on a note of continued difficulty rather than relief?",
+        "inputType": "single_choice",
+        "options": [
+          "Extract A only",
+          "Extract B only",
+          "Both extracts",
+          "Neither extract"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "Extract B states that arriving at the ridge brought no relief and that the descent would be no easier."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R04",
+    "title": "Question 4 · Comparing literary extracts",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Extract A",
+        "text": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken."
+      },
+      {
+        "label": "Extract B",
+        "text": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+      }
+    ],
+    "items": [
+      {
+        "id": "R04-1",
+        "prompt": "The crow in Extract A and the snake in Extract B both function mainly to",
+        "inputType": "single_choice",
+        "options": [
+          "add a sense of threat or unease to the scene",
+          "show that the travellers are in a nature reserve",
+          "provide comic relief",
+          "indicate the time of year"
+        ],
+        "answer": 0,
+        "skill": "Reading comprehension",
+        "explanation": "The distant crow and sudden snake subtly intensify the uneasy atmosphere; neither animal is a comic or seasonal detail."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R05",
+    "title": "Question 5 · Polar perspectives",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition."
+      }
+    ],
+    "items": [
+      {
+        "id": "R05-1",
+        "prompt": "The author suggests that earlier explorers’ language of “conquering” the ice",
+        "inputType": "single_choice",
+        "options": [
+          "accurately reflected their technological superiority",
+          "contrasted with moments of genuine awe recorded in their journals",
+          "was mainly used to attract funding for expeditions",
+          "has been adopted unchanged by modern scientists"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The passage juxtaposes triumphant language about conquering the ice with diary passages conveying awe and uncertainty."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R06",
+    "title": "Question 6 · Polar perspectives",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition."
+      }
+    ],
+    "items": [
+      {
+        "id": "R06-1",
+        "prompt": "In the final sentence, “an eternal stage” most nearly means",
+        "inputType": "single_choice",
+        "options": [
+          "a place of permanent theatrical performance",
+          "a setting assumed to be unchanging and permanent",
+          "a platform built by the explorers themselves",
+          "a religious idea of heaven"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "In context, an eternal stage is a landscape incorrectly imagined as fixed and unaffected by change."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R07",
+    "title": "Question 7 · Polar perspectives",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition."
+      }
+    ],
+    "items": [
+      {
+        "id": "R07-1",
+        "prompt": "The passage as a whole moves from",
+        "inputType": "single_choice",
+        "options": [
+          "personal anecdote to scientific data",
+          "historical attitude to present physical change",
+          "celebration of exploration to criticism of modern technology",
+          "description of animals to description of people"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The author begins with historical images of exploration, then explains how the polar environment is changing."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R08",
+    "title": "Question 8 · Polar perspectives",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition."
+      }
+    ],
+    "items": [
+      {
+        "id": "R08-1",
+        "prompt": "Which of the following is an assumption underlying the author’s argument?",
+        "inputType": "single_choice",
+        "options": [
+          "Satellite technology is less reliable than explorers’ journals.",
+          "The thinning of polar ice is a significant and observable fact.",
+          "All early explorers felt only triumph and never humility.",
+          "Maps should never show blank spaces."
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The argument depends on observing a real physical change in polar ice rather than treating it as an unverified claim."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R09",
+    "title": "Question 9 · Vocabulary in context",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "The archive smelled of dust and slow time. Bound reports from the nineteenth century leaned against boxes of fragile photographs. Nothing here had been digitised; the catalogue itself was a set of handwritten cards that crackled when touched. Researchers who came looking for a particular name or date often left with something else entirely—an unexpected letter, a marginal note—that __________ their original question and sent them in a new direction."
+      }
+    ],
+    "items": [
+      {
+        "id": "R09-1",
+        "prompt": "Which word best completes the sentence?",
+        "inputType": "single_choice",
+        "options": [
+          "confirmed",
+          "complicated",
+          "answered",
+          "repeated"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "Complicated means made more difficult or less straightforward; the sentence describes evidence that adds uncertainty."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R10",
+    "title": "Question 10 · Vocabulary in context",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Critics of the plan argued that building the new highway through the wetland would cause irreversible damage. Supporters replied that the economic gains would be substantial and that careful engineering could __________ most of the environmental harm. The debate continued for months without either side yielding."
+      }
+    ],
+    "items": [
+      {
+        "id": "R10-1",
+        "prompt": "Which word best fits the gap?",
+        "inputType": "single_choice",
+        "options": [
+          "increase",
+          "mitigate",
+          "ignore",
+          "celebrate"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "Mitigate means reduce the severity of damage. The supporters claim that the measures would lessen the wetland impacts."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R11",
+    "title": "Question 11 · Vocabulary in context",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Her early stories were praised for their sharp observation of ordinary lives. Later work, however, grew increasingly __________ , full of symbols and shifting timelines that some readers found rewarding and others simply confusing."
+      }
+    ],
+    "items": [
+      {
+        "id": "R11-1",
+        "prompt": "Which word best fits the gap?",
+        "inputType": "single_choice",
+        "options": [
+          "predictable",
+          "elliptical",
+          "humorous",
+          "short"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "Elliptical writing can be indirect or omit straightforward links. Symbols and shifting timelines support this description."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R12",
+    "title": "Question 12 · Poetry",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty."
+      }
+    ],
+    "items": [
+      {
+        "id": "R12-1",
+        "prompt": "The poem suggests that the apparent change in the garden is caused by",
+        "inputType": "single_choice",
+        "options": [
+          "actual movement of the plants",
+          "a change in light and the viewer’s perception",
+          "damage to the glass itself",
+          "the passage of seasons"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The poem contrasts a clear morning view with a distorted afternoon view, indicating changed conditions and perception."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R13",
+    "title": "Question 13 · Poetry",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty."
+      }
+    ],
+    "items": [
+      {
+        "id": "R13-1",
+        "prompt": "The final stanza implies that certainty",
+        "inputType": "single_choice",
+        "options": [
+          "is always reliable if one looks carefully enough",
+          "can be undermined by changes in conditions and perspective",
+          "belongs only to the morning",
+          "is impossible for human beings"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The contrasting appearances of the same garden reveal how certainty may depend on where and when one looks."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R14",
+    "title": "Question 14 · Coastal decisions",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Many coastal towns now face regular flooding at high tide even on calm days. Engineers have proposed a range of responses, from sea walls to the managed retreat of buildings. (1) __________ Local residents are often divided: some demand immediate protective structures, while others argue that such defences only postpone an inevitable adjustment. (2) __________ The underlying difficulty is that any chosen path carries both costs and uncertainties."
+      }
+    ],
+    "items": [
+      {
+        "id": "R14-1",
+        "prompt": "Which sentence best fits gap (1)?",
+        "inputType": "single_choice",
+        "options": [
+          "Each option involves trade-offs that are not purely technical.",
+          "Most engineers privately believe that sea walls are useless.",
+          "Flooding has decreased in the last decade.",
+          "Tourism has been unaffected by the changes."
+        ],
+        "answer": 0,
+        "skill": "Reading comprehension",
+        "explanation": "The paragraph introduces competing coastal responses; the sentence about trade-offs links these options to the social choices discussed next."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "R15",
+    "title": "Question 15 · Lighthouse cloze (8 parts)",
+    "kind": "cloze",
+    "sourceType": "original-practice",
+    "passages": [
+      {
+        "label": "Lighthouse passage",
+        "text": "THE NIGHT THE LIGHTHOUSE WENT QUIET\n\nAt the edge of a windswept headland stood a lighthouse that had guided fishing boats for generations. When the council proposed replacing its lamp with an automated beacon, most residents welcomed the change. Yet Mara, the last keeper, was (1) ________: she had spent thirty years listening for the engines of returning boats.\n\nThe new beacon could send a warning faster than any keeper, but it depended on a steady electricity supply. Mara asked the engineers whether their plans included a (2) ________ system to operate during power cuts. They showed her a battery, tested monthly and designed to take over without delay. Her concern was (3) ________, though she still worried about the old building itself.\n\nThe council intended to lock the lighthouse and allow visitors inside only in summer. Mara argued that closing it entirely for most of the year would (4) ________ the town from a piece of its history. The mayor replied that maintaining public access would require repairs the council could not currently (5) ________.\n\nAt the final meeting, a student suggested opening the ground floor as a small maritime museum while keeping the tower secured. The proposal did not solve every problem, but it offered a (6) ________: safety could be improved without abandoning the place. Volunteers agreed to catalogue the photographs and logbooks, while the council promised to inspect the building before any doors opened.\n\nOn the first evening without a keeper, Mara watched the automated lamp flash at precisely the right (7) ________. She found she missed the familiar climb up the spiral staircase. Still, as a boat turned safely into the harbour, she admitted that a useful tradition might survive even when its daily (8) ________ changed."
+      }
+    ],
+    "items": [
+      {
+        "id": "R15-1",
+        "prompt": "Select the word that best completes gap (1).",
+        "inputType": "dropdown",
+        "options": [
+          "reluctant",
+          "delighted",
+          "indifferent",
+          "reckless"
+        ],
+        "answer": 0,
+        "skill": "tone_context",
+        "explanation": "Mara is uneasy about the replacement because of her long attachment to the lighthouse."
+      },
+      {
+        "id": "R15-2",
+        "prompt": "Select the word that best completes gap (2).",
+        "inputType": "dropdown",
+        "options": [
+          "decorative",
+          "backup",
+          "portable",
+          "seasonal"
+        ],
+        "answer": 1,
+        "skill": "cohesion_cloze",
+        "explanation": "A backup system takes over if the normal electricity supply fails."
+      },
+      {
+        "id": "R15-3",
+        "prompt": "Select the word that best completes gap (3).",
+        "inputType": "dropdown",
+        "options": [
+          "dismissed",
+          "invented",
+          "addressed",
+          "exaggerated"
+        ],
+        "answer": 2,
+        "skill": "cohesion_cloze",
+        "explanation": "The engineers show a tested battery, so her concern about outages has been addressed."
+      },
+      {
+        "id": "R15-4",
+        "prompt": "Select the word that best completes gap (4).",
+        "inputType": "dropdown",
+        "options": [
+          "protect",
+          "reward",
+          "inspire",
+          "disconnect"
+        ],
+        "answer": 3,
+        "skill": "vocabulary_context",
+        "explanation": "Locking out residents for most of the year would disconnect them from local history."
+      },
+      {
+        "id": "R15-5",
+        "prompt": "Select the word that best completes gap (5).",
+        "inputType": "dropdown",
+        "options": [
+          "afford",
+          "remember",
+          "measure",
+          "describe"
+        ],
+        "answer": 0,
+        "skill": "vocabulary_context",
+        "explanation": "The mayor is explaining a lack of money for necessary repairs."
+      },
+      {
+        "id": "R15-6",
+        "prompt": "Select the word that best completes gap (6).",
+        "inputType": "dropdown",
+        "options": [
+          "warning",
+          "compromise",
+          "competition",
+          "delay"
+        ],
+        "answer": 1,
+        "skill": "main_idea",
+        "explanation": "The museum plan balances the competing needs of safety and heritage."
+      },
+      {
+        "id": "R15-7",
+        "prompt": "Select the word that best completes gap (7).",
+        "inputType": "dropdown",
+        "options": [
+          "height",
+          "colour",
+          "interval",
+          "direction"
+        ],
+        "answer": 2,
+        "skill": "vocabulary_context",
+        "explanation": "The lamp flashes at regular time intervals, which can be precisely correct."
+      },
+      {
+        "id": "R15-8",
+        "prompt": "Select the word that best completes gap (8).",
+        "inputType": "dropdown",
+        "options": [
+          "purpose",
+          "location",
+          "ownership",
+          "routine"
+        ],
+        "answer": 3,
+        "skill": "inference",
+        "explanation": "Mara realises that the lighthouse can still guide vessels although the keeper’s daily routine changes."
+      }
+    ],
+    "reuseAllowed": true
+  },
+  {
+    "id": "R16",
+    "title": "Question 16 · Creek restoration headings (8 parts)",
+    "kind": "paragraph_matching",
+    "sourceType": "original-practice",
+    "passages": [
+      {
+        "label": "Paragraphs A–H",
+        "text": "RESTORING WILLOW CREEK\n\nParagraph A\nAt the beginning of the planting season, volunteers mapped the bare banks of Willow Creek. They marked places where water had carved deep channels through loose soil. These measurements would serve as a starting point, allowing the group to compare the creek before and after restoration.\n\nParagraph B\nThe team resisted the temptation to plant a single fast-growing tree everywhere. Different species tolerated different levels of moisture, and a mixture of local shrubs, sedges and trees would provide homes for a wider variety of animals.\n\nParagraph C\nA nursery donated hundreds of seedlings, but the first delivery arrived during a week of unusually hot weather. Rather than plant immediately, volunteers stored the seedlings in shade and watered them until cooler conditions returned.\n\nParagraph D\nSome residents questioned whether the project could work. The group therefore published photographs, measurements and a schedule of public walks, inviting neighbours to check the evidence and ask questions for themselves.\n\nParagraph E\nAs the plants grew, their roots helped hold the riverbank together. After heavy rain, the restored stretches lost less soil than nearby unplanted areas, suggesting that the vegetation was beginning to reduce erosion.\n\nParagraph F\nThe creek also carried rubbish washed from streets. Planting could not stop this flow, so the volunteers organised litter collections and asked the council to improve drains upstream.\n\nParagraph G\nTwo years later, surveys recorded more small birds and insects among the new vegetation. The team avoided claiming that every change was caused by planting alone, because rainfall and surrounding land use had also varied.\n\nParagraph H\nOrganisers decided that the work could not end with a single planting day. They trained local students to monitor seedlings, replace failed plants and report new damage across the following seasons."
+      }
+    ],
+    "items": [
+      {
+        "id": "R16-1",
+        "prompt": "Which heading best summarises paragraph A?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Adjusting plans to the weather",
+          "Establishing a baseline",
+          "Gaining trust through openness",
+          "Dealing with pollution from elsewhere"
+        ],
+        "answer": 1,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph A focuses on establishing a baseline. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-2",
+        "prompt": "Which heading best summarises paragraph B?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Gaining trust through openness",
+          "Evidence of stronger banks",
+          "Interpreting encouraging results cautiously",
+          "Selecting a diverse planting mix"
+        ],
+        "answer": 3,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph B focuses on selecting a diverse planting mix. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-3",
+        "prompt": "Which heading best summarises paragraph C?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Adjusting plans to the weather",
+          "Evidence of stronger banks",
+          "Dealing with pollution from elsewhere",
+          "Planning ongoing care"
+        ],
+        "answer": 0,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph C focuses on adjusting plans to the weather. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-4",
+        "prompt": "Which heading best summarises paragraph D?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Dealing with pollution from elsewhere",
+          "Interpreting encouraging results cautiously",
+          "Gaining trust through openness",
+          "Establishing a baseline"
+        ],
+        "answer": 2,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph D focuses on gaining trust through openness. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-5",
+        "prompt": "Which heading best summarises paragraph E?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Interpreting encouraging results cautiously",
+          "Evidence of stronger banks",
+          "Planning ongoing care",
+          "Selecting a diverse planting mix"
+        ],
+        "answer": 1,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph E focuses on evidence of stronger banks. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-6",
+        "prompt": "Which heading best summarises paragraph F?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Dealing with pollution from elsewhere",
+          "Planning ongoing care",
+          "Establishing a baseline",
+          "Adjusting plans to the weather"
+        ],
+        "answer": 0,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph F focuses on dealing with pollution from elsewhere. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-7",
+        "prompt": "Which heading best summarises paragraph G?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Establishing a baseline",
+          "Selecting a diverse planting mix",
+          "Gaining trust through openness",
+          "Interpreting encouraging results cautiously"
+        ],
+        "answer": 3,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph G focuses on interpreting encouraging results cautiously. The other headings describe different stages of the project."
+      },
+      {
+        "id": "R16-8",
+        "prompt": "Which heading best summarises paragraph H?",
+        "inputType": "paragraph_match",
+        "options": [
+          "Selecting a diverse planting mix",
+          "Adjusting plans to the weather",
+          "Planning ongoing care",
+          "Evidence of stronger banks"
+        ],
+        "answer": 2,
+        "skill": "paragraph_main_idea",
+        "explanation": "Paragraph H focuses on planning ongoing care. The other headings describe different stages of the project."
+      }
+    ],
+    "reuseAllowed": true
+  },
+  {
+    "id": "R17",
+    "title": "Question 17 · Communication extracts (8 parts)",
+    "kind": "extract_matching",
+    "sourceType": "original-practice",
+    "passages": [
+      {
+        "label": "Extract A",
+        "text": "A LETTER ACROSS THE SEA\n\nWhen Nila moved to another country, her grandmother sent a handwritten letter each month. The envelope often arrived weeks after it was posted, but Nila kept every one. She said the uneven handwriting made the words feel like a visit, while the long wait gave her time to compose a careful reply."
+      },
+      {
+        "label": "Extract B",
+        "text": "A WARNING FROM THE HILLS\n\nBefore mobile phone coverage reached the valley, villagers used a pattern of bell strikes to signal a flood warning. The system was simple and could be heard from the fields. However, a newcomer might mistake the rhythm for an ordinary celebration unless someone explained the code."
+      },
+      {
+        "label": "Extract C",
+        "text": "THE CLASSROOM MESSAGE BOARD\n\nAn online class board allowed students to suggest improvements to their school. Quiet pupils sometimes contributed more in writing than they did in meetings. Yet jokes written without facial expressions were occasionally misunderstood, and teachers had to ask students to clarify what they meant."
+      },
+      {
+        "label": "Extract D",
+        "text": "THE TWO-MINUTE RADIO CALL\n\nA volunteer radio operator on a remote walking trail asked hikers to keep their messages short and precise. Long conversations blocked the shared channel. After one group gave an unclear location, the operator introduced a standard format: name, position, problem, and assistance requested."
+      }
+    ],
+    "items": [
+      {
+        "id": "R17-1",
+        "prompt": "Which extract describes a communication method that requires knowledge of an agreed signal?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 1,
+        "skill": "cross_text_matching",
+        "explanation": "Bells carry a warning only if listeners understand what their pattern signifies."
+      },
+      {
+        "id": "R17-2",
+        "prompt": "Which extract suggests that slower communication can encourage more thoughtful replies?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 0,
+        "skill": "cross_text_matching",
+        "explanation": "Nila uses the long delay between letters to compose a careful response."
+      },
+      {
+        "id": "R17-3",
+        "prompt": "Which extract discusses how missing facial cues can cause confusion?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 2,
+        "skill": "cross_text_matching",
+        "explanation": "The online messages sometimes lose intended meaning because expressions are absent."
+      },
+      {
+        "id": "R17-4",
+        "prompt": "Which extract emphasises the need for a fixed order of information?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 3,
+        "skill": "cross_text_matching",
+        "explanation": "The radio operator establishes a standard sequence for emergency calls."
+      },
+      {
+        "id": "R17-5",
+        "prompt": "Which extract presents a system that worked without mobile reception?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 1,
+        "skill": "cross_text_matching",
+        "explanation": "The bell signals were used before mobile coverage was available in the valley."
+      },
+      {
+        "id": "R17-6",
+        "prompt": "Which extract shows a form of communication helping less outspoken people participate?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 2,
+        "skill": "cross_text_matching",
+        "explanation": "Quiet pupils contributed more through written messages than in meetings."
+      },
+      {
+        "id": "R17-7",
+        "prompt": "Which extract describes a message being valued partly for its physical appearance?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 0,
+        "skill": "cross_text_matching",
+        "explanation": "The grandmother’s uneven handwriting makes the letter feel personal to Nila."
+      },
+      {
+        "id": "R17-8",
+        "prompt": "Which extract explains why unnecessary detail can disadvantage other users?",
+        "inputType": "extract_match",
+        "options": [
+          "Extract A",
+          "Extract B",
+          "Extract C",
+          "Extract D"
+        ],
+        "answer": 3,
+        "skill": "cross_text_matching",
+        "explanation": "Lengthy radio conversations occupy a shared channel that others need."
+      }
+    ],
+    "reuseAllowed": true
+  },
+  {
+    "id": "RN01",
+    "title": "New practice · Fiction · hidden workshop",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "Mara found the workshop door unlatched. Inside, the grandfather clock had been taken apart: gears rested in shallow trays, and tiny labels hung from each spring. Her uncle stood motionless beside the table, listening to a faint ticking. “I have not repaired it,” he whispered, “but at last I know which part has been speaking to us.”"
+      }
+    ],
+    "items": [
+      {
+        "id": "RN01-1",
+        "prompt": "What does the uncle’s comment most strongly suggest?",
+        "inputType": "single_choice",
+        "options": [
+          "The clock has stopped permanently",
+          "He has discovered the source of a sound or fault",
+          "Mara has broken the clock",
+          "The workshop has been abandoned"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "He has not completed the repair, but the faint ticking and labelled parts suggest he has identified the source of the noise or problem."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "RN02",
+    "title": "New practice · Nonfiction · urban heat",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "On hot days, a shaded footpath may feel much cooler than an unshaded one even when nearby air temperatures are similar. Trees block some direct sunlight, limiting the energy absorbed by the pavement. Leaves also release water vapour, a process that can cool their surroundings. However, tree planting needs appropriate soil and space to succeed."
+      }
+    ],
+    "items": [
+      {
+        "id": "RN02-1",
+        "prompt": "Which claim is best supported by the passage?",
+        "inputType": "single_choice",
+        "options": [
+          "All shaded streets have lower air temperatures",
+          "Trees can cool streets through more than one mechanism",
+          "Tree planting works equally well in every location",
+          "Pavement always stays cool in summer"
+        ],
+        "answer": 1,
+        "skill": "Reading comprehension",
+        "explanation": "The passage identifies both shade and water release as cooling mechanisms, while noting practical limits."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "RN03",
+    "title": "New practice · Poetry · tide",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "At dusk the harbour folds its light,\nAnd boats return like scattered seeds;\nThe lighthouse writes across the night\nA patient line that no one reads.\nYet sailors know that steady sweep,\nAnd follow home across the deep."
+      }
+    ],
+    "items": [
+      {
+        "id": "RN03-1",
+        "prompt": "What is the main effect of describing the lighthouse as writing a line?",
+        "inputType": "single_choice",
+        "options": [
+          "It suggests the lighthouse sends a guiding signal",
+          "It shows the lighthouse records the weather",
+          "It implies sailors cannot see the light",
+          "It suggests the harbour is empty"
+        ],
+        "answer": 0,
+        "skill": "Reading comprehension",
+        "explanation": "The beam is compared to a line of writing; sailors understand and follow its regular guidance."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "RN04",
+    "title": "New practice · Narrative perspective",
+    "kind": "single",
+    "passages": [
+      {
+        "label": "Passage",
+        "text": "I had told everyone the bridge was safe. Still, when the first plank creaked beneath my boot, I held the rail so tightly that the rough timber marked my palm. Behind me, Finn laughed and stepped forward without hesitation. I hoped he had not noticed my hand."
+      }
+    ],
+    "items": [
+      {
+        "id": "RN04-1",
+        "prompt": "Which detail most clearly reveals the narrator’s feelings?",
+        "inputType": "single_choice",
+        "options": [
+          "Finn laughs",
+          "The bridge has a railing",
+          "The narrator grips the rail tightly",
+          "There is a plank underfoot"
+        ],
+        "answer": 2,
+        "skill": "Reading comprehension",
+        "explanation": "The tight grip and marks on the palm reveal fear despite the narrator’s earlier confident claim."
+      }
+    ],
+    "sourceType": "original-practice"
+  },
+  {
+    "id": "RN05",
+    "title": "New practice · Community solutions matching",
+    "kind": "extract_match",
+    "passages": [
+      {
+        "label": "Four accounts",
+        "text": "Four children describe ways their community solved different problems.\n\nA — The school librarian opened a quiet room after lunch so pupils could read away from the noisy courtyard.\n\nB — Local volunteers painted faded pedestrian crossings, making it easier for drivers to notice where children crossed.\n\nC — A neighbourhood group planted native flowers along a bare verge, hoping to bring back bees and butterflies.\n\nD — Students installed refill stations to reduce the number of disposable plastic bottles used at school."
+      }
+    ],
+    "items": [
+      {
+        "id": "RN05-1",
+        "prompt": "Which speaker describes improving road visibility?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 1,
+        "skill": "Cross-text matching",
+        "explanation": "The newly painted pedestrian crossings make crossings easier for drivers to see."
+      },
+      {
+        "id": "RN05-2",
+        "prompt": "Which speaker focuses on cutting single-use waste?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 3,
+        "skill": "Cross-text matching",
+        "explanation": "Refill stations reduce the need for disposable bottles."
+      },
+      {
+        "id": "RN05-3",
+        "prompt": "Which speaker hopes to benefit pollinating insects?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 2,
+        "skill": "Cross-text matching",
+        "explanation": "Planting native flowers aims to attract bees and butterflies."
+      },
+      {
+        "id": "RN05-4",
+        "prompt": "Which speaker describes a quieter learning space?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 0,
+        "skill": "Cross-text matching",
+        "explanation": "The librarian creates a quiet room for reading."
+      },
+      {
+        "id": "RN05-5",
+        "prompt": "Which speaker specifically mentions installing water-related equipment?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 3,
+        "skill": "Cross-text matching",
+        "explanation": "D describes installation of refill stations."
+      },
+      {
+        "id": "RN05-6",
+        "prompt": "Which account explicitly mentions local volunteers?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 1,
+        "skill": "Cross-text matching",
+        "explanation": "Account B explicitly identifies local volunteers as the people repainting pedestrian crossings."
+      },
+      {
+        "id": "RN05-7",
+        "prompt": "Which speaker uses plants to address a problem?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 2,
+        "skill": "Cross-text matching",
+        "explanation": "Native flowers are planted to encourage insects."
+      },
+      {
+        "id": "RN05-8",
+        "prompt": "Which speaker responds to noise rather than waste or traffic?",
+        "inputType": "extract_match",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": 0,
+        "skill": "Cross-text matching",
+        "explanation": "The quiet reading room addresses the noisy courtyard."
+      }
+    ],
+    "sourceType": "original-practice"
+  }
+]
