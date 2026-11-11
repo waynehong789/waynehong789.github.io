@@ -948,5 +948,635 @@
     "reviewStatus": "new_editor_checked",
     "sourceType": "original-practice",
     "difficulty": 2
+  },
+  {
+    "id": "MFULL26-001",
+    "text": "A tank contains 42 litres of water. Each bucket holds 3.5 litres. How many full buckets can be filled?",
+    "options": [
+      "12",
+      "13",
+      "11",
+      "10",
+      "14"
+    ],
+    "answer": 0,
+    "skill": "Measurement and division",
+    "difficulty": 2,
+    "explanation": "42 ÷ 3.5 = 12 buckets.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-002",
+    "text": "A library has 240 books. Three-eighths are nonfiction. Of the remaining books, one-fifth are borrowed. How many fiction books remain on the shelves?",
+    "options": [
+      "150",
+      "120",
+      "105",
+      "90",
+      "130"
+    ],
+    "answer": 1,
+    "skill": "Fractions and multi-step",
+    "difficulty": 4,
+    "explanation": "Nonfiction: 240 × 3/8 = 90. Fiction: 150. Borrowed fiction: 150/5 = 30. Remaining: 120.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-003",
+    "text": "A rectangle has perimeter 54 cm and length 17 cm. What is its area?",
+    "options": [
+      "153 cm²",
+      "204 cm²",
+      "170 cm²",
+      "187 cm²",
+      "136 cm²"
+    ],
+    "answer": 2,
+    "skill": "Geometry",
+    "difficulty": 3,
+    "explanation": "Length + width = 27 cm, so width = 10 cm. Area = 17 × 10 = 170 cm².",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-004",
+    "text": "A shop offers three notebooks for $7.50. At the same price per notebook, how much do eight cost?",
+    "options": [
+      "$22.50",
+      "$17.50",
+      "$18.00",
+      "$20.00",
+      "$19.50"
+    ],
+    "answer": 3,
+    "skill": "Unit rates",
+    "difficulty": 2,
+    "explanation": "One notebook costs $7.50 ÷ 3 = $2.50; eight cost $20.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-005",
+    "text": "The pattern is 4, 9, 19, 39, … . What is the next term?",
+    "options": [
+      "77",
+      "69",
+      "81",
+      "59",
+      "79"
+    ],
+    "answer": 4,
+    "skill": "Patterns",
+    "difficulty": 3,
+    "explanation": "Each term is double the previous term plus 1: 39 × 2 + 1 = 79.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-006",
+    "text": "A train leaves at 10:47 am and arrives at 12:16 pm. It stops for 8 minutes. How long was it moving?",
+    "options": [
+      "81 minutes",
+      "73 minutes",
+      "89 minutes",
+      "97 minutes",
+      "79 minutes"
+    ],
+    "answer": 0,
+    "skill": "Time reasoning",
+    "difficulty": 3,
+    "explanation": "The total journey lasts 89 minutes; subtract 8 minutes stopped to get 81 minutes.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-007",
+    "text": "Rina and Sol share 84 marbles in the ratio 3:4. How many more marbles does Sol receive than Rina?",
+    "options": [
+      "21",
+      "12",
+      "14",
+      "24",
+      "7"
+    ],
+    "answer": 1,
+    "skill": "Ratio",
+    "difficulty": 3,
+    "explanation": "There are seven parts; each part is 84 ÷ 7 = 12. Their difference is one part.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-008",
+    "text": "A square has area 144 cm². A rectangle has the same perimeter and width 8 cm. What is its length?",
+    "options": [
+      "18 cm",
+      "20 cm",
+      "16 cm",
+      "14 cm",
+      "12 cm"
+    ],
+    "answer": 2,
+    "skill": "Geometry",
+    "difficulty": 4,
+    "explanation": "Square side = 12 cm, perimeter = 48 cm. Rectangle length + width = 24 cm, so length = 16 cm.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-009",
+    "text": "A bag has 5 red, 3 blue and 2 green counters. Without looking, what is the probability of drawing a counter that is NOT blue?",
+    "options": [
+      "3/5",
+      "1/2",
+      "4/5",
+      "7/10",
+      "3/10"
+    ],
+    "answer": 3,
+    "skill": "Probability",
+    "difficulty": 2,
+    "explanation": "There are 10 counters and 7 are not blue, so the probability is 7/10.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-010",
+    "text": "An empty container weighs 650 g. Filled with rice it weighs 2.15 kg. If each serving is 125 g of rice, how many servings does it hold?",
+    "options": [
+      "10",
+      "11",
+      "14",
+      "13",
+      "12"
+    ],
+    "answer": 4,
+    "skill": "Metric conversion",
+    "difficulty": 4,
+    "explanation": "Rice mass = 2150 − 650 = 1500 g. Divide by 125 g = 12 servings.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-011",
+    "text": "A number is multiplied by 4, then 9 is subtracted. The result is 67. What was the original number?",
+    "options": [
+      "19",
+      "21",
+      "17",
+      "14",
+      "24"
+    ],
+    "answer": 0,
+    "skill": "Working backwards",
+    "difficulty": 2,
+    "explanation": "Reverse the operations: (67 + 9) ÷ 4 = 19.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-012",
+    "text": "A map uses a scale of 1 cm to 4 km. Two towns are 6.5 cm apart on the map. What is their actual distance?",
+    "options": [
+      "24 km",
+      "26 km",
+      "20 km",
+      "10.5 km",
+      "30 km"
+    ],
+    "answer": 1,
+    "skill": "Scale",
+    "difficulty": 3,
+    "explanation": "6.5 × 4 = 26 km.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-013",
+    "text": "Six workers can pack 180 boxes in 3 hours at the same steady rate. How many boxes can four workers pack in 5 hours?",
+    "options": [
+      "220",
+      "160",
+      "200",
+      "180",
+      "240"
+    ],
+    "answer": 2,
+    "skill": "Rates",
+    "difficulty": 4,
+    "explanation": "Each worker packs 180 ÷ (6 × 3) = 10 boxes per hour. Four workers in five hours pack 4 × 5 × 10 = 200.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-014",
+    "text": "An angle is 38° smaller than its supplementary angle. What is the smaller angle?",
+    "options": [
+      "76°",
+      "61°",
+      "67°",
+      "71°",
+      "81°"
+    ],
+    "answer": 3,
+    "skill": "Angles",
+    "difficulty": 4,
+    "explanation": "The two angles total 180°. If smaller angle is x, 2x + 38 = 180, so x = 71°.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-015",
+    "text": "A school sold 150 tickets. Adult tickets cost $8 and child tickets cost $5. If 90 child tickets were sold, what was the total money collected?",
+    "options": [
+      "$870",
+      "$810",
+      "$990",
+      "$900",
+      "$930"
+    ],
+    "answer": 4,
+    "skill": "Money",
+    "difficulty": 3,
+    "explanation": "Adult tickets: 150 − 90 = 60. Income = 60 × 8 + 90 × 5 = $930.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-016",
+    "text": "The mean of five numbers is 14. Four of them are 9, 12, 16 and 18. What is the fifth number?",
+    "options": [
+      "15",
+      "17",
+      "14",
+      "13",
+      "16"
+    ],
+    "answer": 0,
+    "skill": "Statistics",
+    "difficulty": 3,
+    "explanation": "Total required = 5 × 14 = 70. Known sum = 55. Missing number = 15.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-017",
+    "text": "A rectangular garden is 9 m by 7 m. A 1 m-wide path runs entirely around its outside. What is the area of the path?",
+    "options": [
+      "40 m²",
+      "36 m²",
+      "32 m²",
+      "44 m²",
+      "48 m²"
+    ],
+    "answer": 1,
+    "skill": "Area",
+    "difficulty": 4,
+    "explanation": "Outer dimensions are 11 m × 9 m = 99 m². Garden = 63 m², so path = 36 m².",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-018",
+    "text": "A ferry carries 28 passengers on its first trip. On each following trip it carries 6 more passengers than on the preceding trip. How many passengers does it carry on the fifth trip?",
+    "options": [
+      "50",
+      "48",
+      "52",
+      "46",
+      "54"
+    ],
+    "answer": 2,
+    "skill": "Sequences",
+    "difficulty": 2,
+    "explanation": "The fifth trip has four increases of six: 28 + 4 × 6 = 52.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-019",
+    "text": "A jacket costing $80 is discounted by 25%, then the reduced price is discounted by another 10%. What is the final price?",
+    "options": [
+      "$56",
+      "$50",
+      "$58",
+      "$54",
+      "$52"
+    ],
+    "answer": 3,
+    "skill": "Percentages",
+    "difficulty": 4,
+    "explanation": "After 25% off: $60. After a further 10% off: $60 − $6 = $54.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-020",
+    "text": "A box contains 12 identical cards numbered 1 to 12. How many cards show a number divisible by both 2 and 3?",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": 4,
+    "skill": "Multiples",
+    "difficulty": 2,
+    "explanation": "Numbers divisible by 6 between 1 and 12 are 6 and 12.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-021",
+    "text": "A cyclist travels 18 km in 45 minutes at constant speed. How far will the cyclist travel in 2 hours at the same speed?",
+    "options": [
+      "48 km",
+      "42 km",
+      "54 km",
+      "36 km",
+      "45 km"
+    ],
+    "answer": 0,
+    "skill": "Speed and time",
+    "difficulty": 4,
+    "explanation": "45 minutes is 3/4 hour, so speed = 18 ÷ 3/4 = 24 km/h. Two hours = 48 km.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-022",
+    "text": "A triangle has sides 7 cm and 12 cm. Which of these could be the length of its third side?",
+    "options": [
+      "20 cm",
+      "14 cm",
+      "4 cm",
+      "19 cm",
+      "5 cm"
+    ],
+    "answer": 1,
+    "skill": "Geometry reasoning",
+    "difficulty": 4,
+    "explanation": "Triangle inequality: third side must be greater than 12 − 7 = 5 and less than 12 + 7 = 19. Only 14 cm fits.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-023",
+    "text": "There are 7 students in a queue. If Maya must stand first and Leo must stand last, how many different students can stand second?",
+    "options": [
+      "3",
+      "7",
+      "5",
+      "4",
+      "6"
+    ],
+    "answer": 2,
+    "skill": "Counting",
+    "difficulty": 2,
+    "explanation": "First and last places are fixed, leaving five students who could be second.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-024",
+    "text": "A cube has edges 5 cm long. What is the total length of all its edges?",
+    "options": [
+      "40 cm",
+      "50 cm",
+      "75 cm",
+      "60 cm",
+      "30 cm"
+    ],
+    "answer": 3,
+    "skill": "3-D measurement",
+    "difficulty": 2,
+    "explanation": "A cube has 12 edges, each 5 cm, giving 60 cm.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-025",
+    "text": "Three different positive whole numbers have a product of 24. Their sum is 9. Which is the largest of the three numbers?",
+    "options": [
+      "6",
+      "5",
+      "12",
+      "8",
+      "4"
+    ],
+    "answer": 4,
+    "skill": "Number reasoning",
+    "difficulty": 4,
+    "explanation": "The only distinct positive whole-number triple with product 24 and sum 9 is 2, 3, 4. The largest is 4.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-026",
+    "text": "A rectangular pool is 12 m long and 5 m wide. It is filled to a depth of 2 m. What volume of water does it contain?",
+    "options": [
+      "120 m³",
+      "90 m³",
+      "240 m³",
+      "60 m³",
+      "19 m³"
+    ],
+    "answer": 0,
+    "skill": "Volume",
+    "difficulty": 2,
+    "explanation": "Volume = 12 × 5 × 2 = 120 cubic metres.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-027",
+    "text": "Which fraction is closest to 1/2?",
+    "options": [
+      "4/9",
+      "7/15",
+      "5/12",
+      "5/8",
+      "3/8"
+    ],
+    "answer": 1,
+    "skill": "Fractions and comparison",
+    "difficulty": 4,
+    "explanation": "Distances from 1/2 are 1/18, 1/12, 1/30, 1/8 and 1/8; 7/15 is closest.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-028",
+    "text": "Two bells ring together at 9:00 am. One rings every 12 minutes and the other every 18 minutes. When will they next ring together?",
+    "options": [
+      "9:24 am",
+      "9:30 am",
+      "9:36 am",
+      "9:54 am",
+      "9:48 am"
+    ],
+    "answer": 2,
+    "skill": "Common multiples",
+    "difficulty": 3,
+    "explanation": "LCM(12, 18) = 36 minutes, so the next shared ring is 9:36 am.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-029",
+    "text": "A 24 cm ribbon is cut into two pieces. One piece is three times as long as the other. How long is the longer piece?",
+    "options": [
+      "12 cm",
+      "15 cm",
+      "16 cm",
+      "18 cm",
+      "20 cm"
+    ],
+    "answer": 3,
+    "skill": "Ratio",
+    "difficulty": 2,
+    "explanation": "The ratio is 1:3, total four parts. One part is 6 cm, so longer piece is 18 cm.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-030",
+    "text": "A spinner has eight equal sectors numbered 1 through 8. What is the probability of landing on a prime number?",
+    "options": [
+      "3/8",
+      "5/8",
+      "3/4",
+      "1/4",
+      "1/2"
+    ],
+    "answer": 4,
+    "skill": "Probability",
+    "difficulty": 2,
+    "explanation": "Prime numbers are 2, 3, 5 and 7: four of eight sectors = 1/2.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-031",
+    "text": "On a grid, a point starts at (−2, 3). It moves 5 squares right and 4 squares down. Where does it finish?",
+    "options": [
+      "(3, −1)",
+      "(−7, 7)",
+      "(−7, −1)",
+      "(2, 1)",
+      "(3, 7)"
+    ],
+    "answer": 0,
+    "skill": "Coordinates",
+    "difficulty": 3,
+    "explanation": "Right adds 5 to x: −2 + 5 = 3. Down subtracts 4 from y: 3 − 4 = −1.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-032",
+    "text": "In a class, 16 students play soccer, 13 play basketball, and 6 play both. How many students play at least one of the two sports?",
+    "options": [
+      "29",
+      "23",
+      "21",
+      "17",
+      "19"
+    ],
+    "answer": 1,
+    "skill": "Sets and counting",
+    "difficulty": 3,
+    "explanation": "Use inclusion–exclusion: 16 + 13 − 6 = 23 students.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-033",
+    "text": "A recipe needs 450 mL of milk for 6 servings. How much milk is needed for 10 servings?",
+    "options": [
+      "675 mL",
+      "600 mL",
+      "750 mL",
+      "700 mL",
+      "900 mL"
+    ],
+    "answer": 2,
+    "skill": "Proportion",
+    "difficulty": 2,
+    "explanation": "Each serving uses 450 ÷ 6 = 75 mL. Ten need 750 mL.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-034",
+    "text": "A shop sells pencils in packs of 6 or packs of 10. What is the smallest number greater than 30 that can be bought as an exact total using only packs of 6 AND, separately, using only packs of 10?",
+    "options": [
+      "36",
+      "40",
+      "50",
+      "60",
+      "42"
+    ],
+    "answer": 3,
+    "skill": "Common multiples",
+    "difficulty": 4,
+    "explanation": "A total must be a common multiple of 6 and 10. The smallest common multiple above 30 is 60.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
+  },
+  {
+    "id": "MFULL26-035",
+    "text": "The table shows the number of books read in one month: Ava 5, Ben 7, Cleo 4, Dev 8. What is the median number of books read?",
+    "options": [
+      "5.5",
+      "4.5",
+      "6.5",
+      "5",
+      "6"
+    ],
+    "answer": 4,
+    "skill": "Data interpretation",
+    "difficulty": 3,
+    "explanation": "Sort 4, 5, 7, 8. The median is the average of 5 and 7, which is 6.",
+    "reviewStatus": "new_original_checked",
+    "sourceType": "original-practice",
+    "paperVersion": "full-2026-11-v2"
   }
 ]

@@ -8,10 +8,17 @@ function randomize(a,seed){let b=a.slice(),x=seed||17;for(let i=b.length-1;i>0;i
 function store(k,obj){try{localStorage.setItem(k,JSON.stringify(obj))}catch(e){$('save-state').textContent='Storage unavailable — progress may not survive refresh.'}}
 function load(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch{return null}}
 function flat(groups){return groups.flatMap(g=>g.items.map(it=>({...it,groupId:g.id,passages:g.passages,groupTitle:g.title}))) }
-let bank=[],items=[],groups=[],state=null,tick=null,activeTab=0;const sessionKey='ronald_session_'+subject+'_expandedbank_v3';
+let bank=[],items=[],groups=[],state=null,tick=null,activeTab=0;
 const mode=params.get('mode')==='daily'?'daily':'full';
+const sessionKey='ronald_session_'+subject+'_'+mode+'_fullpaper_v4';
 function initial(){
  const seed=dateSeed();
+ if(mode==='full' && (subject==='math'||subject==='thinking')){
+   const prefix=subject==='math'?'MFULL26-':'TFULL26-';
+   const paper=bank.filter(q=>String(q.id).startsWith(prefix));
+   if(paper.length!==(subject==='math'?35:40))throw Error('The current full paper is incomplete.');
+   return paper;
+ }
  if(subject==='reading'){
    // Always keep entire linked groups and choose 17 groups / 38 answers for full practice.
    const multi=groups.filter(g=>g.items.length>1),single=groups.filter(g=>g.items.length===1);
@@ -58,7 +65,7 @@ function showIntro(){
  $('intro-summary').textContent=`${mode==='daily'?'Daily practice':'Full section'} · ${count} answer parts · ${mode==='full'?config.minutes:Math.min(config.minutes,subject==='reading'?15:subject==='thinking'?20:18)} minutes.`;
  $('intro-note').textContent=subject==='reading'
   ? 'Full practice selects 17 linked groups with 38 answers; daily practice selects four standalone questions and one complete 8-part group. New original practice materials rotate with the earlier bank.'
-  : `Expanded bank of ${bank.length} items; ${mode==='daily'?'daily': 'full'} practice selects ${count}. Earlier sample questions still require independent content review, and scores are provisional.`;
+  : mode==='full' ? `New November 2026 full paper: ${count} original questions with explanations. This is independent practice, not an official NSW test.` : `Expanded bank of ${bank.length} questions; daily practice draws from the existing and expanded banks. Earlier items still need additional review.`;
 }
 function render(){if(!state){showIntro();return}if(state.status!=='in_progress'){showResults(state);return}$('intro').classList.add('hidden');$('playing').classList.remove('hidden');$('results').classList.add('hidden');renderQuestion();clock();clearInterval(tick);tick=setInterval(clock,1000)}
 function finish(expired){if(!state||state.status!=='in_progress')return;clearInterval(tick);state.status=expired?'expired':'submitted';state.submittedAt=Date.now();const correct=items.filter(q=>state.responses[q.id]===q.answer).length;const answered=items.filter(partAnswered).length;state.score={correct,answered,total:items.length,elapsedSeconds:Math.min(state.minutes*60,Math.floor((Date.now()-state.startedAt)/1000))};persist();let history=load(key)||[];history.push({id:state.subject+'-'+state.startedAt,date:state.date,subject:state.subject,mode:state.mode,...state.score,completedAt:state.submittedAt});store(key,history.slice(-500));showResults(state)}
