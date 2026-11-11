@@ -65,3 +65,13 @@ Added 25 original Maths questions, 25 original Thinking Skills questions and 12 
 The player now chooses 35 Maths or 40 Thinking questions from the larger bank for a timed full section. Reading chooses 14 standalone groups and three complete eight-answer groups, yielding precisely 17 groups / 38 answer parts. Daily practice draws 12 Maths, 15 Thinking, or four standalone Reading groups plus one eight-answer group (12 answer parts). Reading groups never split. The selection changes by Sydney date, not on every click.
 
 New question IDs are `MNEW-*`, `TNEW-*`, `RN*`. Existing IDs and progress-history format are preserved. New sessions are namespaced `_expandedbank_v3` so a previously saved 38-answer session cannot conflict with changed content selection. Prior completed history remains available. New items have editorially checked explanations, but they have not undergone independent professional item validation or live browser usability testing. Earlier sample items still include unverified answer keys. These are original practice items, not official NSW papers.
+
+
+## November 2026 full-paper refresh
+
+- Mathematical Reasoning full mode uses 35 original `MFULL26-###` questions (40 minutes, five answers per question).
+- Thinking Skills full mode uses 40 original `TFULL26-###` questions (40 minutes, four answers per question).
+- Each full mode is a consistent paper, not a random mix of older unverified questions. The full paper can be retaken; it does not automatically create another new paper.
+- Daily practice continues using the previous question pools.
+- Older progress history is retained; unfinished sessions use a versioned key to avoid mismatched question lists.
+- Content is independent practice, not official NSW test material. Worked explanations have been checked during authoring, but an independent teacher review is still advisable.
