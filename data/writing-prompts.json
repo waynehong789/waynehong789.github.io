@@ -1,0 +1,20 @@
+[
+  {
+    "id": "W01",
+    "genre": "persuasive",
+    "title": "A school decision",
+    "prompt": "Your school is deciding whether students should help design a new outdoor learning area. Write a persuasive piece to explain your view to the school leadership team."
+  },
+  {
+    "id": "W02",
+    "genre": "imaginative",
+    "title": "The unexpected message",
+    "prompt": "Write a story that begins: “The message was meant for someone else, but I knew I had to answer it.”"
+  },
+  {
+    "id": "W03",
+    "genre": "reflective",
+    "title": "A change of mind",
+    "prompt": "Write a piece about a time someone changed their mind after discovering something they had not understood."
+  }
+]

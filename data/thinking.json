@@ -1,0 +1,962 @@
+[
+  {
+    "id": 1,
+    "text": "Five friends – Asha, Ben, Cora, Dylan and Ella – each chose a different locker code from 12, 15, 18, 21 and 24.\\n\\n• Ella’s code is higher than Cora’s.\\n• Ben’s code is 6 more than Asha’s.\\n• Dylan’s code is a multiple of 8.\\n• Cora’s code is 3 more than Asha’s.\\n\\nWhich statement must be true?",
+    "options": [
+      "Ella’s code is 24",
+      "Ben’s code is 18",
+      "Dylan’s code is 24",
+      "Asha’s code is 15"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 2,
+    "text": "To win a science prize, a student must:\\n1. Submit an original experiment report, and\\n2. Give a short presentation to the judges.\\n\\nSam submitted an original report but did not win the prize.\\n\\nWhich conclusion is valid?",
+    "options": [
+      "Sam must have failed the presentation",
+      "Sam may have given a presentation; the rules only state what is required, not that it is sufficient",
+      "Sam did not submit an original report",
+      "Anyone who presents automatically wins"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 3,
+    "text": "Three runners start together. Amy takes 120 seconds per lap, Ben 180 seconds, and Chris 150 seconds. They run at constant speeds.\\n\\nAfter how many seconds will all three next be together at the start line?",
+    "options": [
+      "900",
+      "1200",
+      "1500",
+      "1800"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 4,
+    "text": "An ordinary bicycle and an electric scooter both have two wheels and handlebars.\\nTalia says: “Therefore they must move forward in exactly the same way.”\\n\\nWhich sentence best shows Talia’s mistake?",
+    "options": [
+      "Both can be parked near a bike rack",
+      "An electric scooter may be moved by a motor while a bicycle is moved by pedalling",
+      "Both can have lights",
+      "Both are used for transport"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 5,
+    "text": "Amira argues: “Free repair kiosks in libraries will reduce landfill because people will fix items instead of throwing them away.”\\n\\nWhich statement, if true, most strengthens her argument?",
+    "options": [
+      "Some repaired items later break again",
+      "At existing kiosks most items brought in were successfully repaired after owners had planned to discard them",
+      "Repair kiosks require trained staff",
+      "Some residents prefer to buy new items"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 6,
+    "text": "In a code, each letter stands for a digit.  SEND + MORE = MONEY is a famous puzzle. Using the same idea, if  A + A + A = BI  and each letter is a different digit, which could be true?",
+    "options": [
+      "A=5, B=1, I=5",
+      "A=4, B=1, I=2",
+      "A=3, B=0, I=9",
+      "A=7, B=2, I=1"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 7,
+    "text": "All the students who joined the chess club this year also joined the maths club. Some maths-club members did not join the chess club.\\n\\nWhich statement must be true?",
+    "options": [
+      "Every maths-club member joined chess",
+      "No chess-club member joined maths",
+      "At least one maths-club member is not in chess",
+      "Chess club is larger than maths club"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 8,
+    "text": "A square garden is divided into 4 smaller identical squares. Then each of those is divided into 4 even smaller identical squares.\\n\\nHow many of the smallest squares are there?",
+    "options": [
+      "8",
+      "12",
+      "16",
+      "20"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 9,
+    "text": "If today is Wednesday, what day of the week will it be 100 days from now?",
+    "options": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 10,
+    "text": "Which number continues the pattern?\\n2, 6, 12, 20, 30, …",
+    "options": [
+      "36",
+      "40",
+      "42",
+      "48"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 11,
+    "text": "A statement says: “If it is raining, then the ground is wet.”\\nThe ground is wet.\\n\\nWhat can we correctly conclude?",
+    "options": [
+      "It must be raining",
+      "It cannot be raining",
+      "It may or may not be raining",
+      "The statement is false"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 12,
+    "text": "Four people – W, X, Y, Z – are sitting in a row facing north.\\n• Y is to the left of X\\n• Z is to the right of X\\n• W is at one of the ends\\n• Y is not next to W\\n\\nWho is sitting at the left end?",
+    "options": [
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "answer": 0,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 13,
+    "text": "A teacher says: “All students who handed in the draft on time received feedback.”\\nMaya received feedback.\\n\\nWhich conclusion is safe?",
+    "options": [
+      "Maya handed in the draft on time",
+      "Maya may or may not have handed in the draft on time",
+      "Maya did not hand in the draft",
+      "No one who was late received feedback"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 14,
+    "text": "Find the odd one out:\\nTriangle, Square, Pentagon, Cube, Hexagon",
+    "options": [
+      "Triangle",
+      "Square",
+      "Pentagon",
+      "Cube"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 15,
+    "text": "If ☆ means “add 3” and ◇ means “multiply by 2”, what is the value of (5 ☆ 2) ◇ 3 ?",
+    "options": [
+      "13",
+      "16",
+      "19",
+      "22"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 16,
+    "text": "A box contains 3 red, 4 blue and 5 green pencils. Two pencils are drawn at random without replacement.\\n\\nWhich statement is true?",
+    "options": [
+      "The probability of two red is higher than two green",
+      "The probability of two blue equals the probability of two green",
+      "The probability of two green is higher than two red",
+      "It is impossible to draw two of the same colour"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 17,
+    "text": "Which of the following arguments contains a logical flaw?\\n\\n“Every time the rooster crows, the sun rises soon after. Therefore the rooster’s crowing causes the sun to rise.”",
+    "options": [
+      "It correctly identifies a cause",
+      "It mistakes a regular sequence for a causal relationship",
+      "It uses incorrect data",
+      "It is based on a false premise about roosters"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 18,
+    "text": "A pattern of tiles repeats every 6 tiles: Blue, Blue, Red, Green, Green, Yellow.\\n\\nWhat colour is the 50th tile?",
+    "options": [
+      "Blue",
+      "Red",
+      "Green",
+      "Yellow"
+    ],
+    "answer": 0,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 19,
+    "text": "In a race, Ali finished before Ben, Ben finished before Cara, and Dana finished before Ali.\\n\\nWhich statement must be true?",
+    "options": [
+      "Dana finished first",
+      "Cara finished last",
+      "Ben finished after Dana",
+      "Ali finished after Cara"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 20,
+    "text": "A company claims: “Our new battery lasts 30% longer than ordinary batteries.”\\n\\nWhich additional information would most help you judge the claim?",
+    "options": [
+      "The colour of the battery packaging",
+      "How the 30% figure was measured and under what conditions",
+      "The price of the battery",
+      "The number of shops that sell it"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 21,
+    "text": "If all Bloops are Razzies and some Razzies are Lazzies, which conclusion follows?",
+    "options": [
+      "All Bloops are Lazzies",
+      "Some Bloops are Lazzies",
+      "Some Lazzies are Bloops",
+      "No definite conclusion about Bloops and Lazzies"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 22,
+    "text": "A sequence is formed by alternating two rules: add 4, then multiply by 2, then add 4, then multiply by 2, and so on. Starting with 3:\\n\\nWhat is the 5th term?",
+    "options": [
+      "22",
+      "28",
+      "32",
+      "36"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 23,
+    "text": "Which shape can be folded from this net description: four squares in a row with one extra square attached to the side of the second square?",
+    "options": [
+      "Cube",
+      "Square pyramid",
+      "Triangular prism",
+      "Cannot form a closed box"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 24,
+    "text": "A notice says: “Dogs must be kept on a lead in this park.”\\nYou see a dog running freely.\\n\\nWhat can you conclude?",
+    "options": [
+      "The owner is breaking the rule",
+      "The rule is only a suggestion",
+      "The dog is a special exception",
+      "The notice is in the wrong place"
+    ],
+    "answer": 0,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 25,
+    "text": "Find the next number: 1, 4, 9, 16, 25, 36, …",
+    "options": [
+      "42",
+      "45",
+      "49",
+      "52"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 26,
+    "text": "In a group of 30 students, 18 play tennis, 12 play cricket, and 6 play both.\\n\\nHow many play neither sport?",
+    "options": [
+      "0",
+      "3",
+      "6",
+      "9"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 27,
+    "text": "A statement: “No mammals can fly.”\\nWhich of the following, if true, would disprove the statement?",
+    "options": [
+      "Some birds can fly",
+      "Bats are mammals and can fly",
+      "Fish cannot fly",
+      "Some mammals swim"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 28,
+    "text": "Three boxes are labelled “Apples”, “Oranges” and “Apples & Oranges”. Every label is wrong.\\nYou draw one fruit from the box labelled “Apples & Oranges” and it is an apple.\\n\\nWhat is in the box labelled “Oranges”?",
+    "options": [
+      "Only apples",
+      "Only oranges",
+      "Apples and oranges",
+      "Empty"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 29,
+    "text": "Which of the following is the best analogy?\\nBook is to Reading as Fork is to ________.",
+    "options": [
+      "Kitchen",
+      "Eating",
+      "Metal",
+      "Spoon"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 30,
+    "text": "A light flashes every 8 seconds. Another light flashes every 12 seconds. They flash together at time zero.\\n\\nAfter how many seconds do they next flash together?",
+    "options": [
+      "16",
+      "20",
+      "24",
+      "36"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 31,
+    "text": "If “All dogs bark” is true, which of the following must also be true?",
+    "options": [
+      "Some dogs do not bark",
+      "No dogs bark",
+      "If an animal does not bark, then it is not a dog",
+      "All barking animals are dogs"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 32,
+    "text": "A code replaces each letter with the letter three places later in the alphabet (A→D, B→E, …).\\n\\nWhat does “KHOOR” decode to?",
+    "options": [
+      "HELLO",
+      "WORLD",
+      "APPLE",
+      "GRAPE"
+    ],
+    "answer": 0,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 33,
+    "text": "Five books are stacked. History is above Science. Maths is below Science. English is between History and Science. Art is at the bottom.\\n\\nWhich book is in the middle?",
+    "options": [
+      "History",
+      "Science",
+      "Maths",
+      "English"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 34,
+    "text": "Which conclusion follows logically?\\nAll athletes are fit. Some teachers are athletes.\\n\\nTherefore:",
+    "options": [
+      "All teachers are fit",
+      "Some teachers are fit",
+      "No teachers are fit",
+      "All fit people are teachers"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 35,
+    "text": "A pattern of numbers: each number is the sum of the two preceding numbers (like Fibonacci). The sequence starts 2, 5, …\\n\\nWhat is the 6th term?",
+    "options": [
+      "19",
+      "24",
+      "29",
+      "31"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 36,
+    "text": "In a certain code language, “pine apple” means “juice fruit”, “apple orange” means “fruit salad”, and “pine orange” means “juice salad”.\\n\\nWhat does “orange” mean?",
+    "options": [
+      "juice",
+      "fruit",
+      "salad",
+      "pine"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 37,
+    "text": "A balanced scale has 3 identical balls on the left and 1 identical ball plus a 20 g weight on the right. All balls have the same unknown mass.\\n\\nWhat is the mass of one ball?",
+    "options": [
+      "5 g",
+      "10 g",
+      "15 g",
+      "20 g"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 38,
+    "text": "Which of the following statements is logically equivalent to “If it is a square, then it is a rectangle”?",
+    "options": [
+      "If it is a rectangle, then it is a square",
+      "If it is not a rectangle, then it is not a square",
+      "If it is not a square, then it is not a rectangle",
+      "All rectangles are squares"
+    ],
+    "answer": 1,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 39,
+    "text": "A cube is painted red on all sides and then cut into 27 smaller equal cubes (3×3×3).\\n\\nHow many of the small cubes have exactly two faces painted?",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "answer": 2,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 40,
+    "text": "Two statements are given:\\n1. All roses are flowers.\\n2. Some flowers fade quickly.\\n\\nWhich conclusion can be drawn?",
+    "options": [
+      "All roses fade quickly",
+      "Some roses fade quickly",
+      "No roses fade quickly",
+      "None of the above conclusions definitely follow"
+    ],
+    "answer": 3,
+    "skill": "Logical and critical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": "TNEW-001",
+    "text": "All members of the astronomy club study the sky. Some members of the astronomy club also play chess. Which conclusion must be true?",
+    "options": [
+      "Every chess player studies the sky",
+      "Some people who study the sky play chess",
+      "No astronomy club member dislikes chess",
+      "Everyone who studies the sky joins the club"
+    ],
+    "answer": 1,
+    "skill": "Deduction",
+    "explanation": "Those club members who play chess are people who study the sky and play chess; the other claims go beyond the premises.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-002",
+    "text": "A town proposes planting trees near bus stops because this will make waiting more comfortable during hot weather. Which assumption is most necessary?",
+    "options": [
+      "All travellers prefer trees to shelters",
+      "Trees can provide shade at the bus stops",
+      "Bus stops have no roof anywhere",
+      "Every day in the town is hot"
+    ],
+    "answer": 1,
+    "skill": "Necessary assumptions",
+    "explanation": "The argument relies on trees being able to provide shade or comparable relief where people wait; the other claims are unnecessary.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-003",
+    "text": "After a school introduced a reading hour, library borrowing increased. A teacher concludes the reading hour caused the increase. Which information most weakens the conclusion?",
+    "options": [
+      "Many books have colourful covers",
+      "A new borrowing competition began in the same week",
+      "Some pupils like science books",
+      "The library opens at lunchtime"
+    ],
+    "answer": 1,
+    "skill": "Evaluating evidence",
+    "explanation": "The borrowing competition is an alternative cause of the increase, making the single-cause conclusion less certain.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-004",
+    "text": "Lena finished before Omar but after Priya. Noah finished after Omar. Who finished first among these four?",
+    "options": [
+      "Lena",
+      "Noah",
+      "Omar",
+      "Priya"
+    ],
+    "answer": 3,
+    "skill": "Ordering",
+    "explanation": "The ordering is Priya, Lena, Omar, Noah.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-005",
+    "text": "If the alarm is armed, the red light is on. The red light is off. What follows?",
+    "options": [
+      "The alarm is not armed",
+      "The alarm must be broken",
+      "The alarm is armed",
+      "The alarm was previously armed"
+    ],
+    "answer": 0,
+    "skill": "Conditional logic",
+    "explanation": "By contraposition, if an armed alarm always has a red light on, an off light means it is not armed.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-006",
+    "text": "A student says: “Every champion I interviewed practises daily, so practising daily guarantees becoming a champion.” What is the main flaw?",
+    "options": [
+      "It assumes all champions are the same age",
+      "It confuses a characteristic of champions with a guarantee of success",
+      "It does not state a training location",
+      "It ignores the meaning of the word daily"
+    ],
+    "answer": 1,
+    "skill": "Identifying flaws",
+    "explanation": "Observing that champions practise does not prove everyone who practises will become a champion.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-007",
+    "text": "A council says more people will cycle if a protected bicycle lane is built. Which finding best supports the prediction?",
+    "options": [
+      "Most bicycles are painted dark colours",
+      "A survey finds many residents avoid cycling mainly because they fear traffic",
+      "Cycling requires regular maintenance",
+      "Some cyclists travel at night"
+    ],
+    "answer": 1,
+    "skill": "Strengthening arguments",
+    "explanation": "Safety from traffic is a specific barrier that a protected lane could address.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-008",
+    "text": "Every wooden toy in a box is painted. Some painted toys are wooden. Which statement must be true?",
+    "options": [
+      "Every painted toy is wooden",
+      "There is at least one painted wooden toy",
+      "No painted toy is metal",
+      "All toys in the box are wooden"
+    ],
+    "answer": 1,
+    "skill": "Set reasoning",
+    "explanation": "The premise that some painted toys are wooden directly guarantees at least one painted wooden toy.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-009",
+    "text": "Which number should come next? 2, 6, 12, 20, 30, ?",
+    "options": [
+      "36",
+      "40",
+      "42",
+      "48"
+    ],
+    "answer": 2,
+    "skill": "Pattern reasoning",
+    "explanation": "These terms are n(n+1) for n=1 through 5; the next is 6×7=42.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-010",
+    "text": "Exactly one of Arun and Bella is telling the truth. Arun says: “Bella is lying.” Bella says: “We are both lying.” Who is telling the truth?",
+    "options": [
+      "Arun only",
+      "Bella only",
+      "Both",
+      "Neither"
+    ],
+    "answer": 0,
+    "skill": "Logic puzzle",
+    "explanation": "Arun is truthful: Bella’s claim that both are lying is false because Arun tells the truth. If Bella were truthful, her statement that she herself lies would be impossible.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-011",
+    "text": "A ticket is valid only if it has been stamped. Rosa has a valid ticket. What must be true?",
+    "options": [
+      "Rosa got it today",
+      "Her ticket was stamped",
+      "Rosa bought it online",
+      "All stamped tickets are valid"
+    ],
+    "answer": 1,
+    "skill": "Interpreting conditions",
+    "explanation": "Stamping is a necessary condition of validity, so a valid ticket must be stamped.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-012",
+    "text": "A principal says, “Replacing the old lights will lower our electricity bill because the new lights use less power.” Which additional fact is most relevant to estimating the savings?",
+    "options": [
+      "The colour of the light switches",
+      "How many hours the lights are used",
+      "Whether students like the lights",
+      "How high the ceiling is"
+    ],
+    "answer": 1,
+    "skill": "Assumptions",
+    "explanation": "Electricity consumption depends on both power and time used, so the hours are essential to estimating savings.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-013",
+    "text": "Seed is to tree as egg is to _____.",
+    "options": [
+      "nest",
+      "feather",
+      "bird",
+      "branch"
+    ],
+    "answer": 2,
+    "skill": "Analogies",
+    "explanation": "A seed can develop into a tree, just as an egg can develop into a bird.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-014",
+    "text": "Three notices say: (1) Every gate in the park is locked at night. (2) The east gate is a gate in the park. (3) The east gate is unlocked tonight. Which combination creates a contradiction?",
+    "options": [
+      "Statements 1 and 2 only",
+      "Statements 1 and 3 only",
+      "Statements 2 and 3 only",
+      "All three statements together"
+    ],
+    "answer": 3,
+    "skill": "Spotting contradictions",
+    "explanation": "Statement 1 applies to the east gate only when statement 2 identifies it as a park gate. Statement 3 then contradicts its required locked status.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-015",
+    "text": "A prize is awarded to the tallest person in a group. Mira is taller than Jo and shorter than Kai. Which additional statement proves Kai wins?",
+    "options": [
+      "Jo is shorter than Mira",
+      "There are exactly three people in the group",
+      "Kai wears red shoes",
+      "Mira is older than Jo"
+    ],
+    "answer": 1,
+    "skill": "Sufficient information",
+    "explanation": "With exactly Mira, Jo and Kai in the group, Kai exceeds both and must be tallest.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-016",
+    "text": "A sports club notices fewer injuries after it changed training times and introduced new warm-ups. What is the strongest conclusion?",
+    "options": [
+      "The warm-ups alone caused the reduction",
+      "The time change alone caused the reduction",
+      "The decrease occurred after both changes, but the cause is not established",
+      "Injuries will never occur again"
+    ],
+    "answer": 2,
+    "skill": "Cause and effect",
+    "explanation": "Because both changes happened together, the evidence does not isolate either as the cause.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-017",
+    "text": "A password must contain exactly one digit and exactly two letters, and the digit must be last. Which password follows the rule?",
+    "options": [
+      "7AB",
+      "A7B",
+      "AB7",
+      "ABC7"
+    ],
+    "answer": 2,
+    "skill": "Rules and exclusions",
+    "explanation": "AB7 contains exactly two letters followed by exactly one digit.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-018",
+    "text": "A number is greater than 20, less than 40, divisible by 3 and even, but not divisible by 9. Which number could it be?",
+    "options": [
+      "24",
+      "27",
+      "36",
+      "39"
+    ],
+    "answer": 0,
+    "skill": "Number deduction",
+    "explanation": "24 is even and divisible by 3, but not by 9. 36 is divisible by 9; 27 and 39 are odd.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-019",
+    "text": "A company claims its reusable bottle is the best because it is the most expensive. Which evidence would best test the claim?",
+    "options": [
+      "A list of bottle colours",
+      "Independent durability and performance comparisons",
+      "The company logo design",
+      "How many stores sell it"
+    ],
+    "answer": 1,
+    "skill": "Argument evaluation",
+    "explanation": "Performance and durability are relevant to quality, while price alone is not sufficient evidence.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-020",
+    "text": "No penguins in the sanctuary can fly. Pippa is a penguin in the sanctuary. Which statement must be true?",
+    "options": [
+      "Pippa is the youngest penguin",
+      "Pippa cannot fly",
+      "Pippa is black and white",
+      "Pippa lives near the ocean"
+    ],
+    "answer": 1,
+    "skill": "Logical quantifiers",
+    "explanation": "The general rule applies to every sanctuary penguin including Pippa.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-021",
+    "text": "A robot faces north, turns 90° clockwise, then 180°, then 90° anticlockwise. Which direction does it face?",
+    "options": [
+      "North",
+      "South",
+      "East",
+      "West"
+    ],
+    "answer": 1,
+    "skill": "Spatial directions",
+    "explanation": "North → east → west → south.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "TNEW-022",
+    "text": "A train leaves every 15 minutes starting at 8:00 am. A traveller arrives at the platform at 8:37 am. If trains run exactly on schedule, when is the next departure?",
+    "options": [
+      "8:40 am",
+      "8:45 am",
+      "8:50 am",
+      "9:00 am"
+    ],
+    "answer": 1,
+    "skill": "Inference",
+    "explanation": "Departures are 8:00, 8:15, 8:30, 8:45; the next after 8:37 is 8:45.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "TNEW-023",
+    "text": "“The new playground is safer because fewer injuries were reported this month.” Which fact makes this comparison least convincing?",
+    "options": [
+      "The new playground uses blue paint",
+      "The playground was closed for most of the month",
+      "The playground has more benches",
+      "Some children prefer swings"
+    ],
+    "answer": 1,
+    "skill": "Weakening arguments",
+    "explanation": "Far fewer opportunities to use the playground would naturally reduce total injuries without showing lower risk per visit.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "TNEW-024",
+    "text": "Five boxes are arranged left to right. The red box is immediately left of the blue box. The green box is immediately right of the blue box. Which statement must be true?",
+    "options": [
+      "Green is left of red",
+      "Red is left of green",
+      "Blue is at an end",
+      "There are no other boxes between red and green"
+    ],
+    "answer": 1,
+    "skill": "Logic and ordering",
+    "explanation": "Their order is red, blue, green. Thus red is left of green; there is actually one box (blue) between them.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "TNEW-025",
+    "text": "A shop reports that 60% of its sales on Saturday were made online. Which statement must follow?",
+    "options": [
+      "More than half of Saturday sales were online",
+      "More than half of all weekly sales were online",
+      "Online shoppers spent more per sale",
+      "The shop sold fewer products on Sunday"
+    ],
+    "answer": 0,
+    "skill": "Data inference",
+    "explanation": "Sixty per cent exceeds half, but the information concerns only the share of Saturday sales, not other days or spending.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  }
+]

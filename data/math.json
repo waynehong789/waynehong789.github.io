@@ -1,0 +1,952 @@
+[
+  {
+    "id": 1,
+    "text": "A cordial dispenser holds 3 litres. The cordial is poured into bottles that each hold 210 mL. After filling as many complete bottles as possible, the remaining cordial is poured into a measuring container where each unit represents 10 mL.\n\nHow many units of cordial are added to the measuring container?",
+    "options": [
+      "4 units",
+      "5 units",
+      "6 units",
+      "10 units",
+      "12 units"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 2,
+    "text": "Layla’s recipe uses 40 g of sunflower seeds for every 80 g of rolled oats. In one batch she uses 120 g of rolled oats.\n\nHow many grams of sunflower seeds should she use to keep the same ratio?",
+    "options": [
+      "40 g",
+      "50 g",
+      "60 g",
+      "80 g",
+      "120 g"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 3,
+    "text": "On Day 1 Mia completes 4 shuttle runs. Each day after that she completes 6 more shuttle runs than the day before.\n\nHow many shuttle runs does she complete on Day 10?",
+    "options": [
+      "46",
+      "52",
+      "58",
+      "64",
+      "70"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 4,
+    "text": "On a campsite map each grid unit represents 12 metres. North is upwards. Noor starts at the flag and walks 6 units East, then 2 units South, then 1 unit West.\n\nWhat final instruction lets her reach a tent that is 5 units South of her current position?",
+    "options": [
+      "Walk 48 metres South",
+      "Walk 60 metres South",
+      "Walk 60 metres North",
+      "Walk 72 metres South",
+      "Walk 84 metres South"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 5,
+    "text": "A game wheel is split into 10 equal sectors numbered 1–10. Bailey has spun and scored 3. Sienna will spin once.\n\nWhat is the probability that the sum of their scores is even AND the product is greater than 18?",
+    "options": [
+      "1/10",
+      "1/5",
+      "3/10",
+      "2/5",
+      "1/2"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 6,
+    "text": "A rectangular garden has a longer side of 64 m. The shorter side is 18 m less than the longer side. A fence goes around the outside, but a 5 m gateway on one shorter edge and a 9 m service opening on one longer edge are left unfenced.\n\nHow many metres of fencing are needed?",
+    "options": [
+      "206 m",
+      "211 m",
+      "215 m",
+      "220 m",
+      "234 m"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 7,
+    "text": "Rina starts with 96 tokens. She gives some tokens to Omar. She then gives ½ of her remaining tokens to Kai. Kai gives ⅓ of the tokens he received to June. June receives 12 tokens.\n\nHow many tokens did Rina give to Omar?",
+    "options": [
+      "24",
+      "36",
+      "42",
+      "48",
+      "60"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 8,
+    "text": "In a triangle one angle is 72°. The second angle is twice the measure of the third angle.\n\nWhat is the measure of the third angle?",
+    "options": [
+      "34°",
+      "36°",
+      "42°",
+      "48°",
+      "54°"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 9,
+    "text": "A delivery driver leaves at 7:50 a.m. She drives for 1 hour 35 minutes to her first stop, pauses 25 minutes, then drives 168 km at 70 km/h.\n\nAt what time does she arrive at her final stop?",
+    "options": [
+      "11:49 a.m.",
+      "11:50 a.m.",
+      "11:54 a.m.",
+      "12:04 p.m.",
+      "12:14 p.m."
+    ],
+    "answer": 4,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 10,
+    "text": "Which claim(s) are true?\n\nClaim 1: 3/5 + 1/4 = 60%\nClaim 2: 0.35 = 7/20\nClaim 3: 15% of 60 = 9\n\nA) Claim 1 only\nB) Claim 2 only\nC) Claim 3 only\nD) Claims 2 and 3\nE) Claims 1 and 3",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": 3,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 11,
+    "text": "Each claw token is worth the same points; each shield token is worth the same points.\nAva has 7 claw tokens worth 42 points. Ben has 12 shield tokens worth 36 points. Chloe has 4 claw + 3 shield tokens.\n\nHow many points does Chloe have?",
+    "options": [
+      "27",
+      "30",
+      "33",
+      "36",
+      "39"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 12,
+    "text": "A shaded rectangle 8 cm × 5 cm sits inside a larger rectangle 20 cm × 12 cm.\n\nWhat percentage of the larger rectangle is shaded?",
+    "options": [
+      "15%",
+      "16⅔%",
+      "20%",
+      "25%",
+      "30%"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 13,
+    "text": "On a number line marks are equally spaced. Only 20 and 44 are labelled. There are 5 equal gaps between them. An arrow points to the mark 2 gaps to the right of 44.\n\nWhat number does the arrow point to?",
+    "options": [
+      "48.8",
+      "51.2",
+      "53.6",
+      "56",
+      "58.4"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 14,
+    "text": "A cube net is folded with symbols on the outside. The star face is opposite the square face. The circle face is adjacent to the star.\n\nWhich symbol cannot be opposite the circle?",
+    "options": [
+      "Star",
+      "Square",
+      "Triangle",
+      "Cannot be determined",
+      "None of these"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 15,
+    "text": "4 teams each use 3 pairs of machines.\nRound 1: every machine makes 7 badges.\nRound 2: one pair per team is slow (3 badges); others make 7.\nRound 3: only normal-speed machines, each makes 2 badges.\n\nTotal badges made?",
+    "options": [
+      "304",
+      "320",
+      "328",
+      "336",
+      "352"
+    ],
+    "answer": 3,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 16,
+    "text": "A tank holds 240 L when full. It is currently ⅝ full. Water is drained at 6 L/min for 12 minutes.\n\nHow many litres remain?",
+    "options": [
+      "78 L",
+      "90 L",
+      "102 L",
+      "114 L",
+      "126 L"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 17,
+    "text": "The average of five numbers is 28. When one extra number is added the new average is 30.\n\nWhat is the extra number?",
+    "options": [
+      "32",
+      "36",
+      "38",
+      "40",
+      "42"
+    ],
+    "answer": 3,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 18,
+    "text": "A rectangular prism measures 6 cm × 4 cm × 5 cm.\n\nWhat is its surface area?",
+    "options": [
+      "120 cm²",
+      "148 cm²",
+      "150 cm²",
+      "164 cm²",
+      "180 cm²"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 19,
+    "text": "Each term after the first is found by multiplying the previous term by 2 and then subtracting 3. The first term is 5.\n\nWhat is the fourth term?",
+    "options": [
+      "11",
+      "19",
+      "23",
+      "29",
+      "35"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 20,
+    "text": "A shop offers 20% off a $85 jacket, then applies a further $6 voucher.\n\nWhat is the final price?",
+    "options": [
+      "$62",
+      "$64",
+      "$66",
+      "$68",
+      "$70"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 21,
+    "text": "Two angles are complementary. One is 18° larger than the other.\n\nWhat is the larger angle?",
+    "options": [
+      "36°",
+      "54°",
+      "63°",
+      "72°",
+      "81°"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 22,
+    "text": "A car travels 180 km in 2 hours 15 minutes.\n\nWhat is its average speed in km/h?",
+    "options": [
+      "72",
+      "75",
+      "80",
+      "84",
+      "90"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 23,
+    "text": "The ratio of boys to girls is 3 : 5. There are 16 more girls than boys.\n\nHow many students are there altogether?",
+    "options": [
+      "48",
+      "56",
+      "64",
+      "72",
+      "80"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 24,
+    "text": "A square has perimeter 36 cm. A rectangle has the same perimeter; its length is twice its width.\n\nWhat is the area of the rectangle?",
+    "options": [
+      "64 cm²",
+      "72 cm²",
+      "80 cm²",
+      "96 cm²",
+      "108 cm²"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 25,
+    "text": "How many different 3-digit numbers can be formed using the digits 2, 5 and 7 if each digit is used only once?",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "12",
+      "27"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 26,
+    "text": "A pie chart shows 40% football, 25% basketball, 20% tennis, rest swimming. 180 students were surveyed.\n\nHow many chose swimming?",
+    "options": [
+      "15",
+      "18",
+      "27",
+      "36",
+      "45"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 27,
+    "text": "The volume of a cube is 125 cm³.\n\nWhat is the total length of all its edges?",
+    "options": [
+      "60 cm",
+      "75 cm",
+      "90 cm",
+      "100 cm",
+      "125 cm"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 28,
+    "text": "A number is multiplied by 4 and then 7 is added. The result is 55.\n\nWhat was the original number?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 29,
+    "text": "Point A is at (2,5) and point B at (6,5). Point C is the same distance below B as A is to the left of B.\n\nWhat are the coordinates of C?",
+    "options": [
+      "(6,1)",
+      "(6,2)",
+      "(6,3)",
+      "(6,9)",
+      "(2,1)"
+    ],
+    "answer": 0,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 30,
+    "text": "A recipe for 8 people needs 600 g of flour. How much flour is needed for 14 people?",
+    "options": [
+      "900 g",
+      "1000 g",
+      "1050 g",
+      "1100 g",
+      "1200 g"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 31,
+    "text": "The mean of four numbers is 17. Three of the numbers are 12, 19 and 15.\n\nWhat is the fourth number?",
+    "options": [
+      "20",
+      "22",
+      "24",
+      "26",
+      "28"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 32,
+    "text": "A triangle has sides 7 cm, 24 cm and 25 cm.\n\nWhich statement is true?",
+    "options": [
+      "It is equilateral",
+      "It is isosceles but not right-angled",
+      "It is right-angled",
+      "It is obtuse",
+      "It is impossible"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 33,
+    "text": "A clock shows 3:40. What is the size of the smaller angle between the hour and minute hands?",
+    "options": [
+      "120°",
+      "130°",
+      "140°",
+      "150°",
+      "160°"
+    ],
+    "answer": 1,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 34,
+    "text": "If 3x – 7 = 2x + 8, what is the value of x?",
+    "options": [
+      "11",
+      "13",
+      "15",
+      "17",
+      "19"
+    ],
+    "answer": 2,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 35,
+    "text": "A bag contains 5 red, 3 blue and 2 green marbles. One marble is drawn at random.\n\nWhat is the probability it is not blue?",
+    "options": [
+      "3/10",
+      "1/2",
+      "3/5",
+      "7/10",
+      "4/5"
+    ],
+    "answer": 3,
+    "skill": "Mathematical reasoning",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": "MNEW-001",
+    "text": "A library has 240 books. Three eighths are mysteries. Of the remaining books, one third are biographies. How many biographies are there?",
+    "options": [
+      "40",
+      "45",
+      "50",
+      "60",
+      "80"
+    ],
+    "answer": 2,
+    "skill": "Fractions and ratios",
+    "explanation": "Mysteries: 240 × 3/8 = 90. Remaining: 150. Biographies: 150 ÷ 3 = 50.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-002",
+    "text": "A sequence begins 5, 11, 19, 29, 41. What is the next term?",
+    "options": [
+      "51",
+      "53",
+      "55",
+      "57",
+      "59"
+    ],
+    "answer": 2,
+    "skill": "Number patterns",
+    "explanation": "Successive differences are 6, 8, 10, 12; the next difference is 14, giving 55.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-003",
+    "text": "A cyclist travels 18 km in 45 minutes at a constant speed. How far would the cyclist travel in 2 hours?",
+    "options": [
+      "36 km",
+      "42 km",
+      "45 km",
+      "48 km",
+      "54 km"
+    ],
+    "answer": 3,
+    "skill": "Time and speed",
+    "explanation": "Two hours is 120 minutes. At 18/45 km per minute, the distance is (18 ÷ 45) × 120 = 48 km.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-004",
+    "text": "A rectangle has perimeter 54 cm. Its length is 3 cm more than twice its width. What is its area?",
+    "options": [
+      "104 cm²",
+      "126 cm²",
+      "136 cm²",
+      "152 cm²",
+      "162 cm²"
+    ],
+    "answer": 3,
+    "skill": "Geometry",
+    "explanation": "If width is w, length is 2w+3. Since 2(3w+3)=54, w=8 and length=19; area=152 cm².",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-005",
+    "text": "A jacket priced at $80 is discounted by 25%, then the reduced price is increased by 10%. What is the final price?",
+    "options": [
+      "$60",
+      "$64",
+      "$66",
+      "$68",
+      "$72"
+    ],
+    "answer": 2,
+    "skill": "Percentages",
+    "explanation": "After discount: $80 × 0.75 = $60. Then $60 × 1.10 = $66.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-006",
+    "text": "A bag has 4 red, 3 blue and 5 green marbles. One marble is selected at random. What is the probability it is NOT green?",
+    "options": [
+      "5/12",
+      "1/2",
+      "7/12",
+      "2/3",
+      "3/4"
+    ],
+    "answer": 2,
+    "skill": "Probability",
+    "explanation": "There are 12 marbles, of which 7 are red or blue. The probability is 7/12.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-007",
+    "text": "A dripping tap fills a 750 mL bottle every 6 minutes. At the same rate, how many litres are collected in 40 minutes?",
+    "options": [
+      "4 L",
+      "4.5 L",
+      "5 L",
+      "5.5 L",
+      "6 L"
+    ],
+    "answer": 2,
+    "skill": "Units and rates",
+    "explanation": "The rate is 750 ÷ 6 = 125 mL/min. In 40 minutes that is 5000 mL = 5 L.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-008",
+    "text": "Which number is divisible by both 6 and 9 but not by 4?",
+    "options": [
+      "54",
+      "72",
+      "84",
+      "108",
+      "144"
+    ],
+    "answer": 0,
+    "skill": "Number properties",
+    "explanation": "54 is divisible by 6 and 9, but not by 4. The others are either divisible by 4 (72, 108, 144) or not by 9 (84).",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-009",
+    "text": "Four identical notebooks and a $3 pen cost $27. How much does one notebook cost?",
+    "options": [
+      "$4",
+      "$5",
+      "$6",
+      "$7",
+      "$8"
+    ],
+    "answer": 2,
+    "skill": "Algebra and balance",
+    "explanation": "Subtract the $3 pen: $24 remains. Divide by 4 to obtain $6 each.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-010",
+    "text": "A water tank is 2/5 full. Adding 18 litres makes it 7/10 full. What is its full capacity?",
+    "options": [
+      "45 L",
+      "54 L",
+      "60 L",
+      "72 L",
+      "90 L"
+    ],
+    "answer": 2,
+    "skill": "Fractions",
+    "explanation": "The increase is 7/10−2/5 = 3/10 of the tank. If 3/10 equals 18 L, full capacity is 60 L.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-011",
+    "text": "Five scores have a mean of 14. Four scores are 10, 12, 15 and 18. What is the fifth score?",
+    "options": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answer": 2,
+    "skill": "Statistics",
+    "explanation": "The total is 5×14=70. Known scores sum to 55; the missing score is 15.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-012",
+    "text": "Two angles on a straight line are in the ratio 2:7. What is the smaller angle?",
+    "options": [
+      "20°",
+      "30°",
+      "40°",
+      "45°",
+      "60°"
+    ],
+    "answer": 2,
+    "skill": "Geometry and angles",
+    "explanation": "The angles sum to 180° and there are 9 ratio parts. Each part is 20°; the smaller is 40°.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-013",
+    "text": "A square garden has area 81 m². A path 1 m wide is built all around it on the outside. What is the area of the path?",
+    "options": [
+      "20 m²",
+      "36 m²",
+      "40 m²",
+      "44 m²",
+      "49 m²"
+    ],
+    "answer": 2,
+    "skill": "Area and measurement",
+    "explanation": "The garden side is 9 m. The outer square side is 11 m; path area = 11²−9² = 40 m².",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-014",
+    "text": "A café offers 3 soups, 4 sandwiches and 2 drinks. How many different meals can be made by choosing one of each?",
+    "options": [
+      "9",
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
+    "answer": 3,
+    "skill": "Combinatorics",
+    "explanation": "Apply the multiplication rule: 3×4×2=24 different meals.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-015",
+    "text": "A three-digit number has a hundreds digit twice its tens digit. Its units digit is 1 less than the tens digit. The digit sum is 15. What is the number?",
+    "options": [
+      "632",
+      "843",
+      "954",
+      "642",
+      "753"
+    ],
+    "answer": 1,
+    "skill": "Place value",
+    "explanation": "Let tens digit be t. Then 2t+t+(t−1)=15, so t=4 and digits are 8,4,3, giving 843.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-016",
+    "text": "Six machines make 180 badges in 3 hours, each at the same constant rate. How many badges can four of these machines make in 5 hours?",
+    "options": [
+      "160",
+      "180",
+      "200",
+      "220",
+      "240"
+    ],
+    "answer": 2,
+    "skill": "Rates",
+    "explanation": "One machine makes 180/(6×3)=10 badges per hour. Four machines in five hours make 4×5×10=200.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-017",
+    "text": "Two fair six-sided dice are rolled. What is the probability that their total is 7?",
+    "options": [
+      "1/12",
+      "1/9",
+      "1/6",
+      "1/5",
+      "1/4"
+    ],
+    "answer": 2,
+    "skill": "Probability",
+    "explanation": "Six of 36 equally likely ordered pairs total 7, so the probability is 6/36=1/6.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-018",
+    "text": "The ratio of blue to yellow counters is 5:3. After 12 blue counters are removed, the ratio becomes 3:3. How many yellow counters were there originally?",
+    "options": [
+      "12",
+      "15",
+      "18",
+      "21",
+      "24"
+    ],
+    "answer": 2,
+    "skill": "Ratio",
+    "explanation": "Originally blue=5k and yellow=3k. After removal 5k−12=3k; k=6, so yellow=18.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-019",
+    "text": "Point A is (−2, 3). It moves 5 units right and 7 units down. What are the new coordinates?",
+    "options": [
+      "(3, 4)",
+      "(−7, −4)",
+      "(3, −4)",
+      "(−3, 10)",
+      "(5, −7)"
+    ],
+    "answer": 2,
+    "skill": "Coordinates",
+    "explanation": "Right adds 5 to x: −2+5=3. Down subtracts 7 from y: 3−7=−4.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-020",
+    "text": "A school buys 8 identical packs of pencils for $54.40. Each pack has 10 pencils. What is the cost per pencil?",
+    "options": [
+      "$0.54",
+      "$0.60",
+      "$0.68",
+      "$0.72",
+      "$0.80"
+    ],
+    "answer": 2,
+    "skill": "Money",
+    "explanation": "There are 80 pencils. $54.40÷80=$0.68 per pencil.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-021",
+    "text": "A pattern of tiles has 3 tiles in figure 1, 7 in figure 2, 11 in figure 3. Which expression gives the number of tiles in figure n?",
+    "options": [
+      "3n+1",
+      "4n−1",
+      "4n+1",
+      "n+3",
+      "2n+1"
+    ],
+    "answer": 1,
+    "skill": "Sequences",
+    "explanation": "The sequence increases by 4, and 4n−1 gives 3, 7, 11 for n=1,2,3.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  },
+  {
+    "id": "MNEW-022",
+    "text": "A 2.4 litre jug is 75% full. How many 150 mL cups can be filled completely from it?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "16"
+    ],
+    "answer": 2,
+    "skill": "Fractions and capacity",
+    "explanation": "The jug contains 2.4×0.75=1.8 L=1800 mL. At 150 mL each, it fills 12 cups.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 3
+  },
+  {
+    "id": "MNEW-023",
+    "text": "Three consecutive even numbers have a sum of 102. What is the largest?",
+    "options": [
+      "32",
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "answer": 2,
+    "skill": "Logical arithmetic",
+    "explanation": "Their middle number is 102÷3=34; the numbers are 32,34,36.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 4
+  },
+  {
+    "id": "MNEW-024",
+    "text": "In a survey, 18 people chose apples, 12 chose bananas and 10 chose oranges. What percentage chose bananas?",
+    "options": [
+      "20%",
+      "25%",
+      "30%",
+      "35%",
+      "40%"
+    ],
+    "answer": 2,
+    "skill": "Data interpretation",
+    "explanation": "A total of 40 people responded. 12/40 = 30%.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 5
+  },
+  {
+    "id": "MNEW-025",
+    "text": "Three people each paint 2 identical fences in 6 hours. Working at the same individual rate, how many fences can five people paint in 9 hours?",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "18",
+      "20"
+    ],
+    "answer": 2,
+    "skill": "Work and rate",
+    "explanation": "One person paints 2/6=1/3 fence per hour. Five people in 9 hours paint 5×9/3=15 fences.",
+    "reviewStatus": "new_editor_checked",
+    "sourceType": "original-practice",
+    "difficulty": 2
+  }
+]

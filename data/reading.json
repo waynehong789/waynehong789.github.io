@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "type": "dual",
+    "extracts": {
+      "A": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.",
+      "B": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+    },
+    "text": "Both extracts suggest that the travellers",
+    "options": [
+      "were in high spirits throughout the journey",
+      "experienced a change in atmosphere as they moved",
+      "relied on a map to find their way",
+      "were racing against time"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 2,
+    "type": "dual",
+    "extracts": {
+      "A": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.",
+      "B": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+    },
+    "text": "In Extract A, the youngest child’s action of stepping in the exact prints most likely shows",
+    "options": [
+      "a desire to leave no trace",
+      "imitation and perhaps a need for security",
+      "an attempt to walk faster than the others",
+      "disagreement with the chosen path"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 3,
+    "type": "dual",
+    "extracts": {
+      "A": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.",
+      "B": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+    },
+    "text": "Which extract ends on a note of continued difficulty rather than relief?",
+    "options": [
+      "Extract A only",
+      "Extract B only",
+      "Both extracts",
+      "Neither extract"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 4,
+    "type": "dual",
+    "extracts": {
+      "A": "Extract A\n\nThe river had fallen during the night, leaving a broad margin of dark silt that shone like wet slate. We walked in single file, the youngest deliberately placing her boots in the exact prints left by the person ahead. No one spoke. The only sounds were the soft suck of mud and the distant complaint of a crow. When the path finally climbed into the trees, the air changed; it became cooler and carried the sharp scent of crushed bracken. Behind us the silt flats already looked unfamiliar, as if the morning had erased the route we had just taken.",
+      "B": "Extract B\n\nBy late afternoon the heat had thickened until every movement felt effortful. The children had stopped asking how much further and now simply trudged, heads down, watching the dust rise and settle on their shoes. Once, a snake slid off the track and vanished into the dry grass; no one commented. When we reached the ridge the view opened suddenly—an expanse of bleached hills under a white sky—but the expected sense of arrival did not come. Instead there was only the same dry wind and the knowledge that the descent would be no easier."
+    },
+    "text": "The crow in Extract A and the snake in Extract B both function mainly to",
+    "options": [
+      "add a sense of threat or unease to the scene",
+      "show that the travellers are in a nature reserve",
+      "provide comic relief",
+      "indicate the time of year"
+    ],
+    "answer": 0,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "passage": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.",
+    "text": "The author suggests that earlier explorers’ language of “conquering” the ice",
+    "options": [
+      "accurately reflected their technological superiority",
+      "contrasted with moments of genuine awe recorded in their journals",
+      "was mainly used to attract funding for expeditions",
+      "has been adopted unchanged by modern scientists"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "passage": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.",
+    "text": "In the final sentence, “an eternal stage” most nearly means",
+    "options": [
+      "a place of permanent theatrical performance",
+      "a setting assumed to be unchanging and permanent",
+      "a platform built by the explorers themselves",
+      "a religious idea of heaven"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "passage": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.",
+    "text": "The passage as a whole moves from",
+    "options": [
+      "personal anecdote to scientific data",
+      "historical attitude to present physical change",
+      "celebration of exploration to criticism of modern technology",
+      "description of animals to description of people"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "passage": "For centuries the polar regions were imagined as blank spaces on the map—white, pure, and waiting to be claimed. Explorers wrote of “conquering” the ice, as if the landscape were an opponent. Yet the journals that survive often reveal a quieter story: men listening to the groan of shifting floes, watching the aurora with something closer to humility than triumph. Modern satellite images show the same ice retreating year by year. The blank space is disappearing, not because it has been filled in by flags, but because the physical substance itself is thinning. What earlier writers treated as an eternal stage is proving to be a temporary condition.",
+    "text": "Which of the following is an assumption underlying the author’s argument?",
+    "options": [
+      "Satellite technology is less reliable than explorers’ journals.",
+      "The thinning of polar ice is a significant and observable fact.",
+      "All early explorers felt only triumph and never humility.",
+      "Maps should never show blank spaces."
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 9,
+    "type": "cloze",
+    "passage": "The archive smelled of dust and slow time. Bound reports from the nineteenth century leaned against boxes of fragile photographs. Nothing here had been digitised; the catalogue itself was a set of handwritten cards that crackled when touched. Researchers who came looking for a particular name or date often left with something else entirely—an unexpected letter, a marginal note—that __________ their original question and sent them in a new direction.",
+    "text": "Which word best completes the sentence?",
+    "options": [
+      "confirmed",
+      "complicated",
+      "answered",
+      "repeated"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 10,
+    "type": "cloze",
+    "passage": "Critics of the plan argued that building the new highway through the wetland would cause irreversible damage. Supporters replied that the economic gains would be substantial and that careful engineering could __________ most of the environmental harm. The debate continued for months without either side yielding.",
+    "text": "Which word best fits the gap?",
+    "options": [
+      "increase",
+      "mitigate",
+      "ignore",
+      "celebrate"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 11,
+    "type": "cloze",
+    "passage": "Her early stories were praised for their sharp observation of ordinary lives. Later work, however, grew increasingly __________ , full of symbols and shifting timelines that some readers found rewarding and others simply confusing.",
+    "text": "Which word best fits the gap?",
+    "options": [
+      "predictable",
+      "elliptical",
+      "humorous",
+      "short"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 12,
+    "type": "poem",
+    "passage": "Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty.",
+    "text": "The poem suggests that the apparent change in the garden is caused by",
+    "options": [
+      "actual movement of the plants",
+      "a change in light and the viewer’s perception",
+      "damage to the glass itself",
+      "the passage of seasons"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 13,
+    "type": "poem",
+    "passage": "Glass\n\nIn the morning the window holds the garden\nlike a held breath—\neach leaf exact, the gravel path\nunwavering.\n\nBy afternoon the same glass\nwarps the view:\nbranches bend, the path\nhesitates.\n\nWhat changed?\nOnly the light,\nand the eye that learned\nto doubt its own certainty.",
+    "text": "The final stanza implies that certainty",
+    "options": [
+      "is always reliable if one looks carefully enough",
+      "can be undermined by changes in conditions and perspective",
+      "belongs only to the morning",
+      "is impossible for human beings"
+    ],
+    "answer": 1,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 14,
+    "type": "insert",
+    "passage": "Many coastal towns now face regular flooding at high tide even on calm days. Engineers have proposed a range of responses, from sea walls to the managed retreat of buildings. (1) __________ Local residents are often divided: some demand immediate protective structures, while others argue that such defences only postpone an inevitable adjustment. (2) __________ The underlying difficulty is that any chosen path carries both costs and uncertainties.",
+    "text": "Which sentence best fits gap (1)?",
+    "options": [
+      "Each option involves trade-offs that are not purely technical.",
+      "Most engineers privately believe that sea walls are useless.",
+      "Flooding has decreased in the last decade.",
+      "Tourism has been unaffected by the changes."
+    ],
+    "answer": 0,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 15,
+    "type": "insert",
+    "passage": "Many coastal towns now face regular flooding at high tide even on calm days. Engineers have proposed a range of responses, from sea walls to the managed retreat of buildings. (1) __________ Local residents are often divided: some demand immediate protective structures, while others argue that such defences only postpone an inevitable adjustment. (2) __________ The underlying difficulty is that any chosen path carries both costs and uncertainties.",
+    "text": "Which sentence best fits gap (2)?",
+    "options": [
+      "Neither group has yet found a solution that satisfies everyone.",
+      "All residents now support managed retreat.",
+      "Sea walls have already been built in every affected town.",
+      "The government has refused to fund any further studies."
+    ],
+    "answer": 0,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 16,
+    "type": "match",
+    "extracts": {
+      "A": "Extract A\nThe first time I tried to meditate I spent the entire twenty minutes planning dinner and wondering whether I had locked the car. Only later did I realise that noticing the drift of attention was itself the beginning of the practice.",
+      "B": "Extract B\nSome traditions treat dreams as messages that arrive in symbolic form. A house may stand for the self; water may stand for emotion. The work is not to accept the symbols at face value but to explore what they evoke in the dreamer.",
+      "C": "Extract C\nUnder experimental conditions, people who were told they had slept well performed better on memory tests the next day—even when the information was false. Expectation alone appeared to influence cognitive performance.",
+      "D": "Extract D\nChildren’s imaginary companions are sometimes dismissed as mere play. Yet longitudinal studies suggest that children who create such companions often show advanced abilities in perspective-taking and narrative construction."
+    },
+    "text": "Which extract describes a situation in which a false belief affected later performance?",
+    "options": [
+      "Extract A",
+      "Extract B",
+      "Extract C",
+      "Extract D"
+    ],
+    "answer": 2,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  },
+  {
+    "id": 17,
+    "type": "match",
+    "extracts": {
+      "A": "Extract A\nThe first time I tried to meditate I spent the entire twenty minutes planning dinner and wondering whether I had locked the car. Only later did I realise that noticing the drift of attention was itself the beginning of the practice.",
+      "B": "Extract B\nSome traditions treat dreams as messages that arrive in symbolic form. A house may stand for the self; water may stand for emotion. The work is not to accept the symbols at face value but to explore what they evoke in the dreamer.",
+      "C": "Extract C\nUnder experimental conditions, people who were told they had slept well performed better on memory tests the next day—even when the information was false. Expectation alone appeared to influence cognitive performance.",
+      "D": "Extract D\nChildren’s imaginary companions are sometimes dismissed as mere play. Yet longitudinal studies suggest that children who create such companions often show advanced abilities in perspective-taking and narrative construction."
+    },
+    "text": "Which extract presents an activity that is often underestimated but may indicate developmental strengths?",
+    "options": [
+      "Extract A",
+      "Extract B",
+      "Extract C",
+      "Extract D"
+    ],
+    "answer": 3,
+    "skill": "Reading comprehension",
+    "explanation": "Review the information in the question and compare each answer choice. A detailed worked solution is not yet verified for this item.",
+    "reviewStatus": "sample_unverified"
+  }
+]
