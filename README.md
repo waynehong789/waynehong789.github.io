@@ -18,7 +18,7 @@ Opening the HTML with `file://` will generally **not** load JSON because of brow
 - Existing dashboard and subjects retained as links, refreshed with a unified responsive visual style.
 - 35-question Maths / 40-minute full section with five A–E choices.
 - 40-question Thinking Skills / 40-minute full section with four A–D choices.
-- Reading starter player with passage tabs, grouped data schema and dropdown support.
+- Reading player with passage tabs, linked groups and dropdown support (17 groups / 38 slots per full paper).
 - Writing page: 30-minute countdown, local autosave, word count, three original prompts, self-assessment checklist.
 - Daily shorter selections (deterministic by Sydney date), flags, navigation, autosave, absolute persisted deadline and auto-submit on expiry.
 - Results / answer review, completion history, subject aggregate and CSV export.
@@ -26,8 +26,8 @@ Opening the HTML with `file://` will generally **not** load JSON because of brow
 
 ## Important limits — must address before claiming full exam fidelity
 
-1. **Reading content:** supplied website has 17 answer parts, NOT the official-style 17 groups / 38 answer parts. `data/reading-groups.json` supports group/item structure but the question bank needs more *independently checked* original material. Do not label this starter set a full-format NSW reading paper.
-2. **Question quality:** initial supplied questions have not all been independently verified. Maths question 9 and 15 had wrong answer indices and were corrected; Thinking Skills questions 23 and 40 originally had correct index E and have been remapped into A–D, but require human review for ambiguity. Do not infer that remaining questions are fully reliable.
+1. **Reading content:** the current bank has 22 groups / 50 answer parts; full mode selects 17 groups / 38 answers. Individual items still need independent educational review.
+2. **Question quality:** initial supplied questions have not all been independently verified. Earlier Maths answer-index errors were corrected; Thinking Skills questions 23 and 40 originally had correct index E and have been remapped into A–D, but require human review for ambiguity. Do not infer that remaining questions are fully reliable.
 3. **Fresh questions:** a static website cannot safely or reliably generate and verify unlimited daily new questions without an approved expanding bank or backend. Daily mode uses deterministic rotation from the available sample items. Add `version`, skills and reviewer approval before scaling.
 4. **Static answer security:** sample answer keys in downloadable JSON are discoverable by visitors. For secure tests, host answer keys and marking on a server.
 5. **No cross-device sync:** localStorage saves on one device only. A backend and privacy-first accounts would be needed for sync.
@@ -41,7 +41,7 @@ Opening the HTML with `file://` will generally **not** load JSON because of brow
 - `math-test.html`, `thinking-test.html`, `reading-test.html`: subject views
 - `writing-test.html`, `writing.js`: writing editor
 - `data/*.json`: current sample content (separate from page logic)
-- `CONTENT_REQUIREMENTS.md`: validator constraints and next content milestones
+- `skills/CONTENT_REQUIREMENTS.md`: validator constraints and next content milestones
 
 ## Test plan
 
@@ -51,7 +51,7 @@ Opening the HTML with `file://` will generally **not** load JSON because of brow
 - Open Reading and switch extract tabs without losing an answer.
 - Use writing autosave; refresh and confirm retained text/clock.
 - Export CSV and verify values.
-- Add a second full-format Reading fixture to check 17 groups/38 slots after content approval.
+- Check that full Reading renders 17 linked groups / 38 scored answer slots and preserves grouped passages.
 
 
 ## Reading complete-paper update (November 2026)
@@ -75,3 +75,23 @@ New question IDs are `MNEW-*`, `TNEW-*`, `RN*`. Existing IDs and progress-histor
 - Daily practice continues using the previous question pools.
 - Older progress history is retained; unfinished sessions use a versioned key to avoid mismatched question lists.
 - Content is independent practice, not official NSW test material. Worked explanations have been checked during authoring, but an independent teacher review is still advisable.
+
+
+## Personalised Maths Revision #1
+
+See `PERSONALISED_MATHS_REVISION_01.md`; launch from the dashboard.
+
+
+## Mandatory question quality control
+
+**Every new or modified question** must follow `skills/SKILL.md` (independent solve, verify all options and explanation, reviewer sign-off). Run `python3 scripts/validate_question_bank.py` before pushing; GitHub Actions automatically checks new/changed content. Older baseline questions are not automatically certified.
+
+## Repository layout (simplified)
+
+- `skills/SKILL.md`: mandatory question-generation and independent-review workflow
+- `skills/CONTENT_REQUIREMENTS.md`: question-format and release requirements
+- `data/`: question banks (keep separate for browser fetching)
+- `scripts/`: release validator and legacy baseline (keep together for executable paths)
+- `.github/workflows/`: GitHub Actions workflow (fixed location required by GitHub)
+
+Do not restore the former nested `skills/ronald-question-generation/` directory. Always read `skills/SKILL.md` before creating or changing question content.

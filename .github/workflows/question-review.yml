@@ -1,0 +1,24 @@
+name: Question bank release gate
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'skills/**'
+      - '.github/workflows/question-review.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - 'skills/**'
+      - '.github/workflows/question-review.yml'
+jobs:
+  validate-question-bank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check question structure and mandatory independent review records
+        run: python3 scripts/validate_question_bank.py
